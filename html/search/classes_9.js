@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['langgenerator',['LangGenerator',['../class_lang_generator.html',1,'']]],
-  ['logincontroller',['LoginController',['../class_login_controller.html',1,'']]],
-  ['logoutcontroller',['LogoutController',['../class_logout_controller.html',1,'']]]
+  ['notfoundexception',['NotFoundException',['../class_orpheus_1_1_exception_1_1_not_found_exception.html',1,'Orpheus::Exception']]]
 ];

@@ -25,6 +25,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Orpheus
+   &#160;<span id="projectnumber">v3</span>
    </div>
    <div id="projectbrief">PHP Framework developed by Florent HAZARD (Sowapps)</div>
   </td>
@@ -97,9 +98,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a07771e871c08ba6e59bec86c8c3e81ca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="admin_2layouts_2page__skeleton_8php.html#a07771e871c08ba6e59bec86c8c3e81ca">$routeName</a> = $<a class="el" href="class_controller.html">Controller</a>-&gt;getRouteName()</td></tr>
+<tr class="memitem:a07771e871c08ba6e59bec86c8c3e81ca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="admin_2layouts_2page__skeleton_8php.html#a07771e871c08ba6e59bec86c8c3e81ca">$routeName</a> = $Controller-&gt;getRouteName()</td></tr>
 <tr class="separator:a07771e871c08ba6e59bec86c8c3e81ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:affe1f65abed433fe3e737806e5a7de9e"><td class="memItemLeft" align="right" valign="top">foreach(<a class="el" href="class_h_t_m_l_rendering.html#a71c16a56232373c79970195ae0b9e2cc">HTMLRendering::$metaprop</a> as $property=&gt; $content)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="admin_2layouts_2page__skeleton_8php.html#affe1f65abed433fe3e737806e5a7de9e">foreach</a> (<a class="el" href="class_h_t_m_l_rendering.html#a2a63c6117c6ad5d602d280ee546b6409">HTMLRendering::listCSSURLs</a>(<a class="el" href="class_h_t_m_l_rendering.html#aa4cb29ed3fa3edbb6155b1844eca6ffb">HTMLRendering::LINK_TYPE_PLUGIN</a>) as $url)</td></tr>
+<tr class="memitem:a598ca4e71b15a1313ec95f0df1027ca5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="admin_2layouts_2page__skeleton_8php.html#a598ca4e71b15a1313ec95f0df1027ca5">$user</a> = User::getLoggedUser()</td></tr>
+<tr class="separator:a598ca4e71b15a1313ec95f0df1027ca5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affe1f65abed433fe3e737806e5a7de9e"><td class="memItemLeft" align="right" valign="top">foreach(HTMLRendering::$metaprop as $property=&gt; $content)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="admin_2layouts_2page__skeleton_8php.html#affe1f65abed433fe3e737806e5a7de9e">foreach</a> (HTMLRendering::listCSSURLs(HTMLRendering::LINK_TYPE_PLUGIN) as $url)</td></tr>
 <tr class="separator:affe1f65abed433fe3e737806e5a7de9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Variable Documentation</h2>
@@ -108,7 +111,19 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">$routeName = $<a class="el" href="class_controller.html">Controller</a>-&gt;getRouteName()</td>
+          <td class="memname">$routeName = $Controller-&gt;getRouteName()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a598ca4e71b15a1313ec95f0df1027ca5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$user = User::getLoggedUser()</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -120,7 +135,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">foreach(<a class="el" href="class_h_t_m_l_rendering.html#ac077055a6dd3489657d1ce6fcf98c57a">HTMLRendering::listJSURLs</a>(<a class="el" href="class_h_t_m_l_rendering.html#aa4cb29ed3fa3edbb6155b1844eca6ffb">HTMLRendering::LINK_TYPE_PLUGIN</a>) as $url)</td>
+          <td class="memname">foreach(HTMLRendering::listJSURLs(HTMLRendering::LINK_TYPE_PLUGIN) as $url)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -130,7 +145,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun May 29 2016 10:05:21 for Orpheus by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 3 2016 14:07:54 for Orpheus by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['panel_5fdanger',['PANEL_DANGER',['../_check_file_system_setup_controller_8php.html#abf5174469ff751aaf75484aeacecec34',1,'CheckFileSystemSetupController.php']]],
-  ['panel_5fsuccess',['PANEL_SUCCESS',['../_check_file_system_setup_controller_8php.html#a1ab1ac44c54b21792c75dc421a7d937b',1,'CheckFileSystemSetupController.php']]],
-  ['panel_5fwarning',['PANEL_WARNING',['../_check_file_system_setup_controller_8php.html#a95f83ea2a2aee4019e4495e1602f57b1',1,'CheckFileSystemSetupController.php']]],
   ['pdoerror_5ffatal',['PDOERROR_FATAL',['../__pdo_8php.html#a114bc6e3335f4e39a236762f860fbd23',1,'_pdo.php']]],
   ['pdoerror_5fminor',['PDOERROR_MINOR',['../__pdo_8php.html#a8498a50fb5726390028bbbf9529ffca0',1,'_pdo.php']]],
   ['pdoexec',['PDOEXEC',['../__pdo_8php.html#abdd0a8a2c32517cc9c4ee58a71713dd9',1,'_pdo.php']]],

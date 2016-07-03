@@ -25,6 +25,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Orpheus
+   &#160;<span id="projectnumber">v3</span>
    </div>
    <div id="projectbrief">PHP Framework developed by Florent HAZARD (Sowapps)</div>
   </td>
@@ -110,16 +111,13 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= <a class="code" href="class_permanent_object.html#a38e84555186ecb8ca9af283f8fdcfab5">User::get</a>(array(</div><div class="line">    <span class="stringliteral">&#39;where&#39;</span>     =&gt; <a class="code" href="class_abstract_user.html#a678ed97f197041eb6756b3418b6ee1fb">User::loggedCanDo</a>(<span class="stringliteral">&#39;user_seedev&#39;</span>) ? <span class="stringliteral">&#39;&#39;</span> : <span class="stringliteral">&#39;accesslevel&lt;&#39;</span>.<a class="code" href="class_config_core.html#a7de323d3f961b8ac6987a2220df110cf">Config::get</a>(<span class="stringliteral">&#39;perm_status/administrator&#39;</span>),</div><div class="line">    <span class="stringliteral">&#39;orderby&#39;</span>   =&gt; <span class="stringliteral">&#39;fullname ASC&#39;</span>,</div><div class="line"></div><div class="line">))</div><div class="ttc" id="class_permanent_object_html_a38e84555186ecb8ca9af283f8fdcfab5"><div class="ttname"><a href="class_permanent_object.html#a38e84555186ecb8ca9af283f8fdcfab5">PermanentObject\get</a></div><div class="ttdeci">static get($options=NULL)</div><div class="ttdoc">Gets some permanent objects. </div><div class="ttdef"><b>Definition:</b> PermanentObject.php:673</div></div>
-<div class="ttc" id="class_abstract_user_html_a678ed97f197041eb6756b3418b6ee1fb"><div class="ttname"><a href="class_abstract_user.html#a678ed97f197041eb6756b3418b6ee1fb">AbstractUser\loggedCanDo</a></div><div class="ttdeci">static loggedCanDo($action, AbstractUser $object=null)</div><div class="ttdoc">Checks if this user can do a restricted action. </div><div class="ttdef"><b>Definition:</b> AbstractUser.php:411</div></div>
-<div class="ttc" id="class_config_core_html_a7de323d3f961b8ac6987a2220df110cf"><div class="ttname"><a href="class_config_core.html#a7de323d3f961b8ac6987a2220df110cf">ConfigCore\get</a></div><div class="ttdeci">static get($key, $default=null)</div><div class="ttdoc">Gets configuration from the main configuration object. </div><div class="ttdef"><b>Definition:</b> ConfigCore.php:161</div></div>
-</div><!-- fragment -->
+<b>Initial value:</b><div class="fragment"><div class="line">= User::get(array(</div><div class="line">    <span class="stringliteral">&#39;where&#39;</span>     =&gt; User::loggedCanDo(<span class="stringliteral">&#39;user_seedev&#39;</span>) ? <span class="stringliteral">&#39;&#39;</span> : <span class="stringliteral">&#39;accesslevel&lt;&#39;</span>.Config::get(<span class="stringliteral">&#39;perm_status/administrator&#39;</span>),</div><div class="line">    <span class="stringliteral">&#39;orderby&#39;</span>   =&gt; <span class="stringliteral">&#39;fullname ASC&#39;</span>,</div><div class="line"></div><div class="line">))</div></div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun May 29 2016 10:05:21 for Orpheus by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 3 2016 14:07:54 for Orpheus by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>
