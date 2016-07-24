@@ -1,0 +1,26 @@
+<?php
+/**
+ * RawRendering
+ */
+
+namespace Orpheus\Rendering;
+
+/**
+ * The raw rendering class
+ * 
+ * A class to render module display without any treatment.
+ */
+class RawRendering extends Rendering {
+	
+	/**
+	 * 
+	 * {@inheritDoc}
+	 * @see \Orpheus\Rendering\Rendering::render()
+	 * @param string $model The model to use, default use is defined by child
+	 * @param array $env An environment variable, commonly an array but depends on the rendering class used
+	 */
+	public function render($model=null, $env=array()) {
+		return isset($env['CONTROLLER_OUTPUT']) ? $env['CONTROLLER_OUTPUT'] : '';
+	}
+}
+

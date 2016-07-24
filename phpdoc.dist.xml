@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpdoc>
+  <parser>
+    <target>html</target>
+  </parser>
+  <transformer>
+    <target>html</target>
+  </transformer>
+  <files>
+    <directory>vendor/orpheus/</directory>
+  </files>
+  <title><![CDATA[Orpheus Framework]]></title>
+</phpdoc>

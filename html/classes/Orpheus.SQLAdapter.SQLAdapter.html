@@ -1,0 +1,2529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>Orpheus Framework</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+    <link href="../css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/prism.css" rel="stylesheet" media="all"/>
+    <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+    <!--[if lt IE 9]>
+    <script src="../js/html5.js"></script>
+    <![endif]-->
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="../js/ui/1.10.4/jquery-ui.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.smooth-scroll.js"></script>
+    <script src="../js/prism.min.js"></script>
+    <!-- TODO: Add http://jscrollpane.kelvinluck.com/ to style the scrollbars for browsers not using webkit-->
+    <script type="text/javascript">
+    function loadExternalCodeSnippets() {
+        Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
+            var src = pre.getAttribute('data-src');
+            var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+            var language = 'php';
+
+            var code = document.createElement('code');
+            code.className = 'language-' + language;
+
+            pre.textContent = '';
+
+            code.textContent = 'Loading…';
+
+            pre.appendChild(code);
+
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('GET', src, true);
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+
+                    if (xhr.status < 400 && xhr.responseText) {
+                        code.textContent = xhr.responseText;
+
+                        Prism.highlightElement(code);
+                    }
+                    else if (xhr.status >= 400) {
+                        code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                    }
+                    else {
+                        code.textContent = '✖ Error: File does not exist or is empty';
+                    }
+                }
+            };
+
+            xhr.send(null);
+        });
+    }
+
+    $(document).ready(function(){
+        loadExternalCodeSnippets();
+    });
+    $('#source-view').on('shown', function () {
+        loadExternalCodeSnippets();
+    })
+</script>
+
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <i class="icon-ellipsis-vertical"></i>
+            </a>
+            <a class="brand" href="../index.html">Orpheus Framework</a>
+
+            <div class="nav-collapse">
+                <ul class="nav pull-right">
+                                        <li class="dropdown">
+                        <a href="../index.html" class="dropdown-toggle" data-toggle="dropdown">
+                            API Documentation <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                                                        <li><a href="../namespaces/Orpheus.html">\Orpheus</a></li>
+                                                    </ul>
+                    </li>
+                                        <li class="dropdown" id="charts-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Charts <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../graphs/class.html">
+                                    <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" id="reports-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Reports <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../reports/errors.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/markers.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">9</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/deprecated.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <i class="icon-list-alt"></i>&#160;Deprecated <span class="label label-info pull-right">16</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--<div class="go_to_top">-->
+    <!--<a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>-->
+    <!--</div>-->
+</div>
+
+<div id="___" class="container-fluid">
+        <section class="row-fluid">
+        <div class="span2 sidebar">
+                                <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1632383414"></a>
+                                <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
+            </div>
+            <div id="namespace-1632383414" class="accordion-body collapse in">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1055366969"></a>
+                                <a href="../namespaces/Orpheus.html" style="margin-left: 30px; padding-left: 0">Orpheus</a>
+            </div>
+            <div id="namespace-1055366969" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-632961510"></a>
+                                <a href="../namespaces/Orpheus.Cache.html" style="margin-left: 30px; padding-left: 0">Cache</a>
+            </div>
+            <div id="namespace-632961510" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/Orpheus.Cache.Cache.html">Cache</a></li>
+                                                                                                    <li class="class"><a href="../classes/Orpheus.Cache.APCache.html">APCache</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.Cache.CacheException.html">CacheException</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.Cache.FSCache.html">FSCache</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1570420538"></a>
+                                <a href="../namespaces/Orpheus.Config.html" style="margin-left: 30px; padding-left: 0">Config</a>
+            </div>
+            <div id="namespace-1570420538" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2065879158"></a>
+                                <a href="../namespaces/Orpheus.Config.YAML.html" style="margin-left: 30px; padding-left: 0">YAML</a>
+            </div>
+            <div id="namespace-2065879158" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Orpheus.Config.YAML.YAML.html">YAML</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Orpheus.Config.AppConfig.html">AppConfig</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.Config.Config.html">Config</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.Config.IniConfig.html">IniConfig</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1776700884"></a>
+                                <a href="../namespaces/Orpheus.Controller.html" style="margin-left: 30px; padding-left: 0">Controller</a>
+            </div>
+            <div id="namespace-1776700884" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Orpheus.Controller.DelayedPageController.html">DelayedPageController</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.Controller.RedirectController.html">RedirectController</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.Controller.StaticPageController.html">StaticPageController</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-532310011"></a>
+                                <a href="../namespaces/Orpheus.Core.html" style="margin-left: 30px; padding-left: 0">Core</a>
+            </div>
+            <div id="namespace-532310011" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Orpheus.Core.ClassLoader.html">ClassLoader</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.Core.RequestHandler.html">RequestHandler</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.Core.Route.html">Route</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1662220295"></a>
+                                <a href="../namespaces/Orpheus.Email.html" style="margin-left: 30px; padding-left: 0">Email</a>
+            </div>
+            <div id="namespace-1662220295" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Orpheus.Email.Email.html">Email</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1042520202"></a>
+                                <a href="../namespaces/Orpheus.EntityDescriptor.html" style="margin-left: 30px; padding-left: 0">EntityDescriptor</a>
+            </div>
+            <div id="namespace-1042520202" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1013961639"></a>
+                                <a href="../namespaces/Orpheus.EntityDescriptor.SQLGenerator.html" style="margin-left: 30px; padding-left: 0">SQLGenerator</a>
+            </div>
+            <div id="namespace-1013961639" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/Orpheus.EntityDescriptor.SQLGenerator.SQLGenerator.html">SQLGenerator</a></li>
+                                                                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.SQLGenerator.SQLGeneratorMySQL.html">SQLGeneratorMySQL</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1132915101"></a>
+                                <a href="../namespaces/Orpheus.EntityDescriptor.User.html" style="margin-left: 30px; padding-left: 0">User</a>
+            </div>
+            <div id="namespace-1132915101" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.User.AbstractUser.html">AbstractUser</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.User.User.html">User</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.EntityDescriptor.html">EntityDescriptor</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.FE.html">FE</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.FieldDescriptor.html">FieldDescriptor</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.LangGenerator.html">LangGenerator</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.PermanentEntity.html">PermanentEntity</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.TypeBoolean.html">TypeBoolean</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.TypeCity.html">TypeCity</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.TypeDate.html">TypeDate</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.TypeDatetime.html">TypeDatetime</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.TypeDescriptor.html">TypeDescriptor</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.TypeDouble.html">TypeDouble</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.TypeEmail.html">TypeEmail</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.TypeEnum.html">TypeEnum</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.TypeFloat.html">TypeFloat</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.TypeInteger.html">TypeInteger</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.TypeIP.html">TypeIP</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.TypeNatural.html">TypeNatural</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.TypeNumber.html">TypeNumber</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.TypeObject.html">TypeObject</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.TypePassword.html">TypePassword</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.TypePhone.html">TypePhone</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.TypePostalCode.html">TypePostalCode</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.TypeRef.html">TypeRef</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.TypeSlug.html">TypeSlug</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.TypeState.html">TypeState</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.TypeString.html">TypeString</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.TypeTime.html">TypeTime</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.TypeURL.html">TypeURL</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2124183212"></a>
+                                <a href="../namespaces/Orpheus.Exception.html" style="margin-left: 30px; padding-left: 0">Exception</a>
+            </div>
+            <div id="namespace-2124183212" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Orpheus.Exception.ForbiddenException.html">ForbiddenException</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.Exception.NotFoundException.html">NotFoundException</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.Exception.OperationCancelledException.html">OperationCancelledException</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.Exception.UserException.html">UserException</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.Exception.UserReportsException.html">UserReportsException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-541268182"></a>
+                                <a href="../namespaces/Orpheus.File.html" style="margin-left: 30px; padding-left: 0">File</a>
+            </div>
+            <div id="namespace-541268182" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Orpheus.File.UploadedFile.html">UploadedFile</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1384782885"></a>
+                                <a href="../namespaces/Orpheus.Form.html" style="margin-left: 30px; padding-left: 0">Form</a>
+            </div>
+            <div id="namespace-1384782885" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Orpheus.Form.FormToken.html">FormToken</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-645345827"></a>
+                                <a href="../namespaces/Orpheus.Hook.html" style="margin-left: 30px; padding-left: 0">Hook</a>
+            </div>
+            <div id="namespace-645345827" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Orpheus.Hook.Hook.html">Hook</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1679354618"></a>
+                                <a href="../namespaces/Orpheus.InputController.html" style="margin-left: 30px; padding-left: 0">InputController</a>
+            </div>
+            <div id="namespace-1679354618" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-301966971"></a>
+                                <a href="../namespaces/Orpheus.InputController.HTTPController.html" style="margin-left: 30px; padding-left: 0">HTTPController</a>
+            </div>
+            <div id="namespace-301966971" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Orpheus.InputController.HTTPController.HTMLHTTPResponse.html">HTMLHTTPResponse</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.InputController.HTTPController.HTTPController.html">HTTPController</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html">HTTPRequest</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.InputController.HTTPController.HTTPResponse.html">HTTPResponse</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.InputController.HTTPController.HTTPRoute.html">HTTPRoute</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.InputController.HTTPController.JSONHTTPResponse.html">JSONHTTPResponse</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.InputController.HTTPController.RedirectHTTPResponse.html">RedirectHTTPResponse</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Orpheus.InputController.Controller.html">Controller</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.InputController.ControllerRoute.html">ControllerRoute</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.InputController.InputRequest.html">InputRequest</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.InputController.OutputResponse.html">OutputResponse</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1103672282"></a>
+                                <a href="../namespaces/Orpheus.Publisher.html" style="margin-left: 30px; padding-left: 0">Publisher</a>
+            </div>
+            <div id="namespace-1103672282" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-326257084"></a>
+                                <a href="../namespaces/Orpheus.Publisher.Exception.html" style="margin-left: 30px; padding-left: 0">Exception</a>
+            </div>
+            <div id="namespace-326257084" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Orpheus.Publisher.Exception.FieldNotFoundException.html">FieldNotFoundException</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.Publisher.Exception.InvalidFieldException.html">InvalidFieldException</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.Publisher.Exception.UnknownKeyException.html">UnknownKeyException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-901324208"></a>
+                                <a href="../namespaces/Orpheus.Publisher.Fixture.html" style="margin-left: 30px; padding-left: 0">Fixture</a>
+            </div>
+            <div id="namespace-901324208" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/Orpheus.Publisher.Fixture.FixtureInterface.html">FixtureInterface</a></li>
+                                                                                                    <li class="class"><a href="../classes/Orpheus.Publisher.Fixture.FixtureRepository.html">FixtureRepository</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-72127034"></a>
+                                <a href="../namespaces/Orpheus.Publisher.PermanentObject.html" style="margin-left: 30px; padding-left: 0">PermanentObject</a>
+            </div>
+            <div id="namespace-72127034" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Orpheus.Publisher.PermanentObject.PermanentObject.html">PermanentObject</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-171010723"></a>
+                                <a href="../namespaces/Orpheus.Publisher.Transaction.html" style="margin-left: 30px; padding-left: 0">Transaction</a>
+            </div>
+            <div id="namespace-171010723" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Orpheus.Publisher.Transaction.CreateTransactionOperation.html">CreateTransactionOperation</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.Publisher.Transaction.DeleteTransactionOperation.html">DeleteTransactionOperation</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.Publisher.Transaction.TransactionOperation.html">TransactionOperation</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.Publisher.Transaction.TransactionOperationSet.html">TransactionOperationSet</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.Publisher.Transaction.UpdateTransactionOperation.html">UpdateTransactionOperation</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Orpheus.Publisher.PasswordGenerator.html">PasswordGenerator</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.Publisher.SlugGenerator.html">SlugGenerator</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-518085259"></a>
+                                <a href="../namespaces/Orpheus.Rendering.html" style="margin-left: 30px; padding-left: 0">Rendering</a>
+            </div>
+            <div id="namespace-518085259" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Orpheus.Rendering.HTMLRendering.html">HTMLRendering</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.Rendering.RawRendering.html">RawRendering</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.Rendering.Rendering.html">Rendering</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-888669259"></a>
+                                <a href="../namespaces/Orpheus.SQLAdapter.html" style="margin-left: 30px; padding-left: 0">SQLAdapter</a>
+            </div>
+            <div id="namespace-888669259" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1797422186"></a>
+                                <a href="../namespaces/Orpheus.SQLAdapter.Exception.html" style="margin-left: 30px; padding-left: 0">Exception</a>
+            </div>
+            <div id="namespace-1797422186" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Orpheus.SQLAdapter.Exception.SQLException.html">SQLException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html">SQLAdapter</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.SQLAdapter.SQLAdapterMSSQL.html">SQLAdapterMSSQL</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.SQLAdapter.SQLAdapterMySQL.html">SQLAdapterMySQL</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.SQLAdapter.SQLAdapterPgSQL.html">SQLAdapterPgSQL</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-512745748"></a>
+                                <a href="../namespaces/Orpheus.SQLRequest.html" style="margin-left: 30px; padding-left: 0">SQLRequest</a>
+            </div>
+            <div id="namespace-512745748" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Orpheus.SQLRequest.SQLRequest.html">SQLRequest</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.SQLRequest.SQLSelectRequest.html">SQLSelectRequest</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </section>
+    <section class="row-fluid">
+        <div class="span10 offset2">
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <nav>
+                                                <a href="../namespaces/Orpheus.SQLAdapter.html">\Orpheus\SQLAdapter</a> <i class="icon-level-up"></i>
+                                            </nav>
+                    <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal"><i class="icon-code"></i></a>
+
+                    <h1><small>\Orpheus\SQLAdapter</small>SQLAdapter</h1>
+                    <p><em>The main SQL Adapter class</em></p>
+                    <p>This class is the mother sql adapter inherited for specific DBMS.</p>
+                    
+                                        
+                    <section id="summary">
+                        <h2>Summary</h2>
+                        <section class="row-fluid heading">
+                            <section class="span4">
+                                <a href="#methods">Methods</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#properties">Properties</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#constants">Constants</a>
+                            </section>
+                        </section>
+                        <section class="row-fluid public">
+                            <section class="span4">
+                                                                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#method___construct" class="">__construct()</a><br />
+                                                                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#method_getInstance" class="">getInstance()</a><br />
+                                                                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#method_registerAdapter" class="">registerAdapter()</a><br />
+                                                                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#method_make" class="">make()</a><br />
+                                                                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#method_query" class="">query()</a><br />
+                                                                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#method_select" class="">select()</a><br />
+                                                                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#method_update" class="">update()</a><br />
+                                                                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#method_insert" class="">insert()</a><br />
+                                                                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#method_delete" class="">delete()</a><br />
+                                                                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#method_lastID" class="">lastID()</a><br />
+                                                                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#method_escapeIdentifier" class="">escapeIdentifier()</a><br />
+                                                                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#method_formatString" class="">formatString()</a><br />
+                                                                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#method_formatValue" class="">formatValue()</a><br />
+                                                                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#method_escapeValue" class="">escapeValue()</a><br />
+                                                                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#method_formatValueList" class="">formatValueList()</a><br />
+                                                                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#method_setIDField" class="">setIDField()</a><br />
+                                                                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#method_doSelect" class="deprecated">doSelect()</a><br />
+                                                                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#method_doUpdate" class="deprecated">doUpdate()</a><br />
+                                                                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#method_doDelete" class="deprecated">doDelete()</a><br />
+                                                                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#method_doInsert" class="deprecated">doInsert()</a><br />
+                                                                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#method_doLastID" class="deprecated">doLastID()</a><br />
+                                                                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#method_doEscapeIdentifier" class="deprecated">doEscapeIdentifier()</a><br />
+                                                                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#method_doFormatString" class="deprecated">doFormatString()</a><br />
+                                                                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#method_doFormatValue" class="deprecated">doFormatValue()</a><br />
+                                                                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#method_prepareQuery" class="">prepareQuery()</a><br />
+                                                                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#method_prepareInstance" class="">prepareInstance()</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No public properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#constant_OBJECT" class="">OBJECT</a><br />
+                                                                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#constant_ARR_FIRST" class="">ARR_FIRST</a><br />
+                                                                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#constant_ARR_ASSOC" class="">ARR_ASSOC</a><br />
+                                                                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#constant_ARR_OBJECTS" class="">ARR_OBJECTS</a><br />
+                                                                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#constant_STATEMENT" class="">STATEMENT</a><br />
+                                                                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#constant_SQLQUERY" class="">SQLQUERY</a><br />
+                                                                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#constant_NUMBER" class="">NUMBER</a><br />
+                                                            </section>
+                        </section>
+                        <section class="row-fluid protected">
+                            <section class="span4">
+                                                                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#method_registerInstance" class="">registerInstance()</a><br />
+                                                                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#method_getDefaults" class="">getDefaults()</a><br />
+                                                                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#method_connect" class="">connect()</a><br />
+                                                                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#method_listConfig" class="">listConfig()</a><br />
+                                                                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#method_formatFieldList" class="">formatFieldList()</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#property_IDFIELD" class="">$IDFIELD</a><br />
+                                                                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#property_pdo" class="">$pdo</a><br />
+                                                                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#property_selectDefaults" class="">$selectDefaults</a><br />
+                                                                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#property_updateDefaults" class="">$updateDefaults</a><br />
+                                                                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#property_deleteDefaults" class="">$deleteDefaults</a><br />
+                                                                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#property_insertDefaults" class="">$insertDefaults</a><br />
+                                                                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#property_instances" class="">$instances</a><br />
+                                                                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#property_adapters" class="">$adapters</a><br />
+                                                                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#property_configs" class="">$configs</a><br />
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                        <section class="row-fluid private">
+                            <section class="span4">
+                                                                    <em>No private methods found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No private properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                    </section>
+                </div>
+                <aside class="span4 detailsbar">
+                                            <span class="label label-info">abstract</span>
+                                        
+                    
+                    <dl>
+                        <dt>File</dt>
+                            <dd><a href="../files/orpheus-sqladapter.src.SQLAdapter.SQLAdapter.html"><div class="path-wrapper">orpheus-sqladapter\src\SQLAdapter\SQLAdapter.php</div></a></dd>
+                                                <dt>Package</dt>
+                            <dd><div class="namespace-wrapper">Default</div></dd>
+                                                <dt>Class hierarchy</dt>
+                            <dd class="hierarchy">
+                                                                                                                                                                    <div class="namespace-wrapper">\Orpheus\SQLAdapter\SQLAdapter</div>
+                            </dd>
+
+                        
+                        
+                        
+                        
+                                                                        </dl>
+                    <h2>Tags</h2>
+                    <table class="table table-condensed">
+                                            <tr><td colspan="2"><em>None found</em></td></tr>
+                                        </table>
+                </aside>
+            </div>
+
+                                    <a id="constants" name="constants"></a>
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <h2>Constants</h2>
+                </div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_OBJECT" name="constant_OBJECT" class="anchor"></a>
+            <article id="constant_OBJECT" class="constant">
+                <h3 class="">OBJECT</h3>
+                <pre class="signature">OBJECT</pre>
+                <p><em></em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_ARR_FIRST" name="constant_ARR_FIRST" class="anchor"></a>
+            <article id="constant_ARR_FIRST" class="constant">
+                <h3 class="">ARR_FIRST</h3>
+                <pre class="signature">ARR_FIRST</pre>
+                <p><em></em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_ARR_ASSOC" name="constant_ARR_ASSOC" class="anchor"></a>
+            <article id="constant_ARR_ASSOC" class="constant">
+                <h3 class="">ARR_ASSOC</h3>
+                <pre class="signature">ARR_ASSOC</pre>
+                <p><em></em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_ARR_OBJECTS" name="constant_ARR_OBJECTS" class="anchor"></a>
+            <article id="constant_ARR_OBJECTS" class="constant">
+                <h3 class="">ARR_OBJECTS</h3>
+                <pre class="signature">ARR_OBJECTS</pre>
+                <p><em></em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_STATEMENT" name="constant_STATEMENT" class="anchor"></a>
+            <article id="constant_STATEMENT" class="constant">
+                <h3 class="">STATEMENT</h3>
+                <pre class="signature">STATEMENT</pre>
+                <p><em></em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_SQLQUERY" name="constant_SQLQUERY" class="anchor"></a>
+            <article id="constant_SQLQUERY" class="constant">
+                <h3 class="">SQLQUERY</h3>
+                <pre class="signature">SQLQUERY</pre>
+                <p><em></em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_NUMBER" name="constant_NUMBER" class="anchor"></a>
+            <article id="constant_NUMBER" class="constant">
+                <h3 class="">NUMBER</h3>
+                <pre class="signature">NUMBER</pre>
+                <p><em></em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                            
+                                    <a id="properties" name="properties"></a>
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <h2>Properties</h2>
+                </div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_IDFIELD" name="property_IDFIELD" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$IDFIELD</h3>
+                <pre class="signature">$IDFIELD : string</pre>
+                <p><em>The ID field</em></p>
+                
+
+                                <h4>Type</h4>
+                string
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_pdo" name="property_pdo" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$pdo</h3>
+                <pre class="signature">$pdo : \PDO</pre>
+                <p><em>The PDO instance</em></p>
+                
+
+                                <h4>Type</h4>
+                \PDO
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_selectDefaults" name="property_selectDefaults" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$selectDefaults</h3>
+                <pre class="signature">$selectDefaults : array</pre>
+                <p><em>Select defaults options</em></p>
+                
+
+                                <h4>Type</h4>
+                array
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_updateDefaults" name="property_updateDefaults" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$updateDefaults</h3>
+                <pre class="signature">$updateDefaults : array</pre>
+                <p><em>Update defaults options</em></p>
+                
+
+                                <h4>Type</h4>
+                array
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_deleteDefaults" name="property_deleteDefaults" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$deleteDefaults</h3>
+                <pre class="signature">$deleteDefaults : array</pre>
+                <p><em>Delete defaults options</em></p>
+                
+
+                                <h4>Type</h4>
+                array
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_insertDefaults" name="property_insertDefaults" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$insertDefaults</h3>
+                <pre class="signature">$insertDefaults : array</pre>
+                <p><em>Insert defaults options</em></p>
+                
+
+                                <h4>Type</h4>
+                array
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_instances" name="property_instances" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$instances</h3>
+                <pre class="signature">$instances : array</pre>
+                <p><em>All Adapter instances by name</em></p>
+                
+
+                                <h4>Type</h4>
+                array
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_adapters" name="property_adapters" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$adapters</h3>
+                <pre class="signature">$adapters : array</pre>
+                <p><em>Store drivers&#039; adapter</em></p>
+                
+
+                                <h4>Type</h4>
+                array
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_configs" name="property_configs" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$configs</h3>
+                <pre class="signature">$configs : \Orpheus\SQLAdapter\unknown</pre>
+                <p><em>Configurations</em></p>
+                
+
+                                <h4>Type</h4>
+                \Orpheus\SQLAdapter\unknown
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                            
+                                    <a id="methods" name="methods"></a>
+            <div class="row-fluid">
+                <div class="span8 content class"><h2>Methods</h2></div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method___construct" name="method___construct" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">__construct()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">__construct(string  <span class="argument">$name</span>, mixed  <span class="argument">$config</span>) </pre>
+                <p><em>Constructor</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$name </td>
+                                <td><p>The name of the instance</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>mixed</td>
+                                <td>$config </td>
+                                <td><p>Instance config to use, maybe a config name, a config array or a PDO instance</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getInstance" name="method_getInstance" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getInstance()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getInstance(string  <span class="argument">$name = null</span>) : \Orpheus\SQLAdapter\SQLAdapter</pre>
+                <p><em>Get an unique instance of SQLAdapter by its name</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$name </td>
+                                <td><p>Name of the instance, default value is &quot;default&quot;</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html">\Orpheus\SQLAdapter\SQLAdapter</a>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_registerAdapter" name="method_registerAdapter" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">registerAdapter()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">registerAdapter(string  <span class="argument">$driver</span>, string  <span class="argument">$class</span>) </pre>
+                <p><em>Register a driver adapter</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$driver </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$class </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_make" name="method_make" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">make()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">make(string  <span class="argument">$name = &#039;default&#039;</span>) : \Orpheus\SQLAdapter\SQLAdapter</pre>
+                <p><em>Try to make a SQLAdapter by its name loading from configuration</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$name </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Orpheus\SQLAdapter\Exception\SQLException</dt>
+                            <dd></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html">\Orpheus\SQLAdapter\SQLAdapter</a>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_query" name="method_query" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">query()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">query(  <span class="argument">$Query</span>,   <span class="argument">$Fetch = PDOQUERY</span>) : \Orpheus\SQLAdapter\The</pre>
+                <p><em>Query the DB server</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$Query </td>
+                                <td><p>The query to execute.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$Fetch </td>
+                                <td><p>See PDO constants above. Optional, default is PDOQUERY.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \Orpheus\SQLAdapter\The
+                                            &mdash; <p>result of pdo_query()</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                                            <dt>See also</dt>
+                                                                <dd><a href=""><span class="namespace-wrapper">\Orpheus\SQLAdapter\pdo_query()</span></a></dd>
+                                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_select" name="method_select" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">select()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">select(array  <span class="argument">$options = array()</span>) : mixed</pre>
+                <p><em>Select something from database</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array</td>
+                                <td>$options </td>
+                                <td><p>The options used to build the query</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    mixed
+                                            &mdash; <p>Mixed return, depending on the 'output' option</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                        <span class="label label-info">abstract</span>
+                                                <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_update" name="method_update" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">update()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">update(array  <span class="argument">$options = array()</span>) : integer</pre>
+                <p><em>Update something in database</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array</td>
+                                <td>$options </td>
+                                <td><p>The options used to build the query</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    integer
+                                            &mdash; <p>The number of affected rows</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                        <span class="label label-info">abstract</span>
+                                                <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_insert" name="method_insert" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">insert()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">insert(array  <span class="argument">$options = array()</span>) : integer</pre>
+                <p><em>Insert something in database</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array</td>
+                                <td>$options </td>
+                                <td><p>The options used to build the query</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    integer
+                                            &mdash; <p>The number of inserted rows</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                        <span class="label label-info">abstract</span>
+                                                <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_delete" name="method_delete" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">delete()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">delete(array  <span class="argument">$options = array()</span>) : integer</pre>
+                <p><em>Delete something in database</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array</td>
+                                <td>$options </td>
+                                <td><p>The options used to build the query</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    integer
+                                            &mdash; <p>The number of deleted rows</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                        <span class="label label-info">abstract</span>
+                                                <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_lastID" name="method_lastID" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">lastID()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">lastID(string  <span class="argument">$table</span>) : \Orpheus\SQLAdapter\The</pre>
+                <p><em>Get the last inserted ID</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$table </td>
+                                <td><p>The table to get the last inserted id</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \Orpheus\SQLAdapter\The
+                                            &mdash; <p>last inserted id value</p>
+<p>It requires a successful call of insert() !</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_escapeIdentifier" name="method_escapeIdentifier" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">escapeIdentifier()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">escapeIdentifier(string  <span class="argument">$identifier</span>) : string</pre>
+                <p><em>Escape SQL identifiers</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$identifier </td>
+                                <td><p>The identifier to escape</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>The escaped identifier</p>
+<p>Escapes the given string as an SQL identifier.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_formatString" name="method_formatString" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">formatString()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">formatString(string  <span class="argument">$str</span>) : \Orpheus\SQLAdapter\The</pre>
+                <p><em>Format SQL string</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$str </td>
+                                <td><p>The string to format.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \Orpheus\SQLAdapter\The
+                                            &mdash; <p>formatted string.</p>
+<p>Format the given string as an SQL string.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_formatValue" name="method_formatValue" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">formatValue()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">formatValue(string  <span class="argument">$value</span>) : \Orpheus\SQLAdapter\The</pre>
+                <p><em>Format SQL value</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$value </td>
+                                <td><p>The value to format.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \Orpheus\SQLAdapter\The
+                                            &mdash; <p>formatted value.</p>
+<p>Format the given value to the matching SQL type.
+If the value is a float, we make french decimal compatible with SQL.
+If null, we use the NULL value, else we consider it as a string value.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_escapeValue" name="method_escapeValue" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">escapeValue()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">escapeValue(string  <span class="argument">$value</span>) : \Orpheus\SQLAdapter\The</pre>
+                <p><em>Escape SQL value</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$value </td>
+                                <td><p>The value to format.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \Orpheus\SQLAdapter\The
+                                            &mdash; <p>formatted value.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                                            <dt>See also</dt>
+                                                                <dd><a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#method_formatValue"><span class="namespace-wrapper">Escape the given value to the matching SQL type.
+If the value is a float, we make french decimal compatible with SQL.
+If null, we use the NULL value, else we consider it as a string value.</span></a></dd>
+                                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_formatValueList" name="method_formatValueList" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">formatValueList()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">formatValueList(array  <span class="argument">$list</span>) : string</pre>
+                <p><em>Format a list of values</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array</td>
+                                <td>$list </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setIDField" name="method_setIDField" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setIDField()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setIDField(string  <span class="argument">$field</span>) : \Orpheus\SQLAdapter\SQLAdapter</pre>
+                <p><em>Set the IDFIELD</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$field </td>
+                                <td><p>The new ID field.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html">\Orpheus\SQLAdapter\SQLAdapter</a>
+                                            &mdash; <p>Set the IDFIELD value to $field</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_doSelect" name="method_doSelect" class="anchor"></a>
+            <article class="method">
+                <h3 class="public deprecated">doSelect()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">doSelect(array  <span class="argument">$options = array()</span>, string  <span class="argument">$instance = null</span>, string  <span class="argument">$IDField = null</span>) </pre>
+                <p><em>The static function to use for SELECT queries in global context</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array</td>
+                                <td>$options </td>
+                                <td><p>The options used to build the query.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$instance </td>
+                                <td><p>The db instance used to send the query.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$IDField </td>
+                                <td><p>The ID field of the table.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                                <aside class="alert alert-block alert-error">
+                    <h4>Deprecated</h4>
+                    
+                </aside>
+                        <dl>
+                                                                                            <dt>See also</dt>
+                                                                <dd><a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#method_select"><span class="namespace-wrapper">\Orpheus\SQLAdapter\SQLAdapter::select()</span></a></dd>
+                                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_doUpdate" name="method_doUpdate" class="anchor"></a>
+            <article class="method">
+                <h3 class="public deprecated">doUpdate()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">doUpdate(  <span class="argument">$options = array()</span>,   <span class="argument">$instance = null</span>,   <span class="argument">$IDField = null</span>) </pre>
+                <p><em>The static function to use for UPDATE queries in global context</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$options </td>
+                                <td><p>The options used to build the query.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$instance </td>
+                                <td><p>The db instance used to send the query.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$IDField </td>
+                                <td><p>The ID field of the table.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                                <aside class="alert alert-block alert-error">
+                    <h4>Deprecated</h4>
+                    
+                </aside>
+                        <dl>
+                                                                                            <dt>See also</dt>
+                                                                <dd><a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#method_update"><span class="namespace-wrapper">\Orpheus\SQLAdapter\SQLAdapter::update()</span></a></dd>
+                                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_doDelete" name="method_doDelete" class="anchor"></a>
+            <article class="method">
+                <h3 class="public deprecated">doDelete()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">doDelete(  <span class="argument">$options = array()</span>,   <span class="argument">$instance = null</span>,   <span class="argument">$IDField = null</span>) </pre>
+                <p><em>The static function to use for DELETE queries in global context</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$options </td>
+                                <td><p>The options used to build the query.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$instance </td>
+                                <td><p>The db instance used to send the query.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$IDField </td>
+                                <td><p>The ID field of the table.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                                <aside class="alert alert-block alert-error">
+                    <h4>Deprecated</h4>
+                    
+                </aside>
+                        <dl>
+                                                                                            <dt>See also</dt>
+                                                                <dd><a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#method_delete"><span class="namespace-wrapper">\Orpheus\SQLAdapter\SQLAdapter::delete()</span></a></dd>
+                                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_doInsert" name="method_doInsert" class="anchor"></a>
+            <article class="method">
+                <h3 class="public deprecated">doInsert()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">doInsert(  <span class="argument">$options = array()</span>,   <span class="argument">$instance = null</span>,   <span class="argument">$IDField = null</span>) </pre>
+                <p><em>The static function to use for INSERT queries in global context</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$options </td>
+                                <td><p>The options used to build the query.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$instance </td>
+                                <td><p>The db instance used to send the query.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$IDField </td>
+                                <td><p>The ID field of the table.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                                <aside class="alert alert-block alert-error">
+                    <h4>Deprecated</h4>
+                    
+                </aside>
+                        <dl>
+                                                                                            <dt>See also</dt>
+                                                                <dd><a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#method_insert"><span class="namespace-wrapper">\Orpheus\SQLAdapter\SQLAdapter::insert()</span></a></dd>
+                                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_doLastID" name="method_doLastID" class="anchor"></a>
+            <article class="method">
+                <h3 class="public deprecated">doLastID()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">doLastID(  <span class="argument">$table</span>,   <span class="argument">$IDField = &#039;id&#039;</span>,   <span class="argument">$instance = null</span>) </pre>
+                <p><em>The static function to use to get last isnert id in global context</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$table </td>
+                                <td><p>The table to get the last ID. Some DBMS ignore it.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$IDField </td>
+                                <td><p>The field id name.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$instance </td>
+                                <td><p>The db instance used to send the query.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                                <aside class="alert alert-block alert-error">
+                    <h4>Deprecated</h4>
+                    
+                </aside>
+                        <dl>
+                                                                                            <dt>See also</dt>
+                                                                <dd><a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#method_lastID"><span class="namespace-wrapper">\Orpheus\SQLAdapter\SQLAdapter::lastID()</span></a></dd>
+                                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_doEscapeIdentifier" name="method_doEscapeIdentifier" class="anchor"></a>
+            <article class="method">
+                <h3 class="public deprecated">doEscapeIdentifier()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">doEscapeIdentifier(  <span class="argument">$Identifier</span>,   <span class="argument">$instance = null</span>) : \Orpheus\SQLAdapter\The</pre>
+                <p><em>Escapes SQL identifiers</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$Identifier </td>
+                                <td><p>The identifier to escape.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$instance </td>
+                                <td><p>The db instance used to send the query.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \Orpheus\SQLAdapter\The
+                                            &mdash; <p>escaped identifier.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                                <aside class="alert alert-block alert-error">
+                    <h4>Deprecated</h4>
+                    Escapes the given string as an SQL identifier.
+                </aside>
+                        <dl>
+                                                                                            <dt>See also</dt>
+                                                                <dd><a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#method_escapeIdentifier"><span class="namespace-wrapper">\Orpheus\SQLAdapter\SQLAdapter::escapeIdentifier()</span></a></dd>
+                                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_doFormatString" name="method_doFormatString" class="anchor"></a>
+            <article class="method">
+                <h3 class="public deprecated">doFormatString()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">doFormatString(  <span class="argument">$String</span>,   <span class="argument">$instance = null</span>) : \Orpheus\SQLAdapter\The</pre>
+                <p><em>Escapes SQL identifiers</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$String </td>
+                                <td><p>The value to format.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$instance </td>
+                                <td><p>The db instance used to send the query.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \Orpheus\SQLAdapter\The
+                                            &mdash; <p>formatted value.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                                <aside class="alert alert-block alert-error">
+                    <h4>Deprecated</h4>
+                    Formats the given value to the matching SQL type.
+If the value is a float, we make french decimal compatible with SQL.
+If null, we use the NULL value, else we consider it as a string value.
+                </aside>
+                        <dl>
+                                                                                            <dt>See also</dt>
+                                                                <dd><a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#method_formatString"><span class="namespace-wrapper">\Orpheus\SQLAdapter\SQLAdapter::formatString()</span></a></dd>
+                                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_doFormatValue" name="method_doFormatValue" class="anchor"></a>
+            <article class="method">
+                <h3 class="public deprecated">doFormatValue()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">doFormatValue(string  <span class="argument">$value</span>,   <span class="argument">$instance = null</span>) : \Orpheus\SQLAdapter\The</pre>
+                <p><em>The static function to quote</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$value </td>
+                                <td><p>The string to quote.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$instance </td>
+                                <td><p>The db instance used to send the query.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \Orpheus\SQLAdapter\The
+                                            &mdash; <p>quoted string.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                                <aside class="alert alert-block alert-error">
+                    <h4>Deprecated</h4>
+                    Add slashes before simple quotes in $String and surrounds it with simple quotes and .
+Keep in mind this function does not really protect your DB server, especially against SQL injections.
+                </aside>
+                        <dl>
+                                                                                            <dt>See also</dt>
+                                                                <dd><a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html#method_formatValue"><span class="namespace-wrapper">\Orpheus\SQLAdapter\SQLAdapter::formatValue()</span></a></dd>
+                                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_prepareQuery" name="method_prepareQuery" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">prepareQuery()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">prepareQuery(  <span class="argument">$options = array()</span>,   <span class="argument">$instance = null</span>,   <span class="argument">$IDField = null</span>) </pre>
+                <p><em>Prepare the query for the given instance</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$options </td>
+                                <td><p>The options used to build the query.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$instance </td>
+                                <td><p>The db instance used to send the query.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$IDField </td>
+                                <td><p>The ID field of the table.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_prepareInstance" name="method_prepareInstance" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">prepareInstance()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">prepareInstance(  <span class="argument">$instance = null</span>) </pre>
+                <p><em>The static function to prepareInstance an adapter for the given instance</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$instance </td>
+                                <td><p>The db instance name to prepareInstance.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_registerInstance" name="method_registerInstance" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">registerInstance()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">registerInstance(string  <span class="argument">$name</span>, \Orpheus\SQLAdapter\SQLAdapter  <span class="argument">$adapter</span>) </pre>
+                <p><em>Register an unique instance by its name</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$name </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td><a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html">\Orpheus\SQLAdapter\SQLAdapter</a></td>
+                                <td>$adapter </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getDefaults" name="method_getDefaults" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">getDefaults()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getDefaults() : array&lt;mixed,string&gt;</pre>
+                <p><em>Get defaults configuration to fill missing options</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    array&lt;mixed,string&gt;
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_connect" name="method_connect" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">connect()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">connect(array  <span class="argument">$config</span>) </pre>
+                <p><em>Connect to the DBMS using $config</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array</td>
+                                <td>$config </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                        <span class="label label-info">abstract</span>
+                                                <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_listConfig" name="method_listConfig" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">listConfig()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">listConfig() : array</pre>
+                <p><em>List all instance&#039;s configuration</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_formatFieldList" name="method_formatFieldList" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">formatFieldList()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">formatFieldList(array|string  <span class="argument">$fields</span>) : string</pre>
+                <p><em>Format the given $fields into an escaped SQL string list of key=value</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array|string</td>
+                                <td>$fields </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                                    </div>
+    </section>
+
+    <div id="source-view" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="source-view-label" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="source-view-label">SQLAdapter.php</h3>
+        </div>
+        <div class="modal-body">
+            <pre data-src="../files/orpheus-sqladapter\src\SQLAdapter\SQLAdapter.php.txt" class="language-php line-numbers"></pre>
+        </div>
+    </div>
+
+    <footer class="row-fluid">
+        <section class="span10 offset2">
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <section class="row-fluid footer-sections">
+                        <section class="span4">
+                                                        <h1><i class="icon-code"></i></h1>
+                            <div>
+                                <ul>
+                                                                            <li><a href="../namespaces/Orpheus.html">\Orpheus</a></li>
+                                                                    </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-bar-chart"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../graphs/class.html">Class Hierarchy Diagram</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-pushpin"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../reports/errors.html">Errors</a></li>
+                                    <li><a href="../reports/markers.html">Markers</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <hr />
+                    Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
+                    on July 23rd, 2016 at 16:17.
+                </section>
+            </section>
+        </section>
+    </footer>
+</div>
+
+</body>
+</html>

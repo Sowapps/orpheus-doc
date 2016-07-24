@@ -1,0 +1,35 @@
+{
+	"name" : "orpheus/orpheus-doc",
+	"description" : "Orpheus PHP Framework Documentation",
+	"type" : "project",
+	"license" : "MIT",
+	"keywords" : [
+		"framework",
+		"php",
+		"manual",
+		"doc"
+	],
+	"require" : {
+		"orpheus/orpheus-core" : "dev-master",
+		"orpheus/orpheus-hook" : "dev-master",
+		"orpheus/orpheus-cache" : "dev-master",
+		"orpheus/orpheus-yaml" : "dev-master",
+		"orpheus/orpheus-initernationalization" : "dev-master",
+		"orpheus/orpheus-rendering" : "dev-master",
+		"orpheus/orpheus-inputcontroller" : "dev-master",
+		"orpheus/orpheus-sqladapter" : "dev-master",
+		"orpheus/orpheus-publisher" : "dev-master",
+		"orpheus/orpheus-entitydescriptor" : "dev-master",
+		"orpheus/orpheus-form" : "dev-master",
+		"orpheus/orpheus-webtools" : "dev-master",
+		"phpdocumentor/phpdocumentor" : "2.*"
+	},
+	"authors" : [{
+			"name" : "Florent HAZARD",
+			"email" : "contact@sowapps.com",
+			"homepage" : "http://sowapps.com",
+			"role" : "Developer"
+		}
+	],
+	"minimum-stability" : "stable"
+}

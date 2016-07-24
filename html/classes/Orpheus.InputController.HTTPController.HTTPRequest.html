@@ -1,0 +1,3015 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>Orpheus Framework</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+    <link href="../css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/prism.css" rel="stylesheet" media="all"/>
+    <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+    <!--[if lt IE 9]>
+    <script src="../js/html5.js"></script>
+    <![endif]-->
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="../js/ui/1.10.4/jquery-ui.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.smooth-scroll.js"></script>
+    <script src="../js/prism.min.js"></script>
+    <!-- TODO: Add http://jscrollpane.kelvinluck.com/ to style the scrollbars for browsers not using webkit-->
+    <script type="text/javascript">
+    function loadExternalCodeSnippets() {
+        Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
+            var src = pre.getAttribute('data-src');
+            var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+            var language = 'php';
+
+            var code = document.createElement('code');
+            code.className = 'language-' + language;
+
+            pre.textContent = '';
+
+            code.textContent = 'Loading…';
+
+            pre.appendChild(code);
+
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('GET', src, true);
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+
+                    if (xhr.status < 400 && xhr.responseText) {
+                        code.textContent = xhr.responseText;
+
+                        Prism.highlightElement(code);
+                    }
+                    else if (xhr.status >= 400) {
+                        code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                    }
+                    else {
+                        code.textContent = '✖ Error: File does not exist or is empty';
+                    }
+                }
+            };
+
+            xhr.send(null);
+        });
+    }
+
+    $(document).ready(function(){
+        loadExternalCodeSnippets();
+    });
+    $('#source-view').on('shown', function () {
+        loadExternalCodeSnippets();
+    })
+</script>
+
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <i class="icon-ellipsis-vertical"></i>
+            </a>
+            <a class="brand" href="../index.html">Orpheus Framework</a>
+
+            <div class="nav-collapse">
+                <ul class="nav pull-right">
+                                        <li class="dropdown">
+                        <a href="../index.html" class="dropdown-toggle" data-toggle="dropdown">
+                            API Documentation <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                                                        <li><a href="../namespaces/Orpheus.html">\Orpheus</a></li>
+                                                    </ul>
+                    </li>
+                                        <li class="dropdown" id="charts-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Charts <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../graphs/class.html">
+                                    <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" id="reports-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Reports <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../reports/errors.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/markers.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">9</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/deprecated.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <i class="icon-list-alt"></i>&#160;Deprecated <span class="label label-info pull-right">16</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--<div class="go_to_top">-->
+    <!--<a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>-->
+    <!--</div>-->
+</div>
+
+<div id="___" class="container-fluid">
+        <section class="row-fluid">
+        <div class="span2 sidebar">
+                                <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-138532905"></a>
+                                <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
+            </div>
+            <div id="namespace-138532905" class="accordion-body collapse in">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-316488453"></a>
+                                <a href="../namespaces/Orpheus.html" style="margin-left: 30px; padding-left: 0">Orpheus</a>
+            </div>
+            <div id="namespace-316488453" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1895897120"></a>
+                                <a href="../namespaces/Orpheus.Cache.html" style="margin-left: 30px; padding-left: 0">Cache</a>
+            </div>
+            <div id="namespace-1895897120" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/Orpheus.Cache.Cache.html">Cache</a></li>
+                                                                                                    <li class="class"><a href="../classes/Orpheus.Cache.APCache.html">APCache</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.Cache.CacheException.html">CacheException</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.Cache.FSCache.html">FSCache</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1026838216"></a>
+                                <a href="../namespaces/Orpheus.Config.html" style="margin-left: 30px; padding-left: 0">Config</a>
+            </div>
+            <div id="namespace-1026838216" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1685911070"></a>
+                                <a href="../namespaces/Orpheus.Config.YAML.html" style="margin-left: 30px; padding-left: 0">YAML</a>
+            </div>
+            <div id="namespace-1685911070" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Orpheus.Config.YAML.YAML.html">YAML</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Orpheus.Config.AppConfig.html">AppConfig</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.Config.Config.html">Config</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.Config.IniConfig.html">IniConfig</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1101545340"></a>
+                                <a href="../namespaces/Orpheus.Controller.html" style="margin-left: 30px; padding-left: 0">Controller</a>
+            </div>
+            <div id="namespace-1101545340" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Orpheus.Controller.DelayedPageController.html">DelayedPageController</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.Controller.RedirectController.html">RedirectController</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.Controller.StaticPageController.html">StaticPageController</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2085139365"></a>
+                                <a href="../namespaces/Orpheus.Core.html" style="margin-left: 30px; padding-left: 0">Core</a>
+            </div>
+            <div id="namespace-2085139365" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Orpheus.Core.ClassLoader.html">ClassLoader</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.Core.RequestHandler.html">RequestHandler</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.Core.Route.html">Route</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1831660254"></a>
+                                <a href="../namespaces/Orpheus.Email.html" style="margin-left: 30px; padding-left: 0">Email</a>
+            </div>
+            <div id="namespace-1831660254" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Orpheus.Email.Email.html">Email</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1760489832"></a>
+                                <a href="../namespaces/Orpheus.EntityDescriptor.html" style="margin-left: 30px; padding-left: 0">EntityDescriptor</a>
+            </div>
+            <div id="namespace-1760489832" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-754423054"></a>
+                                <a href="../namespaces/Orpheus.EntityDescriptor.SQLGenerator.html" style="margin-left: 30px; padding-left: 0">SQLGenerator</a>
+            </div>
+            <div id="namespace-754423054" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/Orpheus.EntityDescriptor.SQLGenerator.SQLGenerator.html">SQLGenerator</a></li>
+                                                                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.SQLGenerator.SQLGeneratorMySQL.html">SQLGeneratorMySQL</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-508467014"></a>
+                                <a href="../namespaces/Orpheus.EntityDescriptor.User.html" style="margin-left: 30px; padding-left: 0">User</a>
+            </div>
+            <div id="namespace-508467014" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.User.AbstractUser.html">AbstractUser</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.User.User.html">User</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.EntityDescriptor.html">EntityDescriptor</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.FE.html">FE</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.FieldDescriptor.html">FieldDescriptor</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.LangGenerator.html">LangGenerator</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.PermanentEntity.html">PermanentEntity</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.TypeBoolean.html">TypeBoolean</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.TypeCity.html">TypeCity</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.TypeDate.html">TypeDate</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.TypeDatetime.html">TypeDatetime</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.TypeDescriptor.html">TypeDescriptor</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.TypeDouble.html">TypeDouble</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.TypeEmail.html">TypeEmail</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.TypeEnum.html">TypeEnum</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.TypeFloat.html">TypeFloat</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.TypeInteger.html">TypeInteger</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.TypeIP.html">TypeIP</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.TypeNatural.html">TypeNatural</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.TypeNumber.html">TypeNumber</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.TypeObject.html">TypeObject</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.TypePassword.html">TypePassword</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.TypePhone.html">TypePhone</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.TypePostalCode.html">TypePostalCode</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.TypeRef.html">TypeRef</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.TypeSlug.html">TypeSlug</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.TypeState.html">TypeState</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.TypeString.html">TypeString</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.TypeTime.html">TypeTime</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.EntityDescriptor.TypeURL.html">TypeURL</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1907159438"></a>
+                                <a href="../namespaces/Orpheus.Exception.html" style="margin-left: 30px; padding-left: 0">Exception</a>
+            </div>
+            <div id="namespace-1907159438" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Orpheus.Exception.ForbiddenException.html">ForbiddenException</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.Exception.NotFoundException.html">NotFoundException</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.Exception.OperationCancelledException.html">OperationCancelledException</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.Exception.UserException.html">UserException</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.Exception.UserReportsException.html">UserReportsException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-134294927"></a>
+                                <a href="../namespaces/Orpheus.File.html" style="margin-left: 30px; padding-left: 0">File</a>
+            </div>
+            <div id="namespace-134294927" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Orpheus.File.UploadedFile.html">UploadedFile</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1943880568"></a>
+                                <a href="../namespaces/Orpheus.Form.html" style="margin-left: 30px; padding-left: 0">Form</a>
+            </div>
+            <div id="namespace-1943880568" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Orpheus.Form.FormToken.html">FormToken</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1783603639"></a>
+                                <a href="../namespaces/Orpheus.Hook.html" style="margin-left: 30px; padding-left: 0">Hook</a>
+            </div>
+            <div id="namespace-1783603639" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Orpheus.Hook.Hook.html">Hook</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-842162127"></a>
+                                <a href="../namespaces/Orpheus.InputController.html" style="margin-left: 30px; padding-left: 0">InputController</a>
+            </div>
+            <div id="namespace-842162127" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1963517897"></a>
+                                <a href="../namespaces/Orpheus.InputController.HTTPController.html" style="margin-left: 30px; padding-left: 0">HTTPController</a>
+            </div>
+            <div id="namespace-1963517897" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Orpheus.InputController.HTTPController.HTMLHTTPResponse.html">HTMLHTTPResponse</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.InputController.HTTPController.HTTPController.html">HTTPController</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html">HTTPRequest</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.InputController.HTTPController.HTTPResponse.html">HTTPResponse</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.InputController.HTTPController.HTTPRoute.html">HTTPRoute</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.InputController.HTTPController.JSONHTTPResponse.html">JSONHTTPResponse</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.InputController.HTTPController.RedirectHTTPResponse.html">RedirectHTTPResponse</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Orpheus.InputController.Controller.html">Controller</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.InputController.ControllerRoute.html">ControllerRoute</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.InputController.InputRequest.html">InputRequest</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.InputController.OutputResponse.html">OutputResponse</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1419402027"></a>
+                                <a href="../namespaces/Orpheus.Publisher.html" style="margin-left: 30px; padding-left: 0">Publisher</a>
+            </div>
+            <div id="namespace-1419402027" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-163538236"></a>
+                                <a href="../namespaces/Orpheus.Publisher.Exception.html" style="margin-left: 30px; padding-left: 0">Exception</a>
+            </div>
+            <div id="namespace-163538236" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Orpheus.Publisher.Exception.FieldNotFoundException.html">FieldNotFoundException</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.Publisher.Exception.InvalidFieldException.html">InvalidFieldException</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.Publisher.Exception.UnknownKeyException.html">UnknownKeyException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1605534074"></a>
+                                <a href="../namespaces/Orpheus.Publisher.Fixture.html" style="margin-left: 30px; padding-left: 0">Fixture</a>
+            </div>
+            <div id="namespace-1605534074" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/Orpheus.Publisher.Fixture.FixtureInterface.html">FixtureInterface</a></li>
+                                                                                                    <li class="class"><a href="../classes/Orpheus.Publisher.Fixture.FixtureRepository.html">FixtureRepository</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1190879671"></a>
+                                <a href="../namespaces/Orpheus.Publisher.PermanentObject.html" style="margin-left: 30px; padding-left: 0">PermanentObject</a>
+            </div>
+            <div id="namespace-1190879671" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Orpheus.Publisher.PermanentObject.PermanentObject.html">PermanentObject</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1580632388"></a>
+                                <a href="../namespaces/Orpheus.Publisher.Transaction.html" style="margin-left: 30px; padding-left: 0">Transaction</a>
+            </div>
+            <div id="namespace-1580632388" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Orpheus.Publisher.Transaction.CreateTransactionOperation.html">CreateTransactionOperation</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.Publisher.Transaction.DeleteTransactionOperation.html">DeleteTransactionOperation</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.Publisher.Transaction.TransactionOperation.html">TransactionOperation</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.Publisher.Transaction.TransactionOperationSet.html">TransactionOperationSet</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.Publisher.Transaction.UpdateTransactionOperation.html">UpdateTransactionOperation</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Orpheus.Publisher.PasswordGenerator.html">PasswordGenerator</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.Publisher.SlugGenerator.html">SlugGenerator</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1998013292"></a>
+                                <a href="../namespaces/Orpheus.Rendering.html" style="margin-left: 30px; padding-left: 0">Rendering</a>
+            </div>
+            <div id="namespace-1998013292" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Orpheus.Rendering.HTMLRendering.html">HTMLRendering</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.Rendering.RawRendering.html">RawRendering</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.Rendering.Rendering.html">Rendering</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1257944848"></a>
+                                <a href="../namespaces/Orpheus.SQLAdapter.html" style="margin-left: 30px; padding-left: 0">SQLAdapter</a>
+            </div>
+            <div id="namespace-1257944848" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1656694367"></a>
+                                <a href="../namespaces/Orpheus.SQLAdapter.Exception.html" style="margin-left: 30px; padding-left: 0">Exception</a>
+            </div>
+            <div id="namespace-1656694367" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Orpheus.SQLAdapter.Exception.SQLException.html">SQLException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Orpheus.SQLAdapter.SQLAdapter.html">SQLAdapter</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.SQLAdapter.SQLAdapterMSSQL.html">SQLAdapterMSSQL</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.SQLAdapter.SQLAdapterMySQL.html">SQLAdapterMySQL</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.SQLAdapter.SQLAdapterPgSQL.html">SQLAdapterPgSQL</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1915444682"></a>
+                                <a href="../namespaces/Orpheus.SQLRequest.html" style="margin-left: 30px; padding-left: 0">SQLRequest</a>
+            </div>
+            <div id="namespace-1915444682" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Orpheus.SQLRequest.SQLRequest.html">SQLRequest</a></li>
+                                                    <li class="class"><a href="../classes/Orpheus.SQLRequest.SQLSelectRequest.html">SQLSelectRequest</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </section>
+    <section class="row-fluid">
+        <div class="span10 offset2">
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <nav>
+                                                <a href="../namespaces/Orpheus.InputController.HTTPController.html">\Orpheus\InputController\HTTPController</a> <i class="icon-level-up"></i>
+                                            </nav>
+                    <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal"><i class="icon-code"></i></a>
+
+                    <h1><small>\Orpheus\InputController\HTTPController</small>HTTPRequest</h1>
+                    <p><em>The HTTPRequest class</em></p>
+                    
+                    
+                                        
+                    <section id="summary">
+                        <h2>Summary</h2>
+                        <section class="row-fluid heading">
+                            <section class="span4">
+                                <a href="#methods">Methods</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#properties">Properties</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#constants">Constants</a>
+                            </section>
+                        </section>
+                        <section class="row-fluid public">
+                            <section class="span4">
+                                                                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html#method___construct" class="">__construct()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html#method_findFirstMatchingRoute" class="">findFirstMatchingRoute()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html#method_redirect" class="">redirect()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.InputRequest.html#method_process" class="">process()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.InputRequest.html#method_processRoute" class="">processRoute()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html#method_getRoutes" class="">getRoutes()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.InputRequest.html#method_getPath" class="">getPath()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.InputRequest.html#method_getParameter" class="">getParameter()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.InputRequest.html#method_hasParameter" class="">hasParameter()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.InputRequest.html#method_getParameters" class="">getParameters()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.InputRequest.html#method_hasInput" class="">hasInput()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.InputRequest.html#method_getInput" class="">getInput()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.InputRequest.html#method_getInputValue" class="">getInputValue()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.InputRequest.html#method_hasInputValue" class="">hasInputValue()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.InputRequest.html#method_getMainRequest" class="">getMainRequest()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.InputRequest.html#method_getRouteName" class="">getRouteName()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.InputRequest.html#method_getRoute" class="">getRoute()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.InputRequest.html#method_setRoute" class="">setRoute()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html#method___toString" class="">__toString()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html#method_getURL" class="">getURL()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html#method_generateFromEnvironment" class="">generateFromEnvironment()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html#method_handleCurrentRequest" class="">handleCurrentRequest()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html#method_getRouteClass" class="">getRouteClass()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html#method_getMethod" class="">getMethod()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html#method_isGET" class="">isGET()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html#method_isPOST" class="">isPOST()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html#method_isPUT" class="">isPUT()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html#method_isDELETE" class="">isDELETE()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html#method_getScheme" class="">getScheme()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html#method_getDomain" class="">getDomain()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html#method_getHeaders" class="">getHeaders()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html#method_getInputType" class="">getInputType()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html#method_getCookies" class="">getCookies()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html#method_getFiles" class="">getFiles()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html#method_getAllData" class="">getAllData()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html#method_getData" class="">getData()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html#method_getArrayData" class="">getArrayData()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html#method_hasArrayData" class="">hasArrayData()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html#method_hasData" class="">hasData()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html#method_hasDataKey" class="">hasDataKey()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html#method_getPathValues" class="">getPathValues()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html#method_getPathValue" class="">getPathValue()</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No public properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No constants found</em>
+                                                            </section>
+                        </section>
+                        <section class="row-fluid protected">
+                            <section class="span4">
+                                                                    <a href="../classes/Orpheus.InputController.InputRequest.html#method_setPath" class="">setPath()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.InputRequest.html#method_setParameters" class="">setParameters()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.InputRequest.html#method_setInput" class="">setInput()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html#method_setMethod" class="">setMethod()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html#method_setScheme" class="">setScheme()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html#method_setDomain" class="">setDomain()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html#method_setHeaders" class="">setHeaders()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html#method_setInputType" class="">setInputType()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html#method_setContent" class="">setContent()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html#method_setCookies" class="">setCookies()</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html#method_setFiles" class="">setFiles()</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <a href="../classes/Orpheus.InputController.InputRequest.html#property_path" class="">$path</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.InputRequest.html#property_parameters" class="">$parameters</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.InputRequest.html#property_input" class="">$input</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.InputRequest.html#property_route" class="">$route</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.InputRequest.html#property_mainRequest" class="">$mainRequest</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html#property_method" class="">$method</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html#property_scheme" class="">$scheme</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html#property_domain" class="">$domain</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html#property_headers" class="">$headers</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html#property_cookies" class="">$cookies</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html#property_files" class="">$files</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html#property_inputType" class="">$inputType</a><br />
+                                                                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html#property_pathValues" class="">$pathValues</a><br />
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                        <section class="row-fluid private">
+                            <section class="span4">
+                                                                    <em>No private methods found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No private properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                    </section>
+                </div>
+                <aside class="span4 detailsbar">
+                                        
+                    
+                    <dl>
+                        <dt>File</dt>
+                            <dd><a href="../files/orpheus-inputcontroller.src.InputController.HTTPController.HTTPRequest.html"><div class="path-wrapper">orpheus-inputcontroller\src\InputController\HTTPController\HTTPRequest.php</div></a></dd>
+                                                <dt>Package</dt>
+                            <dd><div class="namespace-wrapper">Default</div></dd>
+                                                <dt>Class hierarchy</dt>
+                            <dd class="hierarchy">
+                                                                                                                                                                                                                                                                                                
+                                        <div class="namespace-wrapper"><a href="../classes/Orpheus.InputController.InputRequest.html">\Orpheus\InputController\InputRequest</a></div>
+                                                                                                    <div class="namespace-wrapper">\Orpheus\InputController\HTTPController\HTTPRequest</div>
+                            </dd>
+
+                        
+                        
+                        
+                        
+                                                                        </dl>
+                    <h2>Tags</h2>
+                    <table class="table table-condensed">
+                                            <tr>
+                            <th>
+                                author
+                            </th>
+                            <td>
+                                                                    <p>Florent Hazard <a href="mailto:contact@sowapps.com">contact@sowapps.com</a></p>
+                                                            </td>
+                        </tr>
+                                        </table>
+                </aside>
+            </div>
+
+                        
+                                    <a id="properties" name="properties"></a>
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <h2>Properties</h2>
+                </div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_path" name="property_path" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$path</h3>
+                <pre class="signature">$path : string</pre>
+                <p><em>The path</em></p>
+                
+
+                                <h4>Type</h4>
+                string
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Orpheus.InputController.InputRequest.html"><div class="path-wrapper">\Orpheus\InputController\InputRequest</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_parameters" name="property_parameters" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$parameters</h3>
+                <pre class="signature">$parameters : array</pre>
+                <p><em>The input parameters (inline parameters)</em></p>
+                
+
+                                <h4>Type</h4>
+                array
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Orpheus.InputController.InputRequest.html"><div class="path-wrapper">\Orpheus\InputController\InputRequest</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_input" name="property_input" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$input</h3>
+                <pre class="signature">$input : array</pre>
+                <p><em>The input (like stdin)</em></p>
+                
+
+                                <h4>Type</h4>
+                array
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Orpheus.InputController.InputRequest.html"><div class="path-wrapper">\Orpheus\InputController\InputRequest</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_route" name="property_route" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$route</h3>
+                <pre class="signature">$route : \Orpheus\InputController\ControllerRoute</pre>
+                <p><em>The found route for this request</em></p>
+                
+
+                                <h4>Type</h4>
+                <a href="../classes/Orpheus.InputController.ControllerRoute.html">\Orpheus\InputController\ControllerRoute</a>
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Orpheus.InputController.InputRequest.html"><div class="path-wrapper">\Orpheus\InputController\InputRequest</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_mainRequest" name="property_mainRequest" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$mainRequest</h3>
+                <pre class="signature">$mainRequest : \Orpheus\InputController\InputRequest</pre>
+                <p><em>The current main request</em></p>
+                
+
+                                <h4>Type</h4>
+                <a href="../classes/Orpheus.InputController.InputRequest.html">\Orpheus\InputController\InputRequest</a>
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Orpheus.InputController.InputRequest.html"><div class="path-wrapper">\Orpheus\InputController\InputRequest</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_method" name="property_method" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$method</h3>
+                <pre class="signature">$method : string</pre>
+                <p><em>The used method for this request</em></p>
+                
+
+                                <h4>Type</h4>
+                string
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_scheme" name="property_scheme" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$scheme</h3>
+                <pre class="signature">$scheme : string</pre>
+                <p><em>The scheme used to access this route</em></p>
+                
+
+                                <h4>Type</h4>
+                string
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_domain" name="property_domain" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$domain</h3>
+                <pre class="signature">$domain : string</pre>
+                <p><em>The request host domain name</em></p>
+                
+
+                                <h4>Type</h4>
+                string
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_headers" name="property_headers" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$headers</h3>
+                <pre class="signature">$headers : array</pre>
+                <p><em>The headers sent to this route</em></p>
+                
+
+                                <h4>Type</h4>
+                array
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_cookies" name="property_cookies" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$cookies</h3>
+                <pre class="signature">$cookies : array</pre>
+                <p><em>The cookies sent to this route</em></p>
+                
+
+                                <h4>Type</h4>
+                array
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_files" name="property_files" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$files</h3>
+                <pre class="signature">$files : array</pre>
+                <p><em>The uploaded files sent to this route</em></p>
+                
+
+                                <h4>Type</h4>
+                array
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_inputType" name="property_inputType" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$inputType</h3>
+                <pre class="signature">$inputType : string</pre>
+                <p><em>The input content type</em></p>
+                
+
+                                <h4>Type</h4>
+                string
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                                            <dt>See also</dt>
+                                                                <dd><a href=""><span class="namespace-wrapper">https://en.wikipedia.org/wiki/Media_type</span></a></dd>
+                                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_pathValues" name="property_pathValues" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$pathValues</h3>
+                <pre class="signature">$pathValues : \stdClass</pre>
+                <p><em>The values in path</em></p>
+                
+
+                                <h4>Type</h4>
+                \stdClass
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                            
+                                    <a id="methods" name="methods"></a>
+            <div class="row-fluid">
+                <div class="span8 content class"><h2>Methods</h2></div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method___construct" name="method___construct" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">__construct()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">__construct(string  <span class="argument">$method</span>, string  <span class="argument">$path</span>, array  <span class="argument">$parameters = null</span>, array  <span class="argument">$input = null</span>) </pre>
+                <p><em>Constructor</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$method </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$path </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>array</td>
+                                <td>$parameters </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>array</td>
+                                <td>$input </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_findFirstMatchingRoute" name="method_findFirstMatchingRoute" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">findFirstMatchingRoute()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">findFirstMatchingRoute(boolean  <span class="argument">$alternative = false</span>) : \Orpheus\InputController\HTTPController\Route</pre>
+                <p><em>Find a matching route according to the request</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$alternative </td>
+                                <td><p>Is this looking for an alternative route ?</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \Orpheus\InputController\HTTPController\Route
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_redirect" name="method_redirect" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">redirect()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">redirect(\Orpheus\InputController\ControllerRoute  <span class="argument">$route</span>) : \Orpheus\InputController\HTTPController\RedirectHTTPResponse</pre>
+                <p><em>Redirect response to $route</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td><a href="../classes/Orpheus.InputController.ControllerRoute.html">\Orpheus\InputController\ControllerRoute</a></td>
+                                <td>$route </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Orpheus.InputController.HTTPController.RedirectHTTPResponse.html">\Orpheus\InputController\HTTPController\RedirectHTTPResponse</a>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                                            <dt>See also</dt>
+                                                                <dd><a href="../classes/Orpheus.InputController.InputRequest.html#method_redirect"><span class="namespace-wrapper">\Orpheus\InputController\InputRequest::redirect()</span></a></dd>
+                                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_process" name="method_process" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">process()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">process() : \Orpheus\InputController\NULL|\Orpheus\InputController\OutputResponse</pre>
+                <p><em>Process the request by finding a route and processing it</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    \Orpheus\InputController\NULL|<a href="../classes/Orpheus.InputController.OutputResponse.html">\Orpheus\InputController\OutputResponse</a>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Orpheus.InputController.InputRequest.html"><div class="path-wrapper">\Orpheus\InputController\InputRequest</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_processRoute" name="method_processRoute" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">processRoute()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">processRoute(\Orpheus\InputController\ControllerRoute  <span class="argument">$route</span>) : \Orpheus\InputController\OutputResponse</pre>
+                <p><em>Process the given route</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td><a href="../classes/Orpheus.InputController.ControllerRoute.html">\Orpheus\InputController\ControllerRoute</a></td>
+                                <td>$route </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Orpheus\Exception\NotFoundException</dt>
+                            <dd></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Orpheus.InputController.OutputResponse.html">\Orpheus\InputController\OutputResponse</a>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Orpheus.InputController.InputRequest.html"><div class="path-wrapper">\Orpheus\InputController\InputRequest</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getRoutes" name="method_getRoutes" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getRoutes()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getRoutes() : array&lt;mixed,\Orpheus\InputController\HTTPController\HTTPRoute&gt;</pre>
+                <p><em>Get all available routes</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    array&lt;mixed,<a href="../classes/Orpheus.InputController.HTTPController.HTTPRoute.html">\Orpheus\InputController\HTTPController\HTTPRoute</a>&gt;
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                                            <dt>See also</dt>
+                                                                <dd><a href="../classes/Orpheus.InputController.InputRequest.html#method_getRoutes"><span class="namespace-wrapper">\Orpheus\InputController\InputRequest::getRoutes()</span></a></dd>
+                                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getPath" name="method_getPath" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getPath()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getPath() : string</pre>
+                <p><em>Get the path</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Orpheus.InputController.InputRequest.html"><div class="path-wrapper">\Orpheus\InputController\InputRequest</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getParameter" name="method_getParameter" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getParameter()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getParameter(string  <span class="argument">$key</span>, mixed  <span class="argument">$default = null</span>) : mixed</pre>
+                <p><em>Get the parameter by $key, assuming $default value</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$key </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>mixed</td>
+                                <td>$default </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    mixed
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Orpheus.InputController.InputRequest.html"><div class="path-wrapper">\Orpheus\InputController\InputRequest</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_hasParameter" name="method_hasParameter" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">hasParameter()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">hasParameter(string  <span class="argument">$key</span>) : boolean</pre>
+                <p><em>Test if parameter $key exists in this request</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$key </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Orpheus.InputController.InputRequest.html"><div class="path-wrapper">\Orpheus\InputController\InputRequest</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getParameters" name="method_getParameters" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getParameters()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getParameters() : array</pre>
+                <p><em>Get all parameters</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Orpheus.InputController.InputRequest.html"><div class="path-wrapper">\Orpheus\InputController\InputRequest</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_hasInput" name="method_hasInput" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">hasInput()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">hasInput() : boolean</pre>
+                <p><em>Test if request has any input</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Orpheus.InputController.InputRequest.html"><div class="path-wrapper">\Orpheus\InputController\InputRequest</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getInput" name="method_getInput" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getInput()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getInput() : array</pre>
+                <p><em>Get input</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Orpheus.InputController.InputRequest.html"><div class="path-wrapper">\Orpheus\InputController\InputRequest</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getInputValue" name="method_getInputValue" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getInputValue()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getInputValue(string  <span class="argument">$key</span>, mixed  <span class="argument">$default = null</span>) : mixed</pre>
+                <p><em>Get the input by $key, assuming $default value</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$key </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>mixed</td>
+                                <td>$default </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    mixed
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Orpheus.InputController.InputRequest.html"><div class="path-wrapper">\Orpheus\InputController\InputRequest</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_hasInputValue" name="method_hasInputValue" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">hasInputValue()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">hasInputValue(string  <span class="argument">$key</span>) : boolean</pre>
+                <p><em>Test if input $key exists in this request</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$key </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Orpheus.InputController.InputRequest.html"><div class="path-wrapper">\Orpheus\InputController\InputRequest</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getMainRequest" name="method_getMainRequest" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getMainRequest()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getMainRequest() : \Orpheus\InputController\InputRequest</pre>
+                <p><em>Get the main input request</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Orpheus.InputController.InputRequest.html">\Orpheus\InputController\InputRequest</a>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Orpheus.InputController.InputRequest.html"><div class="path-wrapper">\Orpheus\InputController\InputRequest</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getRouteName" name="method_getRouteName" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getRouteName()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getRouteName() : string</pre>
+                <p><em>Get the route name to this request</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Orpheus.InputController.InputRequest.html"><div class="path-wrapper">\Orpheus\InputController\InputRequest</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getRoute" name="method_getRoute" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getRoute()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getRoute() : \Orpheus\InputController\ControllerRoute</pre>
+                <p><em>Get the route to this request</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Orpheus.InputController.ControllerRoute.html">\Orpheus\InputController\ControllerRoute</a>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Orpheus.InputController.InputRequest.html"><div class="path-wrapper">\Orpheus\InputController\InputRequest</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setRoute" name="method_setRoute" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setRoute()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setRoute(\Orpheus\InputController\ControllerRoute  <span class="argument">$route</span>) : \Orpheus\InputController\InputRequest</pre>
+                <p><em>Set the route to this request</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td><a href="../classes/Orpheus.InputController.ControllerRoute.html">\Orpheus\InputController\ControllerRoute</a></td>
+                                <td>$route </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Orpheus.InputController.InputRequest.html">\Orpheus\InputController\InputRequest</a>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Orpheus.InputController.InputRequest.html"><div class="path-wrapper">\Orpheus\InputController\InputRequest</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method___toString" name="method___toString" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">__toString()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">__toString() : string</pre>
+                <p><em>Get this request as string</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getURL" name="method_getURL" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getURL()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getURL() : string</pre>
+                <p><em>Get the URL used for this request</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_generateFromEnvironment" name="method_generateFromEnvironment" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">generateFromEnvironment()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">generateFromEnvironment() : \Orpheus\InputController\HTTPController\HTTPRequest</pre>
+                <p><em>Generate HTTPRequest from environment</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html">\Orpheus\InputController\HTTPController\HTTPRequest</a>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_handleCurrentRequest" name="method_handleCurrentRequest" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">handleCurrentRequest()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">handleCurrentRequest() </pre>
+                <p><em>Handle the current request as a HTTPRequest one
+This method ends the script</em></p>
+                
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getRouteClass" name="method_getRouteClass" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getRouteClass()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getRouteClass() : string</pre>
+                <p><em>Get the name of the route class associated to a HTTPRequest</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getMethod" name="method_getMethod" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getMethod()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getMethod() : string</pre>
+                <p><em>Get the method</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_isGET" name="method_isGET" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">isGET()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">isGET() : boolean</pre>
+                <p><em>Test if this is a GET request</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_isPOST" name="method_isPOST" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">isPOST()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">isPOST() : boolean</pre>
+                <p><em>Test if this is a POST request</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_isPUT" name="method_isPUT" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">isPUT()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">isPUT() : boolean</pre>
+                <p><em>Test if this is a PUT request</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_isDELETE" name="method_isDELETE" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">isDELETE()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">isDELETE() : boolean</pre>
+                <p><em>Test if this is a DELETE request</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getScheme" name="method_getScheme" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getScheme()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getScheme() : string</pre>
+                <p><em>Get the scheme</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getDomain" name="method_getDomain" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getDomain()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getDomain() : string</pre>
+                <p><em>Get the host domain</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getHeaders" name="method_getHeaders" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getHeaders()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getHeaders() : array</pre>
+                <p><em>Get the headers</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getInputType" name="method_getInputType" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getInputType()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getInputType() : string</pre>
+                <p><em>Get the input type</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getCookies" name="method_getCookies" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getCookies()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getCookies() : array</pre>
+                <p><em>Get the cookies</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getFiles" name="method_getFiles" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getFiles()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getFiles() : array</pre>
+                <p><em>Get the uploaded files</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getAllData" name="method_getAllData" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getAllData()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getAllData() : array</pre>
+                <p><em>Get all input data</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getData" name="method_getData" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getData()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getData(string  <span class="argument">$key</span>, mixed  <span class="argument">$default = null</span>) : mixed</pre>
+                <p><em>Get a data by $key, assuming $default</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$key </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>mixed</td>
+                                <td>$default </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    mixed
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getArrayData" name="method_getArrayData" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getArrayData()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getArrayData(string  <span class="argument">$key</span>) : mixed</pre>
+                <p><em>Get the data by key with array as default</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$key </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    mixed
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_hasArrayData" name="method_hasArrayData" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">hasArrayData()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">hasArrayData(string  <span class="argument">$key = null</span>) : boolean</pre>
+                <p><em>Test if data $key is an array</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$key </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_hasData" name="method_hasData" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">hasData()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">hasData(string  <span class="argument">$key = null</span>) : boolean</pre>
+                <p><em>Test if data contains the $key</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$key </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_hasDataKey" name="method_hasDataKey" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">hasDataKey()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">hasDataKey(string  <span class="argument">$path = null</span>, string  <span class="argument">$value = null</span>) : boolean</pre>
+                <p><em>Test if path contains a value and return it as parameter</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$path </td>
+                                <td><p>The path to get the value</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$value </td>
+                                <td><p>The value as ouput parameter</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getPathValues" name="method_getPathValues" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getPathValues()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getPathValues() : \Orpheus\InputController\HTTPController\stdClass</pre>
+                <p><em>Get path values</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    \Orpheus\InputController\HTTPController\stdClass
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getPathValue" name="method_getPathValue" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getPathValue()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getPathValue(string  <span class="argument">$key</span>, mixed  <span class="argument">$default = null</span>) : string</pre>
+                <p><em>Get path value by $key, assuming $default</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$key </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>mixed</td>
+                                <td>$default </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setPath" name="method_setPath" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">setPath()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setPath(string  <span class="argument">$path</span>) : \Orpheus\InputController\InputRequest</pre>
+                <p><em>Set the path</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$path </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Orpheus.InputController.InputRequest.html">\Orpheus\InputController\InputRequest</a>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Orpheus.InputController.InputRequest.html"><div class="path-wrapper">\Orpheus\InputController\InputRequest</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setParameters" name="method_setParameters" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">setParameters()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setParameters(array  <span class="argument">$parameters</span>) : \Orpheus\InputController\InputRequest</pre>
+                <p><em>Set the parameters</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array</td>
+                                <td>$parameters </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Orpheus.InputController.InputRequest.html">\Orpheus\InputController\InputRequest</a>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Orpheus.InputController.InputRequest.html"><div class="path-wrapper">\Orpheus\InputController\InputRequest</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setInput" name="method_setInput" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">setInput()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setInput(array  <span class="argument">$input</span>) : \Orpheus\InputController\InputRequest</pre>
+                <p><em>Set the input</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array</td>
+                                <td>$input </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Orpheus.InputController.InputRequest.html">\Orpheus\InputController\InputRequest</a>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Orpheus.InputController.InputRequest.html"><div class="path-wrapper">\Orpheus\InputController\InputRequest</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setMethod" name="method_setMethod" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">setMethod()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setMethod(string  <span class="argument">$method</span>) : \Orpheus\InputController\HTTPController\HTTPRequest</pre>
+                <p><em>Set the method</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$method </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html">\Orpheus\InputController\HTTPController\HTTPRequest</a>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setScheme" name="method_setScheme" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">setScheme()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setScheme(string  <span class="argument">$scheme</span>) : \Orpheus\InputController\HTTPController\HTTPRequest</pre>
+                <p><em>Set the scheme</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$scheme </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html">\Orpheus\InputController\HTTPController\HTTPRequest</a>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setDomain" name="method_setDomain" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">setDomain()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setDomain(string  <span class="argument">$domain</span>) : \Orpheus\InputController\HTTPController\HTTPRequest</pre>
+                <p><em>Set the host domain</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$domain </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html">\Orpheus\InputController\HTTPController\HTTPRequest</a>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setHeaders" name="method_setHeaders" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">setHeaders()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setHeaders(array  <span class="argument">$headers</span>) : \Orpheus\InputController\HTTPController\HTTPRequest</pre>
+                <p><em>Set the headers</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array</td>
+                                <td>$headers </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html">\Orpheus\InputController\HTTPController\HTTPRequest</a>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setInputType" name="method_setInputType" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">setInputType()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setInputType(string  <span class="argument">$inputType</span>) : \Orpheus\InputController\HTTPController\HTTPRequest</pre>
+                <p><em>Set the input type</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$inputType </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html">\Orpheus\InputController\HTTPController\HTTPRequest</a>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setContent" name="method_setContent" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">setContent()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setContent(string  <span class="argument">$content</span>, string  <span class="argument">$contentType</span>) : \Orpheus\InputController\HTTPController\HTTPRequest</pre>
+                <p><em>Set the content (input &amp; input type)</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$content </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$contentType </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html">\Orpheus\InputController\HTTPController\HTTPRequest</a>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setCookies" name="method_setCookies" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">setCookies()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setCookies(array  <span class="argument">$cookies</span>) : \Orpheus\InputController\HTTPController\HTTPRequest</pre>
+                <p><em>Set the cookies</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array</td>
+                                <td>$cookies </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html">\Orpheus\InputController\HTTPController\HTTPRequest</a>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setFiles" name="method_setFiles" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">setFiles()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setFiles(array  <span class="argument">$files</span>) : \Orpheus\InputController\HTTPController\HTTPRequest</pre>
+                <p><em>Set the uploaded files</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array</td>
+                                <td>$files </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Orpheus.InputController.HTTPController.HTTPRequest.html">\Orpheus\InputController\HTTPController\HTTPRequest</a>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                                    </div>
+    </section>
+
+    <div id="source-view" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="source-view-label" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="source-view-label">HTTPRequest.php</h3>
+        </div>
+        <div class="modal-body">
+            <pre data-src="../files/orpheus-inputcontroller\src\InputController\HTTPController\HTTPRequest.php.txt" class="language-php line-numbers"></pre>
+        </div>
+    </div>
+
+    <footer class="row-fluid">
+        <section class="span10 offset2">
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <section class="row-fluid footer-sections">
+                        <section class="span4">
+                                                        <h1><i class="icon-code"></i></h1>
+                            <div>
+                                <ul>
+                                                                            <li><a href="../namespaces/Orpheus.html">\Orpheus</a></li>
+                                                                    </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-bar-chart"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../graphs/class.html">Class Hierarchy Diagram</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-pushpin"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../reports/errors.html">Errors</a></li>
+                                    <li><a href="../reports/markers.html">Markers</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <hr />
+                    Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
+                    on July 23rd, 2016 at 16:17.
+                </section>
+            </section>
+        </section>
+    </footer>
+</div>
+
+</body>
+</html>
