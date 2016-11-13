@@ -196,13 +196,13 @@ function ssh2_run($command, $SSH2S=null) {
 
 /** 
  * Scans a directory cleanly.
- * @param $dir The directory to scan.
- * @param $sorting_order True to reverse results order. Default value is False.
- * @return An array of the files in this directory.
+ * @param string $dir The path to the directory to scan.
+ * @param boolean $sorting_order True to reverse results order. Default value is False.
+ * @return string[] An array of the files in this directory.
 
  * Scans a directory and returns a clean result.
  */
-function cleanscandir($dir, $sorting_order=0) {
+function cleanscandir($dir, $sorting_order=false) {
 	try {
 		$result = scandir($dir);
 	} catch(Exception $e) {
@@ -300,6 +300,32 @@ function formatException($e) {
 }
 
 /**
+ * Get the debug trace filtered by $filterStartWith 
+ * 
+ * @param string $filterStartWith Exclude functions starting with this value
+ * @return array The filtered backtrace
+ */
+function getDebugTrace($filterStartWith=null) {
+	$backtrace = debug_backtrace();
+	unset($backtrace[0]);
+	if( $filterStartWith !== null ) {
+		$prev = null;
+		foreach( $backtrace as $i => $trace ) {
+			if( stripos($trace['function'], $filterStartWith) === 0 ) {
+				if( $prev !== null ) {
+					unset($backtrace[$prev]);
+				}
+				$prev = $i;
+		
+			} else {
+				break;
+			}
+		}
+	}
+	return array_values($backtrace);
+}
+
+/**
  * Log a report in a file
  * 
  * @param $report The report to log.
@@ -310,39 +336,49 @@ function formatException($e) {
 
  * Log an error in a file serializing data to JSON.
  * Each line of the file is a JSON string of the reports.
- * The log folder is the constant LOGSPATH or, if undefined, the current one.
+ * The log folder is the constant LOGSPATH.
  * Take care of this behavior:
  *	If message is NULL, it won't display any report
- *	Else if ERROR_LEVEL is DEV_LEVEL, displays report
+ *	Else if DEV_VERSION, displays report
  *	Else if message is empty, throw exception
  *	Else it displays the message.
  */
 function log_report($report, $file, $action='', $message='') {
 	if( !is_scalar($report) ) {
 		if( $report instanceof Exception ) {
-			$exception	= $report;
+			$exception = $report;
+			$report	= $exception->getMessage();
+		} else {
+			$report	= stringify($report);
 		}
-		$report	= 'NON-SCALAR::'.stringify($report);//."\n".print_r($report, 1);
+// 		$report	= 'NON-SCALAR::'.stringify($report);//."\n".print_r($report, 1);
 	}
-	$Error	= array('date' => date('c'), 'report' => $report, 'action' => $action);
-	$logFilePath	= ((defined("LOGSPATH") && is_dir(LOGSPATH)) ? LOGSPATH : '').$file;
+	$error = array(
+		'id' => uniqid('OL', true),
+		'date' => date('c'),
+		'report' => $report,
+		'action' => $action,
+		'trace' => isset($exception) ? $exception->getTrace() : getDebugTrace('log'),
+		'crc32' => crc32(isset($exception) ? formatException($exception) : $report).''
+	);
+	$logFilePath = LOGSPATH.$file;
 	try {
-		file_put_contents($logFilePath, json_encode($Error)."\n", FILE_APPEND);
+		file_put_contents($logFilePath, json_encode($error)."\n", FILE_APPEND);
 	} catch( Exception $e ) {
-		$Error['report'] .= "<br />\n<b>And we met an error logging this report:</b><br />\n".stringify($e);
+		$error['report'] .= "<br />\n<b>And we met an error logging this report:</b><br />\n".stringify($e);
 	}
 	if( DEV_VERSION && isset($exception) ) {
 		displayException($exception, $action);
 	}
 	if( $message !== NULL ) {// Yeh != NULL, not !empty, null cause no report to user
 		if( DEV_VERSION ) {
-			$Error['message']	= $message;
-			$Error['page']		= nl2br(htmlentities($GLOBALS['Page']));
+			$error['message']	= $message;
+			$error['page']		= nl2br(htmlentities($GLOBALS['Page']));
 			// Display a pretty formatted error report
 			global $RENDERING;
-			if( !class_exists($RENDERING) || !$RENDERING::doDisplay('error', $Error) ) {
+			if( !class_exists($RENDERING) || !$RENDERING::doDisplay('error', $error) ) {
 				// If we fail in our display of this error, this is fatal.
-				echo print_r($Error, 1);
+				echo print_r($error, 1);
 			}
 		} else if( empty($message) ) {
 			throw new Exception('fatalErrorOccurred');
@@ -360,11 +396,10 @@ function log_report($report, $file, $action='', $message='') {
  * @param $action The action associated to the report. Default value is an empty string.
  * @see log_report()
 
- * Log a debug.
- * The log file is the constant DEBUGFILENAME or, if undefined, '.debug'.
+ * Log a debug. The log file is the constant LOGFILE_DEBUG.
  */
 function log_debug($report, $action='') {
-	log_report($report, defined("DEBUGFILENAME") ? DEBUGFILENAME : '.debug', $action, null);
+	log_report($report, LOGFILE_DEBUG, $action, null);
 }
 
 /**
@@ -381,23 +416,8 @@ function log_debug($report, $action='') {
 function log_hack($report, $action='', $message=null) {
 	global $USER;
 	log_report($report.' 
-[ IP: '.$_SERVER['REMOTE_ADDR'].'; User: '.(isset($USER) ? "$USER #".$USER->id() : 'N/A').'; agent: '.(isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : 'N/A').'; referer: '.(isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : 'N/A').' ]', defined("HACKLOGFILENAME") ? HACKLOGFILENAME : '.hack', $action, $message);
-}
-
-/**
- * Log a system error
- * 
- * @param $report The report to log.
- * @param $action The action associated to the report. Default value is an empty string.
- * @param $silent True to not display any report. Default value is false.
- * @see log_report()
- * @deprecated
-
- * Log a system error.
- * The log file is the constant SYSLOGFILENAME or, if undefined, '.log_error'.
- */
-function sys_error($report, $action='', $silent=false) {
-	log_report($report, defined("SYSLOGFILENAME") ? SYSLOGFILENAME : '.log_error', $action, $silent ? null : '');
+[ IP: '.$_SERVER['REMOTE_ADDR'].'; User: '.(isset($USER) ? "$USER #".$USER->id() : 'N/A').'; agent: '.(isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : 'N/A').'; referer: '.(isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : 'N/A').' ]',
+		LOGFILE_HACK, $action, $message);
 }
 
 /**
@@ -412,7 +432,7 @@ function sys_error($report, $action='', $silent=false) {
  * The log file is the constant SYSLOGFILENAME or, if undefined, '.log_error'.
  */
 function log_error($report, $action='', $fatal=true) {
-	log_report($report, defined("SYSLOGFILENAME") ? SYSLOGFILENAME : '.log_error', $action,
+	log_report($report, LOGFILE_SYSTEM, $action,
 // 		!$fatal && !DEV_VERSION ? null :
 		!$fatal ? null :
 			(is_string($fatal) ? $fatal : "A fatal error occurred, retry later.<br />\nUne erreur fatale est survenue, veuillez re-essayer plus tard.").
@@ -430,22 +450,7 @@ function log_error($report, $action='', $fatal=true) {
  * The log file is the constant PDOLOGFILENAME or, if undefined, '.pdo_error'.
  */
 function sql_error($report, $action='') {
-	log_report($report, defined("PDOLOGFILENAME") ? PDOLOGFILENAME : '.pdo_error', $action, null);// NULL to do nothing
-// 	log_report($report, defined("PDOLOGFILENAME") ? PDOLOGFILENAME : '.pdo_error', $action, null);//, t('errorOccurredWithDB'));
-// 	throw new SQLException('errorOccurredWithDB');
-}
-
-/**
- * Escape a text
- * 
- * @param $str The string to escape
- * @param $flags The flags of htmlentities()
- * @return The escaped string
-
- * Escape the text $str from special characters.
- */
-function escapeText($str, $flags=ENT_NOQUOTES) {
-	return htmlentities(str_replace("\'", "'", $str), $flags, 'UTF-8', false); 	
+	log_report($report, LOGFILE_SQL, $action, null);// NULL to do nothing
 }
 
 /**
@@ -693,8 +698,8 @@ function using($pkgPath) {
 
 /** 
  * Add a class to the autoload.
- * @param $className The class name
- * @param $classPath The class path
+ * @param string $className The class name
+ * @param string $classPath The class path
  * 
  * Add the class to the autoload list, associated with its file.
  * The semi relative path syntax has priority over the full relative path syntax.
@@ -1273,6 +1278,7 @@ define('OPT_PERMANENTOBJECT' , 4);
 define('OPT_LABEL2VALUE'	 , OPT_VALUE_IS_VALUE | OPT_LABEL_IS_KEY);
 define('OPT_VALUE2LABEL'	 , OPT_VALUE_IS_KEY | OPT_LABEL_IS_VALUE);
 define('OPT_VALUE'			 , OPT_VALUE_IS_VALUE | OPT_LABEL_IS_VALUE);
+define('OPT_KEY'			 , OPT_VALUE_IS_KEY | OPT_LABEL_IS_KEY);
 
 /**
  * Generate HTML option tag
@@ -1770,6 +1776,9 @@ function dt($time=TIME, $utc=false) {
  * Datetime format is storing a specific moment, we care about timezone
  */
 function df($format, $time=TIME, $tz=null) {
+	if( $time === null ) {
+		return '';
+	}
 	if( $tz === false ) {
 		$tz = 'UTC';
 	}
@@ -1796,7 +1805,13 @@ function df($format, $time=TIME, $tz=null) {
  * Allow any strtotime format to be converted to time, if time passed, it just returns it.
  */
 function dateToTime($date) {
-	return is_numeric($date) ? $date : strtotime($date.' GMT');
+	if( is_numeric($date) ) {
+		return $date;
+	}
+	if( $date instanceof DateTime ) {
+		return $date->getTimestamp();
+	}
+	return strtotime($date.' GMT');
 }
 
 /** 
@@ -2219,12 +2234,15 @@ function deleteCookie($name) {
  * Start a secured PHP Session and initialize Orpheus
  */
 function startSession($type=SESSION_WITH_COOKIE) {
-// 	global $ERROR_ACTION;
 	/**
 	 * By default, browsers share cookies across subdomains
 	 * So, we change the session name (also the cookie name) according to host
 	 * and specify host as .domain.com (prefixed by a dot).
 	 */
+	if( session_status() !== PHP_SESSION_NONE ) {
+		// Already started
+		return;
+	}
 	
 	Hook::trigger(HOOK_STARTSESSION, $type);
 	if( bintest($type, SESSION_WITH_COOKIE) ) {
@@ -2281,6 +2299,8 @@ function startSession($type=SESSION_WITH_COOKIE) {
 			throw new UserException('movedSession');
 		}
 	}
+	
+	Hook::trigger(HOOK_SESSIONSTARTED, $type);
 }
 defifn('SESSION_SHARE_ACROSS_SUBDOMAIN',	false);
 define('SESSION_WITH_COOKIE',		1<<0);

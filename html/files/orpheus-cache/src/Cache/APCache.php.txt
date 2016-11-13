@@ -38,8 +38,7 @@ class APCache implements Cache {
 	 */
 	public function __construct($class, $name, $ttl=0) {
 		$this->ttl = $ttl;
-		$this->key = $class.'.'.$name;
-// 		$this->get($cached);
+		$this->key = $class.'.'.$name.'@'.INSTANCE_ID;
 	}
 	
 	/**
@@ -75,10 +74,21 @@ class APCache implements Cache {
 	 * Reset the cache
 	 * 
 	 * @return boolean True in case of success
+	 * @deprecated Use clear()
 	 * 
 	 * This method uses the apc_delete() function.
 	 */
 	public function reset() {
+		return $this->clear();
+	}
+	
+	/**
+	 * Clear the cache
+	 * @return boolean True in case of success
+	 * 
+	 * This method uses the apc_delete() function.
+	 */
+	public function clear() {
 		return apc_delete($this->key);
 	}
 }

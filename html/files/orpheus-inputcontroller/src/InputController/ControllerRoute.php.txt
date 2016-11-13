@@ -142,6 +142,10 @@ abstract class ControllerRoute extends Route {
 				throw new NotFoundException('The controller "'.$this->controllerClass.'" was not found');
 			}
 			$request->setRoute($this);
+			
+			//Wow, we made it to handle session, ok ?
+			$this->prepare($request);
+			
 			if( !$this->isAccessible() ) {
 				throw new ForbiddenException('This route is not accessible in this context');
 			}

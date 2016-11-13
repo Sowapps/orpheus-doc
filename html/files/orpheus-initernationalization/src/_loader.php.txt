@@ -11,9 +11,27 @@ if( !defined('ORPHEUSPATH') ) {
 	return;
 }
 
-
 // define('HOOK_GETLANG', 'getDomainLang');
 // Hook::create(HOOK_GETLANG);
+
+/**
+ * Get a language ini file
+ * 
+ * @param string $lang The lang to get the domain file
+ * @param string $domain The domain of the file to load
+ * @return array The translations
+ * 
+ */
+function getLangDomainFile($lang, $domain) {
+	if( !empty($domain) && existsPathOf(LANGDIR.'/'.$lang.'/'.$domain.'.ini') ) {
+		return parse_ini_file(pathOf(LANGDIR.'/'.$lang.'/'.$domain.'.ini'));
+		
+// 	} else if( existsPathOf(LANGDIR.'/'.$APP_LANG.'.ini') ) {
+// 		$GLOBALS['LANG'] = parse_ini_file(pathOf(LANGDIR.'/'.$APP_LANG.'.ini'));
+	} else {
+		return null;
+	}
+}
 
 /**
  * Load a language ini file
@@ -24,7 +42,42 @@ if( !defined('ORPHEUSPATH') ) {
  * You don't have to use this function explicitly.
  */
 function loadLangFile($domain='global') {
-	global $LANG, $APP_LANG;
+// 	global $LANG, $APP_LANG;
+	/**
+	 * $APP_LOCALE is the current locale, e.g en_US
+	 * $APP_LANG is the current base language, e.g fr
+	 * $LANG is the array containing all current locale translations
+	 */
+	global $LANG, $APP_LOCALE, $APP_LANG;
+	if( $LANG && array_key_exists($domain, $LANG) ) {
+		return;
+	}
+	if( !isset($APP_LOCALE) ) {
+		// Set APP LANG to default with backward compatibility
+		$APP_LOCALE = defined('DEFAULT_LOCALE') ? DEFAULT_LOCALE : LANG;
+	}
+	// Former LANGBASE constant
+	if( !isset($APP_LANG) ) {
+		if( defined('LANGBASE') ) {
+			// backward compatibility
+			$APP_LANG = LANGBASE;
+		} else {
+			list($APP_LANG) = explode('_', $APP_LOCALE, 2);
+			// backward compatibility
+			define('LANGBASE', $APP_LANG);
+		}
+	}
+// 	if( !isset($APP_LANG) ) {
+// 		$APP_LANG = Hook::trigger(HOOK_GETLANG, true, LANG, $domain);
+// 	}
+	$LANG[$domain] = getLangDomainFile($APP_LOCALE, $domain);
+// 	if( !empty($domain) && existsPathOf(LANGDIR.'/'.$APP_LANG.'/'.$domain.'.ini') ) {
+// 		$GLOBALS['LANG'][$domain] = parse_ini_file(pathOf(LANGDIR.'/'.$APP_LANG.'/'.$domain.'.ini'));
+		
+// 	} else if( existsPathOf(LANGDIR.'/'.$APP_LANG.'.ini') ) {
+// 		$GLOBALS['LANG'] = parse_ini_file(pathOf(LANGDIR.'/'.$APP_LANG.'.ini'));
+// 	}
+	/*
 	if( isset($LANG[$domain]) ) { return; }
 	if( !isset($APP_LANG) ) {
 		// Set APP LANG to default
@@ -32,19 +85,17 @@ function loadLangFile($domain='global') {
 // 		$APP_LANG = Hook::trigger(HOOK_GETLANG, true, LANG, $domain);
 	}
 	if( !empty($domain) ) {
-		$GLOBALS['LANG'][$domain] = array();
+		$LANG['LANG'][$domain] = array();
+		$path = null;
 		if( existsPathOf(LANGDIR.$APP_LANG.'/'.$domain.'.ini', $path) ) {
-			$GLOBALS['LANG'][$domain] = parse_ini_file($path);
-// 			$GLOBALS['LANG'][$domain] = parse_ini_file(pathOf(LANGDIR.$APP_LANG.'/'.$domain.'.ini'));
+			$LANG[$domain] = parse_ini_file($path);
 		}
-		
-// 	} else if( existsPathOf(LANGDIR.'/'.$APP_LANG.'.ini') ) {
-// 		$GLOBALS['LANG'] = parse_ini_file(pathOf(LANGDIR.'/'.$APP_LANG.'.ini'));
 	}
+	*/
 }
 
 /**
- * Text function for translations.
+ * Translate a key
  * 
  * @param string $k The Key to translate, prefer to use an internal language (English CamelCase).
  * @param string $domain The domain to apply the Key. Default value is 'global'.
@@ -77,24 +128,25 @@ function t($k, $domain='global', $values=array()) {
 			break;
 		}
 	}
-	if( $values!==array() ) {
+	if( $values !== array() ) {
 		if( !is_array($values) ) {
-			$values		= array_slice(func_get_args(), 2);
+			$values = array_slice(func_get_args(), 2);
 		}
 		if( isset($values[0]) ) {
 			if( !is_array($values[0]) ) {
 				return vsprintf($r, $values);
 			}
-			$rkeys		= $values[0];
-			$rvalues	= !empty($values[1]) ? $values[1] : '';
+			$rkeys = $values[0];
+			$rvalues = !empty($values[1]) ? $values[1] : '';
 		} else {
-			$rkeys		= array_map(function ($v) { return "#{$v}#"; }, array_keys($values));
-			$rvalues	= array_values($values);
+			$rkeys = array_map(function ($v) { return "#{$v}#"; }, array_keys($values));
+			$rvalues = array_values($values);
 		}
 		$r = str_replace($rkeys, $rvalues, $r);
 	}
 	return $r;
 }
+
 /**
  * Display t()
  * 
@@ -104,7 +156,7 @@ function t($k, $domain='global', $values=array()) {
  * @see t()
  */
 function _t($k, $domain='global', $values=array()) {
-	echo t($k, $domain, $values);
+	echo t($k, $domain, is_array($values) ? $values : array_slice(func_get_args(), 2));
 }
 
 /**
@@ -169,4 +221,37 @@ function tc($k) {
 function sanitizeNumber($value) {
 	return str_replace(array(tc('decimal_point'), tc('thousands_sep')), array('.', ''), $value);
 }
+
+/**
+ * Format a money by currency and using a number formatter
+ * 
+ * @param number $value
+ * @param string $double
+ * @param string $currency
+ * @return string
+ */
+function formatMoney($value, $double=true, $currency='€') {
+	return ($double ? formatDouble($value) : formatInt($value)).' '.$currency;
+}
+
+/**
+ * Format a int using locale
+ * 
+ * @param number $value
+ * @return string
+ */
+function formatInt($value) {
+	return number_format($value, 0, '', t('thousands_sep'));
+}
+
+/**
+ * Format a double using locale
+ * 
+ * @param number $value
+ * @return string
+ */
+function formatDouble($value) {
+	return number_format($value, 2, t('decimal_point'), t('thousands_sep'));
+}
+
 

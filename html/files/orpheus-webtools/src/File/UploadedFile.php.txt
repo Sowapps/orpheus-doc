@@ -62,7 +62,7 @@ class UploadedFile {
 	 * 
 	 * @var array
 	 */
-	public $type;
+	public $expectedType;
 	
 	/**
 	 * Constructor
@@ -201,9 +201,8 @@ class UploadedFile {
 			}
 		}
 		
-		if( $this->type !== NULL ) {
-			$ext = $this->getType();
-			if( $ext === $this->type ) {
+		if( $this->expectedType !== NULL ) {
+			if( $this->getType() !== $this->expectedType ) {
 				throw new UserException('invalidType');
 			}
 		}

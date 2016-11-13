@@ -32,14 +32,14 @@ class FSCache implements Cache {
 	 * 
 	 * @var string
 	 */
-	protected static $ext='.cache';
+	protected static $ext = '.cache';
 	
 	/**
 	 * The delimitator in cache file
 	 * 
 	 * @var string
 	 */
-	protected static $delim='|';
+	protected static $delim = '|';
 	
 	/**
 	 * Constructor

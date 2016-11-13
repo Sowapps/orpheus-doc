@@ -36,9 +36,13 @@ Hook::create(HOOK_CHECKMODULE);
 define('HOOK_STARTSESSION_AUTO', 'startSessionAuto');
 Hook::create(HOOK_STARTSESSION_AUTO);
 
-// Session is started
+// Session - START
 define('HOOK_STARTSESSION', 'startSession');
 Hook::create(HOOK_STARTSESSION);
+
+// Session - START
+define('HOOK_SESSIONSTARTED', 'sessionStarted');
+Hook::create(HOOK_SESSIONSTARTED);
 
 // Application ready
 define('HOOK_APPREADY', 'appReady');

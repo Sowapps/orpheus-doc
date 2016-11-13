@@ -7,6 +7,7 @@ namespace Orpheus\InputController\HTTPController;
 
 use Orpheus\Rendering\HTMLRendering;
 use Orpheus\Exception\UserException;
+use Orpheus\Exception\ForbiddenException;
 
 /**
  * The HTMLHTTPResponse class
@@ -63,7 +64,7 @@ class HTMLHTTPResponse extends HTTPResponse {
 		if( !headers_sent() ) {
 			header('Content-Type: text/html; charset="UTF-8"');
 		}
-		if( $this->body ) {
+		if( isset($this->body) ) {
 			// if already generated we display the body
 			echo $this->getBody();
 			return;
@@ -113,6 +114,9 @@ class HTMLHTTPResponse extends HTTPResponse {
 	 * @return \Orpheus\InputController\HTTPController\HTMLHTTPResponse
 	 */
 	public static function generateFromException(\Exception $exception, $action='Handling the request') {
+		if( $exception instanceof ForbiddenException ) {
+			return new RedirectHTTPResponse(u(DEFAULTROUTE));
+		}
 		$code = $exception->getCode();
 		if( $code < 100 ) {
 			$code = HTTP_INTERNAL_SERVER_ERROR;

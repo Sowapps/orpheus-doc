@@ -91,6 +91,19 @@ class HTTPRoute extends ControllerRoute {
 	}
 	
 	/**
+	 * Prepare environment for this route
+	 * 
+	 * @param HTTPRequest $request
+	 */
+	public function prepare(HTTPRequest $request) {
+// 		$route = $this->getRoute();
+		$routeOptions = $this->getOptions();
+		if( !isset($routeOptions['session']) || $routeOptions['session'] ) {
+			startSession();
+		}
+	}
+	
+	/**
 	 * Format the current route to get an URL from path
 	 * 
 	 * @param string[] $values
@@ -236,7 +249,7 @@ class HTTPRoute extends ControllerRoute {
 	 * @param string $name
 	 * @param string $path
 	 * @param string $controller
-	 * @param string $methods
+	 * @param string|array $methods
 	 * @param array $restrictTo
 	 * @param string $defaultResponse
 	 * @param array $options
@@ -326,6 +339,7 @@ class HTTPRoute extends ControllerRoute {
 
 //http://fr.php.net/manual/fr/regexp.reference.escape.php
 //http://fr.php.net/manual/fr/regexp.reference.character-classes.php
+// Case Insensitive
 HTTPRoute::setTypeRegex('int',	'\d+');
 HTTPRoute::setTypeRegex('id',	'[1-9]\d*');
 HTTPRoute::setTypeRegex('slug',	'[a-z0-9\-_]+');

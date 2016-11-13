@@ -416,6 +416,17 @@ abstract class AbstractUser extends PermanentEntity {
 	}
 	
 	/**
+	 * Check if this user has developer access
+	 * 
+	 * @return boolean True if this user has developer access
+	 */
+	public static function loggedHasDeveloperAccess() {
+		$user = static::getLoggedUser();
+		$requiredAccessLevel = (int) static::getRoleAccesslevel('developer');
+		return $user && $user->checkPerm($requiredAccessLevel);
+	}
+	
+	/**
 	 * Get application roles
 	 * 
 	 * @return array

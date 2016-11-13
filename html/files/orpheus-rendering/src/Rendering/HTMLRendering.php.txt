@@ -123,7 +123,7 @@ class HTMLRendering extends Rendering {
 		include static::getModelPath($model);
 		
 		$this->pullFromStack();
-		$currentLayouts	= count(static::$layoutStack);
+		$currentLayouts = count(static::$layoutStack);
 		while( $currentLayouts > $prevLayouts && static::endCurrentLayout($env) ) {
 			$currentLayouts--;
 		}
@@ -158,7 +158,7 @@ class HTMLRendering extends Rendering {
 	 * @return string
 	 */
 	public static function renderReport($report, $domain, $type, $stream) {
-		$report	= nl2br($report);
+		$report = nl2br($report);
 		if( file_exists(static::getModelPath('report-'.$type)) ) {
 			return static::doRender('report-'.$type, array('Report'=>$report, 'Domain'=>$domain, 'Type'=>$type, 'Stream'=>$stream));
 		}
@@ -269,12 +269,12 @@ class HTMLRendering extends Rendering {
 	 */
 	protected static function addTypedURL(&$array, $url, $type=null) {
 		if( !$type ) {
-			$type	= self::LINK_TYPE_CUSTOM;
+			$type = self::LINK_TYPE_CUSTOM;
 		}
 		if( !isset($array[$type]) ) {
-			$array[$type]	= array();
+			$array[$type] = array();
 		}
-		$array[$type][]	= $url;
+		$array[$type][] = $url;
 	}
 	
 	/**

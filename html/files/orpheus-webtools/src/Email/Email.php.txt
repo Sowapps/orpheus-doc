@@ -13,26 +13,26 @@ namespace Orpheus\Email;
 class Email {
 	
 	/**
-	 * The mail headers
+	 * The email headers
 	 * 
 	 * @var array
 	 */
 	private $headers = array(
-		'MIME-Version'	=> '',
-		'Content-Type'	=> 'text/plain, charset=UTF-8',
-		'Content-Transfer-Encoding'	=> '',
+		'MIME-Version' => '',
+		'Content-Type' => 'text/plain, charset=UTF-8',
+		'Content-Transfer-Encoding' => '',
 		//'Content-Transfer-Encoding' => '7bit',
-		'Date'	=> '',//See init()
-		'From'	=> 'no-reply@nodomain.com',//Override PHP's default
-		'Sender'	=> '',
-		'X-Sender'	=> '',
-		'Reply-To'	=> '',//Reply Email Address
-		'Return-Path'	=> '',//Return Email Address
-		'Organization'	=> '',
+		'Date' => '',//See init()
+		'From' => 'no-reply@nodomain.com',//Override PHP's default
+		'Sender' => '',
+		'X-Sender' => '',
+		'Reply-To' => '',//Reply Email Address
+		'Return-Path' => '',//Return Email Address
+		'Organization' => '',
 // 		'X-Priority' => '3',
 // 		'X-Mailer' => 'Orpheus\'s Mailer',
 // 		'X-PHP-Originating-Script' => 'Orpheus\'s Publisher Lib Email Class',
-		'Bcc'	=> '',
+		'Bcc' => '',
 	);
 	
 	/**
@@ -40,21 +40,21 @@ class Email {
 	 * 
 	 * @var string
 	 */
-	private $HTMLBody;
+	private $htmlBody;
 	
 	/**
 	 * The text body
 	 * 
 	 * @var string
 	 */
-	private $tEXTBody;
+	private $textBody;
 	
 	/**
 	 * The alternative body
 	 * 
 	 * @var string
 	 */
-	private $AltBody;
+	private $altBody;
 	
 	/**
 	 * Attached files to mail
@@ -63,7 +63,7 @@ class Email {
 	 * 
 	 * @var array
 	 */
-	private $AttFiles = array();
+	private $attachedFiles = array();
 
 	/**
 	 * The mail subject
@@ -84,7 +84,7 @@ class Email {
 	 * 
 	 * @var array
 	 */
-	private $MIMEBoundary = array();
+	private $mimeBoundary = array();
 
 	//Methods
 	
@@ -104,13 +104,13 @@ class Email {
 	 * Initialize the object
 	 */
 	private function init() {
-		$this->Headers['Date'] = date('r');
-		$allowReply	= true;
+		$this->headers['Date'] = date('r');
+		$allowReply = true;
 		if( defined('REPLYEMAIL') ) {
-			$sendEmail	= REPLYEMAIL;
-			$allowReply	= false;
+			$sendEmail = REPLYEMAIL;
+			$allowReply = false;
 		} else if( defined('ADMINEMAIL') ) {
-			$sendEmail	= ADMINEMAIL;
+			$sendEmail = ADMINEMAIL;
 		} else {
 			return;
 		}
@@ -128,11 +128,11 @@ class Email {
 	 * @param string $value The new value of the header.
 	 */
 	public function setHeader($key, $value) {
-		if( !isset($this->Headers[$key]) ) {
+		if( !isset($this->headers[$key]) ) {
 			throw new \Exception('UnknownHeader');
 			return false;
 		}
-		$this->Headers[$key] = $value;
+		$this->headers[$key] = $value;
 	}
 	
 	/* * Set the type of the mail
@@ -161,7 +161,7 @@ class Email {
 	 * @return boolean True if this file is in the attached files list
 	 */
 	public function containsFile($filename) {
-		return in_array($filename, $this->AttFiles);
+		return in_array($filename, $this->attachedFiles);
 	}
 	
 	/**
@@ -172,7 +172,7 @@ class Email {
 	 * Check if the file list is not empty.
 	 */
 	public function containsFiles() {
-		return !empty($this->AttFiles);
+		return !empty($this->attachedFiles);
 	}
 	
 	/**
@@ -186,7 +186,7 @@ class Email {
 		if( $this->containsFile($filename) ) {
 			throw new \Exception('FileAlreadyContained');
 		}
-		$this->AttFiles[] = $filename;
+		$this->attachedFiles[] = $filename;
 	}
 	
 	/**
@@ -197,10 +197,10 @@ class Email {
 	 * Remove $filename from the attached files list.
 	 */
 	public function removeFile($filename) {
-		if( ($key = array_search($filename, $this->AttFiles)) === false ) {
+		if( ($key = array_search($filename, $this->attachedFiles)) === false ) {
 			throw new \Exception('FileNotContained');
 		}
-		unset($this->AttFiles[$key]);
+		unset($this->attachedFiles[$key]);
 	}
 	
 	/**
@@ -210,7 +210,7 @@ class Email {
 	 */
 	public function setSubject($subject) {
 		// If subject is too long, QP returns a bad string, it's working with b64.
-		$this->Subject	= static::escapeB64($subject);// Supports UTF-8
+		$this->subject = static::escapeB64($subject);// Supports UTF-8
 	}
 	
 	/**
@@ -222,7 +222,7 @@ class Email {
 		if( !is_string($body) ) {
 			throw new \Exception('RequireStringParameter');
 		}
-		$this->TEXTBody = static::escape($body);
+		$this->textBody = static::escape($body);
 	}
 
 	/**
@@ -234,7 +234,7 @@ class Email {
 		if( !is_string($body) ) {
 			throw new \Exception('RequireStringParameter');
 		}
-		$this->HTMLBody	= static::convHTMLBody($body);
+		$this->htmlBody = static::convHTMLBody($body);
 	}
 	
 	/**
@@ -272,7 +272,7 @@ class Email {
 		if( !is_string($body) ) {
 			throw new \Exception('RequireStringParameter');
 		}
-		$this->AltBody = $body;
+		$this->altBody = $body;
 	}
 	
 	/**
@@ -300,7 +300,7 @@ class Email {
 		//=?utf-8?b?".base64_encode($from_name)."?= <".$from_a.">\r\n
 		$this->setHeader('From', $senderName===NULL ? $senderEmail : static::escapeB64($senderName).' <'.$senderEmail.'>');
 		$this->setHeader('Sender', $senderEmail);
-		if( $allowReply && empty($this->Headers['Return-Path']) ) {
+		if( $allowReply && empty($this->headers['Return-Path']) ) {
 			$this->setReplyTo($senderEmail);
 		}
 	}
@@ -329,7 +329,7 @@ class Email {
 					'headers' => array(
 						'Content-Type' => 'multipart/alternative',
 					),
-					'body' => ( mb_detect_encoding($this->AltBody, 'UTF-8') === 'UTF-8' ) ? utf8_decode($this->AltBody) : $this->AltBody,
+					'body' => ( mb_detect_encoding($this->altBody, 'UTF-8') === 'UTF-8' ) ? utf8_decode($this->altBody) : $this->altBody,
 				);
 			}
 			
@@ -339,7 +339,7 @@ class Email {
 						'Content-Type' => 'text/plain; charset="UTF-8"',
 						'Content-Transfer-Encoding' => 'quoted-printable',
 					),
-					'body' => $this->TEXTBody,
+					'body' => $this->textBody,
 				);
 			}
 			
@@ -349,7 +349,7 @@ class Email {
 						'Content-Type' => 'text/html; charset="UTF-8"',
 						'Content-Transfer-Encoding' => 'quoted-printable',
 					),
-					'body' => $this->HTMLBody,
+					'body' => $this->htmlBody,
 				);
 			}
 			
@@ -385,7 +385,7 @@ BODY;
 					
 				}
 				
-				foreach( $this->AttFiles as $fileName ) {
+				foreach( $this->attachedFiles as $fileName ) {
 					if( !is_readable($fileName) ) {
 						continue;
 					}
@@ -428,13 +428,13 @@ BODY;
 				$this->setHeader('MIME-Version', '1.0');
 				$this->setHeader('Content-Type', 'text/html; charset="UTF-8"');
 				$this->setHeader('Content-Transfer-Encoding', 'quoted-printable');
-				$body = $this->HTMLBody;
+				$body = $this->htmlBody;
 			
 			} else if( $this->isTEXT() ) {
 				$this->setHeader('MIME-Version', '');
 				$this->setHeader('Content-Type', 'text/plain; charset="UTF-8"');
 				$this->setHeader('Content-Transfer-Encoding', 'quoted-printable');
-				$body = $this->TEXTBody;
+				$body = $this->textBody;
 			}
 		}
 		if( empty($body) ) {
@@ -442,14 +442,14 @@ BODY;
 		}
 		
 		$headers = '';
-		foreach( $this->Headers as $headerName => $headerValue ) {
+		foreach( $this->headers as $headerName => $headerValue ) {
 			if( !empty($headerValue) ) {
 				$headers .= "{$headerName}: {$headerValue}\r\n";
 			}
 		}
 		$headers .= "\r\n";
 		if( !is_array($toAddress) ) {
-			if( !mail($toAddress, $this->Subject, $body, $headers) ) {
+			if( !mail($toAddress, $this->subject, $body, $headers) ) {
 				throw new \Exception("issueSendingEmail");
 			}
 		} else {
@@ -469,7 +469,7 @@ BODY;
 				if( empty($MailToEmail) ) { continue; }
 // 					throw new \Exception("EmptyEmailAddress");
 
-				if( !mail($MailToEmail, $this->Subject, $body, $headers)) {
+				if( !mail($MailToEmail, $this->subject, $body, $headers)) {
 					throw new \Exception('issueSendingEmail');
 				}
 			}
@@ -484,11 +484,11 @@ BODY;
 	 * @return string The value of the boundary.
 	 */
 	public function getBoundary($boundaryInd=0) {
-		if( empty($this->MIMEBoundary[$boundaryInd]) ) {
-			$this->MIMEBoundary[$boundaryInd]	= 'ORPHEUS_'.md5(microtime(1)+$boundaryInd);
+		if( empty($this->mimeBoundary[$boundaryInd]) ) {
+			$this->mimeBoundary[$boundaryInd] = 'ORPHEUS_'.md5(microtime(1)+$boundaryInd);
 // 			$this->MIMEBoundary[$boundaryInd] = '-=%ORPHEUS_'.md5(microtime(1)+$boundaryInd).'%=-';
 		}
-		return $this->MIMEBoundary[$boundaryInd];
+		return $this->mimeBoundary[$boundaryInd];
 	}
 	
 	/**
@@ -497,7 +497,7 @@ BODY;
 	 * @return boolean True if this object has a HTML message
 	 */
 	public function isHTML() {
-		return !empty($this->HTMLBody);
+		return !empty($this->htmlBody);
 	}
 	
 	/**
@@ -506,7 +506,7 @@ BODY;
 	 * @return boolean True if this object has a TEXT message
 	 */
 	public function isTEXT() {
-		return !empty($this->TEXTBody);
+		return !empty($this->textBody);
 	}
 	
 	/**
@@ -515,7 +515,7 @@ BODY;
 	 * @return boolean True if this object has an alternative message
 	 */
 	public function isAlternative() {
-		return !empty($this->AltBody);
+		return !empty($this->altBody);
 	}
 	
 	/**

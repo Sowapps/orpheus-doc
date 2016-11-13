@@ -159,9 +159,9 @@ class HTTPRequest extends InputRequest {
 		
 		if( !empty($_SERVER['CONTENT_TYPE']) ) {
 			list($inputType) = explodeList(';', $_SERVER['CONTENT_TYPE'], 2);
-			$inputType	= trim($inputType);
+			$inputType = trim($inputType);
 		} else {
-			$inputType	= 'application/x-www-form-urlencoded';
+			$inputType = 'application/x-www-form-urlencoded';
 		}
 		
 		// Get input
@@ -178,10 +178,10 @@ class HTTPRequest extends InputRequest {
 				parse_str(file_get_contents("php://input"), $input);
 			} else
 			if( isset($_POST) ) {
-				$input	= $_POST;
+				$input = $_POST;
 			}
 		}
-		$request	= new static($method, parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), $_GET);
+		$request = new static($method, parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), $_GET);
 		$request->setContent($input, $inputType)
 			->setScheme(!empty($_SERVER['HTTPS']) ? 'https' : 'http')
 			->setDomain($_SERVER['HTTP_HOST'])
@@ -200,7 +200,7 @@ class HTTPRequest extends InputRequest {
 			HTTPRoute::initialize();
 			static::$mainRequest = static::generateFromEnvironment();
 			$response = static::$mainRequest->process();
-		} catch( Exception $e ) {
+		} catch( \Exception $e ) {
 			$response = HTMLHTTPResponse::generateFromException($e);
 		}
 		$response->process();
@@ -472,10 +472,20 @@ class HTTPRequest extends InputRequest {
 	 * 
 	 * @param string $key
 	 * @param mixed $default
-	 * @return string
+	 * @return string The path value for $key
 	 */
 	public function getPathValue($key, $default=null) {
-		return isset($this->pathValues->$key) ? $this->pathValues->$key : $default;
+		return $this->hasPathValue($key) ? $this->pathValues->$key : $default;
+	}
+	
+	/**
+	 * Check request has path value $key
+	 * 
+	 * @param string $key
+	 * @return boolean True if it has the $key value in path
+	 */
+	public function hasPathValue($key) {
+		return isset($this->pathValues->$key);
 	}
 }
 

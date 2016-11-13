@@ -52,7 +52,30 @@ abstract class SQLRequest {
 	protected function __construct($sqlAdapter, $idField, $class=null) {
 		$this->setSQLAdapter($sqlAdapter);
 		$this->setIDField($idField);
-		$this->class	= $class;
+		$this->class = $class;
+	}
+	
+	/**
+	 * Get object as string
+	 * 
+	 * @return string
+	 */
+	public function __toString() {
+		return $this->getQuery();
+	}
+	
+	/**
+	 * Get a clone of current request
+	 * 
+	 * @param string $withParameters True to also copy parameters, default to true
+	 * @return SQLRequest
+	 */
+	public function getClone($withParameters=true) {
+		$clone = new static($this->sqlAdapter, $this->idField, $this->class);
+		if( $withParameters ) {
+			$clone->parameters = $this->parameters;
+		}
+		return $clone;
 	}
 	
 	/**

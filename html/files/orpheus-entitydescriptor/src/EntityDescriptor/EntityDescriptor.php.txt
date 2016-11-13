@@ -705,9 +705,18 @@ class TypeDatetime extends TypeDescriptor {
 		if( is_id($value) ) { return; }
 		$time = null;
 		// TODO: Find a better way to check all formats
-		if( !is_date($value, true, $time) ) {
-// 		if( !is_date($value, true, $time) && !is_date($value, true, $time, DATE_FORMAT_SQL) && !is_date($value, true, $time, DATE_FORMAT_GNU) ) {
-			throw new FE('notDatetime');
+		// We now check first char for system dates
+		if( $value[0] === '@' ) {
+			$time = substr($value, 1);
+		} else {
+			$format = null;
+			if( $value[0] === '$' ) {
+				$value = substr($value, 1);
+				$format = DATE_FORMAT_GNU;
+			}
+			if( !is_date($value, true, $time, $format) ) {
+				throw new FE('notDatetime');
+			}
 		}
 		// Format to timestamp
 		$value = $time;
@@ -1452,9 +1461,9 @@ class TypeObject extends TypeString {
 	 * @param FieldDescriptor $field The field to parse
 	 * @param string $value The field value to parse
 	 */
-	public function format(FieldDescriptor $field, $value) {
+	public function format(FieldDescriptor $field, &$value) {
 		if( is_string($value) ) {
-			return $value;
+			return;
 		}
 		/* @var mixed $value */
 		$class = $field->arg('class');
@@ -1462,18 +1471,15 @@ class TypeObject extends TypeString {
 			if( !($value instanceof $class) ) {
 				throw new Exception('Field '.$field.'\'s value should be an instance of '.$class.', got '.get_class($value));
 			}
-// 			if( array_key_exists('Serializable', class_implements($class, true)) ) {
 			if( $value instanceof \Serializable ) {
-// 				$obj = new $class();
-				return $value->serialize();
+				$value = $value->serialize();
 			} else {
-				return serialize($value);
+				$value = serialize($value);
 			}
 			
 		} else {
-			return json_encode($value);
+			$value = json_encode($value);
 		}
-// 		return json_encode($value);
 	}
 }
 EntityDescriptor::registerType(new TypeObject());

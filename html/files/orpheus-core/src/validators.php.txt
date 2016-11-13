@@ -60,8 +60,8 @@ function is_ID($number) {
 }
 
 define('DATE_FORMAT_LOCALE',	0);
-define('DATE_FORMAT_SQL',		1);
-define('DATE_FORMAT_GNU',		2);
+// define('DATE_FORMAT_SQL',		1);
+define('DATE_FORMAT_GNU',		1);
 
 /** 
  * Check if the input is a date.
@@ -87,13 +87,13 @@ function is_date($date, $withTime=false, &$time=false, $format=null) {
 		}
 		$format = DATE_FORMAT_LOCALE;
 	}
-	if( $format === DATE_FORMAT_SQL ) {
-		$dateTime = DateTime::createFromFormat($withTime ? 'd/m/Y H:i:s' : 'd/m/Y|', $date);
-	} else
+	// SQL USES GNU
+// 	if( $format === DATE_FORMAT_SQL ) {
+// 		$dateTime = DateTime::createFromFormat($withTime ? 'd/m/Y H:i:s' : 'd/m/Y|', $date);
+// 	} else
 	if( $format === DATE_FORMAT_GNU ) {
 		$dateTime = DateTime::createFromFormat($withTime ? 'Y-m-d H:i:s' : 'Y-m-d|', $date);
 	} else {
-		// TODO: Use cookie timezone
 		$dateTime = DateTime::createFromFormat(t($withTime ? 'datetimeFromFormat' : 'dateFromFormat'), $date);
 	}
 // 	debug('$dateTime', $dateTime);

@@ -88,7 +88,7 @@ abstract class InputRequest {
 	/**
 	 * Process the request by finding a route and processing it
 	 * 
-	 * @return \Orpheus\InputController\NULL|\Orpheus\InputController\OutputResponse
+	 * @return \Orpheus\InputController\OutputResponse
 	 */
 	public function process() {
 		$route = $this->findFirstMatchingRoute();
