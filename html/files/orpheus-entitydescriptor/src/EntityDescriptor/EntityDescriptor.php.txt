@@ -987,7 +987,7 @@ class TypeNatural extends TypeInteger {
 	public function parseArgs(array $fargs) {
 		$args	= (object) array('decimals'=>0, 'min'=>0, 'max'=>4294967295);
 		if( isset($fargs[0]) ) {
-			$args->max			= $fargs[0];
+			$args->max = $fargs[0];
 		}
 		return $args;
 	}
@@ -1021,7 +1021,7 @@ class TypeRef extends TypeNatural {
 	public function parseArgs(array $fargs) {
 		$args	= (object) array('entity'=>null, 'decimals'=>0, 'min'=>0, 'max'=>4294967295);
 		if( isset($fargs[0]) ) {
-			$args->entity			= $fargs[0];
+			$args->entity = $fargs[0];
 		}
 		return $args;
 	}

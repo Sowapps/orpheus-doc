@@ -204,7 +204,9 @@ abstract class PermanentEntity extends PermanentObject {
 	 * @param string $class
 	 */
 	public static function registerEntity($class) {
-		if( array_key_exists($class, static::$knownEntities) ) { continue; }
+		if( array_key_exists($class, static::$knownEntities) ) {
+			return;
+		}
 		static::$knownEntities[$class] = null;
 	}
 	

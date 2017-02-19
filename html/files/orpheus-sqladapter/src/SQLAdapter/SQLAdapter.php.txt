@@ -206,7 +206,7 @@ abstract class SQLAdapter {
 	 * 
 	 * @return array
 	 */
-	protected static function listConfig() {
+	public static function listConfig() {
 		if( static::$configs !== null ) {
 			return static::$configs;
 		}

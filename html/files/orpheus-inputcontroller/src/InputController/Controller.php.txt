@@ -39,6 +39,13 @@ abstract class Controller {
 	protected $options = array();
 	
 	/**
+	 * Catch controller output when running it 
+	 * 
+	 * @var boolean
+	 */
+	protected $catchControllerOuput = false;
+	
+	/**
 	 * Get this controller as string
 	 * 
 	 * @return string
@@ -66,7 +73,9 @@ abstract class Controller {
 		
 		$this->prepare($request);
 		
-		ob_start();
+		if( $this->catchControllerOuput ) {
+			ob_start();
+		}
 		$result	= null;
 		$values = array();
 		$this->fillValues($values);
@@ -86,7 +95,9 @@ abstract class Controller {
 			}
 			$this->postRun($request, $result);
 		}
-		$result->setControllerOutput(ob_get_clean());
+		if( $this->catchControllerOuput ) {
+			$result->setControllerOutput(ob_get_clean());
+		}
 		
 		return $result;
 	}

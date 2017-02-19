@@ -11,62 +11,6 @@ namespace Orpheus\Rendering;
  * A basic class to render HTML using PHP scripts.
 */
 class HTMLRendering extends Rendering {
-
-	/**
-	 * The default model to show
-	 *
-	 * @var string
-	 */
-	protected static $SHOWMODEL		= 'page_skeleton';
-	
-	/**
-	 * The theme to use to render HTML layouts
-	 * 
-	 * @var string
-	 */
-	public static $theme			= 'default';
-	
-	/**
-	 * Path to css folder
-	 * 
-	 * @var string
-	 */
-	public static $cssPath			= 'css/';
-	
-	/**
-	 * Path to js folder
-	 * 
-	 * @var string
-	 */
-	public static $jsPath			= 'js/';
-	
-	/**
-	 * Path to models folder
-	 * 
-	 * @var string
-	 */
-	public static $modelsPath		= 'layouts/';
-	
-	/**
-	 * List of CSS Urls to load
-	 * 
-	 * @var array
-	 */
-	public static $cssURLs			= array();
-	
-	/**
-	 * List of JS Urls to load
-	 * 
-	 * @var array
-	 */
-	public static $jsURLs			= array();
-	
-	/**
-	 * List of meta-properties to send
-	 * 
-	 * @var array
-	 */
-	public static $metaprop			= array();
 	
 	/**
 	 * LINK_TYPE_PLUGIN
@@ -81,17 +25,84 @@ class HTMLRendering extends Rendering {
 	 * @var integer
 	 */
 	const LINK_TYPE_CUSTOM	= 2;
+
+	/**
+	 * The default model to show
+	 *
+	 * @var string
+	 */
+	protected static $SHOWMODEL		= 'page_skeleton';
+	
+	/**
+	 * The default theme to use for $theme
+	 * 
+	 * @var string
+	 */
+	public static $defaultTheme		= 'default';
+	
+	/**
+	 * List of CSS Urls to load
+	 * 
+	 * @var array
+	 */
+	public $cssURLs				= array();
+	
+	/**
+	 * List of JS Urls to load
+	 * 
+	 * @var array
+	 */
+	public $jsURLs				= array();
+	
+	/**
+	 * List of meta-properties to send
+	 * 
+	 * @var array
+	 */
+	public $metaprop			= array();
+	
+	/**
+	 * The theme to use to render HTML layouts
+	 * 
+	 * @var string
+	 */
+	protected $theme;
+	
+	/**
+	 * Path to css folder
+	 * 
+	 * @var string
+	 */
+	public $cssPath			= 'css/';
+	
+	/**
+	 * Path to js folder
+	 * 
+	 * @var string
+	 */
+	public $jsPath			= 'js/';
+	
+	/**
+	 * Path to layouts folder
+	 * 
+	 * @var string
+	 */
+	public $layoutsPath		= 'layouts/';
+	
+	public function __construct() {
+		$this->theme = static::getDefaultTheme();
+	}
 	
 	/**
 	 * 
 	 * {@inheritDoc}
 	 * @see \Orpheus\Rendering\Rendering::render()
-	 * @param string $model The model to use, default use is defined by child
+	 * @param string $layout The model to use, default use is defined by child
 	 * @param array $env An environment variable, commonly an array but depends on the rendering class used
 	 */
-	public function render($model=null, $env=array()) {
+	public function render($layout=null, $env=array()) {
 		ob_start();
-		$this->display($model, $env);
+		$this->display($layout, $env);
 		return ob_get_clean();
 	}
 	
@@ -100,27 +111,26 @@ class HTMLRendering extends Rendering {
 	 * 
 	 * {@inheritDoc}
 	 * @see \Orpheus\Rendering\Rendering::display()
-	 * @param string $model The model to use
+	 * @param string $layout The model to use
 	 * @param array $env An environment variable
 	 */
-	public function display($model=null, $env=array()) {
-		if( $model === NULL ) {
+	public function display($layout=null, $env=array()) {
+		if( $layout === NULL ) {
 			throw new \Exception("Invalid Rendering Model");
 		}
 		$rendering = $this->getCurrentRendering();
 		if( $rendering ) {
-// 			$env = array_merge($env, $rendering[1]);
 			$env += $rendering[1];
 		}
 		
 		// TODO Merge layoutStack and rendering stack
 		$prevLayouts = count(static::$layoutStack);
-		$this->pushToStack($model, $env);
+		$this->pushToStack($layout, $env);
 		
 		extract($env, EXTR_SKIP);
-		// Store this to end layouts
+		// Store this to end layouts, static because ob_* functions are globals
 		static::$current = $this;
-		include static::getModelPath($model);
+		include $this->getLayoutPath($layout);
 		
 		$this->pullFromStack();
 		$currentLayouts = count(static::$layoutStack);
@@ -135,17 +145,36 @@ class HTMLRendering extends Rendering {
 	 * @param string $theme
 	 */
 	public static function setDefaultTheme($theme) {
-		static::$theme = $theme;
+		static::$defaultTheme = $theme;
 	}
 	
 	/**
-	 * Get the path to the $model
+	 * Get the default theme used to render layouts
 	 * 
-	 * @param string $model
+	 * @return string $theme
+	 */
+	public static function getDefaultTheme() {
+		return static::$defaultTheme;
+	}
+	
+	/**
+	 * Get the path to the $layout
+	 * 
+	 * @param string $layout
 	 * @return string
 	 */
-	public static function getModelPath($model) {
-		return is_readable($model) ? $model : static::getModelsPath().$model.'.php';
+	public function getLayoutPath($layout) {
+		return is_readable($layout) ? $layout : $this->getLayoutsPath().$layout.'.php';
+	}
+	
+	/**
+	 * Test if the layout exists
+	 * 
+	 * @param string $layout
+	 * @return string
+	 */
+	public function existsLayoutPath($layout) {
+		return is_readable($this->getLayoutPath($layout));
 	}
 	
 	/**
@@ -159,12 +188,19 @@ class HTMLRendering extends Rendering {
 	 */
 	public static function renderReport($report, $domain, $type, $stream) {
 		$report = nl2br($report);
-		if( file_exists(static::getModelPath('report-'.$type)) ) {
-			return static::doRender('report-'.$type, array('Report'=>$report, 'Domain'=>$domain, 'Type'=>$type, 'Stream'=>$stream));
+		$rendering = new static();
+		if( $rendering->existsLayoutPath('report-'.$type) ) {
+			return $rendering->render('report-'.$type, array('Report'=>$report, 'Domain'=>$domain, 'Type'=>$type, 'Stream'=>$stream));
 		}
-		if( file_exists(static::getModelPath('report')) ) {
-			return static::doRender('report', array('Report'=>$report, 'Domain'=>$domain, 'Type'=>$type, 'Stream'=>$stream));
+		if( $rendering->existsLayoutPath('report') ) {
+			return $rendering->render('report', array('Report'=>$report, 'Domain'=>$domain, 'Type'=>$type, 'Stream'=>$stream));
 		}
+// 		if( file_exists(static::getLayoutPath('report-'.$type)) ) {
+// 			return static::doRender('report-'.$type, array('Report'=>$report, 'Domain'=>$domain, 'Type'=>$type, 'Stream'=>$stream));
+// 		}
+// 		if( file_exists(static::getLayoutPath('report')) ) {
+// 			return static::doRender('report', array('Report'=>$report, 'Domain'=>$domain, 'Type'=>$type, 'Stream'=>$stream));
+// 		}
 		return '
 		<div class="report report_'.$stream.' '.$type.' '.$domain.'">'.nl2br($report).'</div>';
 	}
@@ -175,8 +211,8 @@ class HTMLRendering extends Rendering {
 	 * @param string $filename
 	 * @param string $type
 	 */
-	public static function addThemeCSSFile($filename, $type=null) {
-		static::addCSSURL(static::getCSSURL().$filename, $type);
+	public function addThemeCSSFile($filename, $type=null) {
+		$this->addCSSURL($this->getCSSURL().$filename, $type);
 	}
 	
 	/**
@@ -185,8 +221,8 @@ class HTMLRendering extends Rendering {
 	 * @param string $filename
 	 * @param string $type
 	 */
-	public static function addCSSFile($filename, $type=null) {
-		static::addThemeCSSFile($filename, $type);
+	public function addCSSFile($filename, $type=null) {
+		$this->addThemeCSSFile($filename, $type);
 	}
 	
 	/**
@@ -195,8 +231,8 @@ class HTMLRendering extends Rendering {
 	 * @param string $url
 	 * @param string $type
 	 */
-	public static function addCSSURL($url, $type=null) {
-		static::addTypedURL(static::$cssURLs, $url, $type);
+	public function addCSSURL($url, $type=null) {
+		static::addTypedURL($this->cssURLs, $url, $type);
 	}
 
 	/**
@@ -205,8 +241,8 @@ class HTMLRendering extends Rendering {
 	 * @param string $filename
 	 * @param string $type
 	 */
-	public static function addThemeJSFile($filename, $type=null) {
-		static::addJSURL(static::getJSURL().$filename, $type);
+	public function addThemeJSFile($filename, $type=null) {
+		$this->addJSURL($this->getJSURL().$filename, $type);
 	}
 
 	/**
@@ -215,8 +251,8 @@ class HTMLRendering extends Rendering {
 	 * @param string $filename
 	 * @param string $type
 	 */
-	public static function addJSFile($filename, $type=null) {
-		static::addJSURL(JSURL.$filename, $type);
+	public function addJSFile($filename, $type=null) {
+		$this->addJSURL(JSURL.$filename, $type);
 	}
 
 	/**
@@ -225,8 +261,8 @@ class HTMLRendering extends Rendering {
 	 * @param string $url
 	 * @param string $type
 	 */
-	public static function addJSURL($url, $type=null) {
-		static::addTypedURL(static::$jsURLs, $url, $type);
+	public function addJSURL($url, $type=null) {
+		static::addTypedURL($this->jsURLs, $url, $type);
 	}
 
 
@@ -236,8 +272,8 @@ class HTMLRendering extends Rendering {
 	 * @param string $property
 	 * @param string $content
 	 */
-	public static function addMetaProperty($property, $content) {
-		static::$metaprop[$property] = $content;
+	public function addMetaProperty($property, $content) {
+		$this->metaprop[$property] = $content;
 	}
 	
 	/**
@@ -246,8 +282,8 @@ class HTMLRendering extends Rendering {
 	 * @param string $type
 	 * @return array
 	 */
-	public static function listCSSURLs($type=null) {
-		return static::listTypedURL(static::$cssURLs, $type);
+	public function listCSSURLs($type=null) {
+		return $this->listTypedURL($this->cssURLs, $type);
 	}
 	
 	/**
@@ -256,8 +292,17 @@ class HTMLRendering extends Rendering {
 	 * @param string $type
 	 * @return array
 	 */
-	public static function listJSURLs($type=null) {
-		return static::listTypedURL(static::$jsURLs, $type);
+	public function listJSURLs($type=null) {
+		return static::listTypedURL($this->jsURLs, $type);
+	}
+	
+	/**
+	 * List all registered html meta properties
+	 * 
+	 * @return array
+	 */
+	public function listMetaProperties() {
+		return $this->metaprop;
 	}
 	
 	/**
@@ -295,10 +340,6 @@ class HTMLRendering extends Rendering {
 		}
 		$r = array();
 		foreach( $array as $type => $typeURLs ) {
-// 			if( !is_array($typeURLs) ) {
-// 				debug('$array', $array);
-// 				die();
-// 			}
 			$r = array_merge($r, $typeURLs);
 		}
 		$array = array();
@@ -306,34 +347,53 @@ class HTMLRendering extends Rendering {
 	}
 	
 	/**
+	 * Set the theme used to render layouts
+	 * 
+	 * @param string $theme
+	 */
+	public function setTheme($theme) {
+		$this->theme = $theme;
+	}
+	
+	/**
 	 * Get the theme path.
 	 * 
-	 * @return The theme path
+	 * @return string The theme path
 	 * 
 	 * Get the path to the current theme.
 	 */
-	public static function getThemePath() {
-		return ACCESSPATH.THEMESDIR.static::$theme.'/';
+	public function getThemePath() {
+		return ACCESSPATH.THEMESDIR.$this->theme.'/';
 	}
 
 	/** 
 	 * Get the absolute theme path.
 	 *
-	 * @return The theme path.
+	 * @return string The theme path.
 	 *
 	 * Get the absolute path to the current theme.
 	 */
-	public static function getAbsThemePath() {
-		return pathOf(static::getThemePath());
+	public function getAbsThemePath() {
+		return pathOf($this->getThemePath());
 	}
 	
 	/**
 	 * Get the models theme path
 	 * 
 	 * @return string The models theme path
+	 * @deprecated Use getLayoutsPath()
 	 */
-	public static function getModelsPath() {
-		return static::getThemePath().static::$modelsPath;
+	public function getModelsPath() {
+		return $this->getLayoutsPath();
+	}
+	
+	/**
+	 * Get the layout theme path
+	 * 
+	 * @return string The models theme path
+	 */
+	public function getLayoutsPath() {
+		return $this->getThemePath().$this->layoutsPath;
 	}
 	
 	/**
@@ -341,8 +401,17 @@ class HTMLRendering extends Rendering {
 	 * 
 	 * @return string The css theme path
 	 */
-	public static function getCSSPath() {
-		return static::getThemePath().static::$cssPath;
+	public function getCSSPath() {
+		return $this->getThemePath().$this->cssPath;
+	}
+	
+	/**
+	 * Get the js theme path
+	 * 
+	 * @return string The JS theme path
+	 */
+	public function getJSPath() {
+		return $this->getThemePath().$this->jsPath;
 	}
 
 
@@ -351,8 +420,8 @@ class HTMLRendering extends Rendering {
 	 *
 	 * @return string
 	 */
-	public static function getThemeURL() {
-		return THEMESURL.static::$theme.'/';
+	public function getThemeURL() {
+		return THEMESURL.$this->theme.'/';
 	}
 
 	/** 
@@ -360,8 +429,8 @@ class HTMLRendering extends Rendering {
 	 * 
 	 * @return string The CSS url
 	*/
-	public static function getCSSURL() {
-		return static::getThemeURL().static::$cssPath;
+	public function getCSSURL() {
+		return $this->getThemeURL().$this->cssPath;
 	}
 
 	/** 
@@ -369,8 +438,8 @@ class HTMLRendering extends Rendering {
 	 * 
 	 * @return string The JS url
 	*/
-	public static function getJSURL() {
-		return static::getThemeURL().static::$jsPath;
+	public function getJSURL() {
+		return $this->getThemeURL().$this->jsPath;
 	}
 }
 

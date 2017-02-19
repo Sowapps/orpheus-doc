@@ -699,7 +699,8 @@ abstract class PermanentObject {
 			return;
 		}
 		if( in_array($event.'_ip', static::$fields) ) {
-			$array[$event.'_ip'] = !empty($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : null;
+			$array[$event.'_ip'] = clientIP();
+// 			$array[$event.'_ip'] = !empty($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : '127.0.0.1';
 		}
 		if( in_array($event.'_agent', static::$fields) ) {
 			$array[$event.'_agent'] = !empty($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : null;
@@ -724,7 +725,7 @@ abstract class PermanentObject {
 		return array(
 			$event.'_time'	=> isset($time) ? $time : time(),
 			$event.'_date'	=> isset($time) ? sqlDatetime($time) : sqlDatetime(),
-			$event.'_ip'	=> isset($ipAdd) ? $ipAdd : (!empty($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : 'NONE' ),
+			$event.'_ip'	=> isset($ipAdd) ? $ipAdd : (!empty($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : '127.0.0.1' ),
 		);
 	}
 	
@@ -892,6 +893,19 @@ abstract class PermanentObject {
 		if( isset(static::$instances[static::getClass()][$this->id()]) ) { return static::$instances[static::getClass()][$this->id()]; }
 		static::$instances[static::getClass()][$this->id()]	= $this;
 		return $this;
+	}
+	
+	/**
+	 * Get cache stats
+	 * 
+	 * @return \Orpheus\Publisher\PermanentObject\PermanentObject
+	 */
+	public static function getCacheStats() {
+		return array_sum(array_map('count', static::$instances));
+// 		$total = 0;
+// 		foreach( static::$instances as $cInstances ) {
+// 			$total
+// 		}
 	}
 	
 	/**

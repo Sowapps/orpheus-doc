@@ -141,6 +141,7 @@ class SQLGeneratorMySQL implements SQLGenerator {
 	 */
 	public function matchEntity(EntityDescriptor $ed) {
 		try {
+			// Try to update, if SHOW fails, we try to create the table
 			$columns = pdo_query('SHOW COLUMNS FROM '.SQLAdapterMySQL::doEscapeIdentifier($ed->getName()), PDOFETCHALL);//|PDOERROR_MINOR
 			// Fields
 			$fields = $ed->getFields();
@@ -215,7 +216,6 @@ class SQLGeneratorMySQL implements SQLGenerator {
 			if( empty($alter) ) { return null; }
 			return '<div class="table-operation table-alter">'.$this->formatHTML_Command('ALTER TABLE').' '.$this->formatHTML_Identifier($ed->getName())."\n{$alter};</div>";
 		} catch( SQLException $e ) {
-// 			throw $e;
 			return $this->getCreate($ed);
 		}
 	}

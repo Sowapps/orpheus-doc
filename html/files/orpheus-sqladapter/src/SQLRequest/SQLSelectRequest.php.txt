@@ -94,7 +94,7 @@ class SQLSelectRequest extends SQLRequest {
 	 * All examples return the same results. Smart comparator is IN for array values and = for all other.
 	 */
 	public function where($condition, $equality=null, $value=null) {
-		if( $equality ) {
+		if( $equality !== null ) {
 			if( $value === null ) {
 				$value		= $equality;
 				$equality	= is_array($value) ? 'IN' : '=';

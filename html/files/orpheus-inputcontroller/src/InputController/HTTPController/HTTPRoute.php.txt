@@ -117,11 +117,11 @@ class HTTPRoute extends ControllerRoute {
 				$var = $regex = null;
 				static::extractVariable($matches[1], $var, $regex);
 				if( !isset($values[$var]) ) {
-					throw new \Exception('The variable `'.$var.'` is missing to generate URL for route '.$this->name);
+					throw new \Exception('The variable "'.$var.'" is missing to generate URL for route '.$this->name);
 				}
 				$value	= $values[$var].'';
 				if( !preg_match('#^'.$regex.'$#', $value) ) {
-					throw new \Exception('The given value "'.$value.'" of variable `'.$var.'` is not matching the regex requirements to generate URL for route '.$this->name);
+					throw new \Exception('The given value "'.$value.'" of variable "'.$var.'" is not matching the regex requirements to generate URL for route '.$this->name);
 				}
 				return $value;
 			},

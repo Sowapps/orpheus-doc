@@ -16,6 +16,8 @@ use Orpheus\Exception\UserException;
  */
 abstract class HTTPController extends Controller {
 	
+	protected $catchControllerOuput = true;
+	
 	/**
 	 * Run this controller
 	 * 
