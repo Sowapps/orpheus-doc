@@ -1,0 +1,3139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Documentation</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<base href="../">
+	<link href="images/favicon.ico" rel="icon"/>
+	<link href="css/normalize.css" rel="stylesheet">
+	<link href="css/base.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+	<link href="css/template.css" rel="stylesheet">
+	<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" rel="stylesheet"/>
+	<script src="https://cdn.jsdelivr.net/npm/fuse.js@3.4.6"></script>
+	<script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+	<script crossorigin="anonymous" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js"></script>
+	<script src="js/search.js"></script>
+	<script defer src="js/searchIndex.js"></script>
+</head>
+<body id="top">
+<header class="phpdocumentor-header phpdocumentor-section">
+	<h1 class="phpdocumentor-title"><a class="phpdocumentor-title__link" href="">Documentation</a></h1>
+	<input class="phpdocumentor-header__menu-button" id="menu-button" name="menu-button" type="checkbox"/>
+	<label class="phpdocumentor-header__menu-icon" for="menu-button">
+		<i class="fas fa-bars"></i>
+	</label>
+	<section class="phpdocumentor-search" data-search-form>
+		<label>
+			<span class="visually-hidden">Search for</span>
+			<svg class="phpdocumentor-search__icon" fill="none" height="20" viewBox="0 0 21 20" width="21" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="7.5" cy="7.5" r="6.5" stroke="currentColor" stroke-width="2"/>
+				<line stroke="currentColor" stroke-width="3" x1="12.4892" x2="19.1559" y1="12.2727" y2="18.9393"/>
+			</svg>
+			<input class="phpdocumentor-field phpdocumentor-search__field" disabled placeholder="Loading .." type="search"/>
+		</label>
+	</section>
+	
+	<nav class="phpdocumentor-topnav">
+		<ul class="phpdocumentor-topnav__menu">
+		</ul>
+	</nav>
+</header>
+
+<main class="phpdocumentor">
+	<div class="phpdocumentor-section">
+		<input class="phpdocumentor-sidebar__menu-button" id="sidebar-button" name="sidebar-button" type="checkbox"/>
+		<label class="phpdocumentor-sidebar__menu-icon" for="sidebar-button">
+			Menu
+		</label>
+		<aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+			
+			<section class="phpdocumentor-sidebar__category">
+				<h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+				<h3 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+				<h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/orpheus.html"><abbr title="\Orpheus">Orpheus</abbr></a></h4>
+				<ul class="phpdocumentor-list">
+					<li><a href="namespaces/orpheus-cache.html"><abbr title="\Orpheus\Cache">Cache</abbr></a></li>
+					<li><a href="namespaces/orpheus-config.html"><abbr title="\Orpheus\Config">Config</abbr></a></li>
+					<li><a href="namespaces/orpheus-core.html"><abbr title="\Orpheus\Core">Core</abbr></a></li>
+					<li><a href="namespaces/orpheus-exception.html"><abbr title="\Orpheus\Exception">Exception</abbr></a></li>
+					<li><a href="namespaces/orpheus-entitydescriptor.html"><abbr title="\Orpheus\EntityDescriptor">EntityDescriptor</abbr></a></li>
+					<li><a href="namespaces/orpheus-time.html"><abbr title="\Orpheus\Time">Time</abbr></a></li>
+					<li><a href="namespaces/orpheus-form.html"><abbr title="\Orpheus\Form">Form</abbr></a></li>
+					<li><a href="namespaces/orpheus-hook.html"><abbr title="\Orpheus\Hook">Hook</abbr></a></li>
+					<li><a href="namespaces/orpheus-controller.html"><abbr title="\Orpheus\Controller">Controller</abbr></a></li>
+					<li><a href="namespaces/orpheus-datatype.html"><abbr title="\Orpheus\DataType">DataType</abbr></a></li>
+					<li><a href="namespaces/orpheus-inputcontroller.html"><abbr title="\Orpheus\InputController">InputController</abbr></a></li>
+					<li><a href="namespaces/orpheus-rendering.html"><abbr title="\Orpheus\Rendering">Rendering</abbr></a></li>
+					<li><a href="namespaces/orpheus-pdo.html"><abbr title="\Orpheus\Pdo">Pdo</abbr></a></li>
+					<li><a href="namespaces/orpheus-sqladapter.html"><abbr title="\Orpheus\SQLAdapter">SQLAdapter</abbr></a></li>
+					<li><a href="namespaces/orpheus-sqlrequest.html"><abbr title="\Orpheus\SQLRequest">SQLRequest</abbr></a></li>
+					<li><a href="namespaces/orpheus-email.html"><abbr title="\Orpheus\Email">Email</abbr></a></li>
+					<li><a href="namespaces/orpheus-file.html"><abbr title="\Orpheus\File">File</abbr></a></li>
+					<li><a href="namespaces/orpheus-publisher.html"><abbr title="\Orpheus\Publisher">Publisher</abbr></a></li>
+				</ul>
+			</section>
+			
+			<section class="phpdocumentor-sidebar__category">
+				<h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+				<h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+				<h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Orpheus.html"><abbr title="\Orpheus">Orpheus</abbr></a></h3>
+				<ul class="phpdocumentor-list">
+					<li><a href="packages/Orpheus-Controller.html"><abbr title="\Orpheus\Controller">Controller</abbr></a></li>
+					<li><a href="packages/Orpheus-Rendering.html"><abbr title="\Orpheus\Rendering">Rendering</abbr></a></li>
+				</ul>
+			</section>
+			
+			<section class="phpdocumentor-sidebar__category">
+				<h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+				<h3 class="phpdocumentor-sidebar__root-package"><a href="reports/deprecated.html">Deprecated</a></h3>
+				<h3 class="phpdocumentor-sidebar__root-package"><a href="reports/errors.html">Errors</a></h3>
+				<h3 class="phpdocumentor-sidebar__root-package"><a href="reports/markers.html">Markers</a></h3>
+			</section>
+			
+			<section class="phpdocumentor-sidebar__category">
+				<h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+				<h3 class="phpdocumentor-sidebar__root-package"><a href="indices/files.html">Files</a></h3>
+			</section>
+		</aside>
+		
+		<div class="phpdocumentor-column -eight phpdocumentor-content">
+			<ul class="phpdocumentor-breadcrumbs">
+				<li class="phpdocumentor-breadcrumb"><a href="namespaces/orpheus.html">Orpheus</a></li>
+				<li class="phpdocumentor-breadcrumb"><a href="namespaces/orpheus-sqladapter.html">SQLAdapter</a></li>
+			</ul>
+			
+			<article class="phpdocumentor-element -class">
+				<h2 class="phpdocumentor-content__title">
+					SQLAdapter
+					
+					
+					<div class="phpdocumentor-element__package">
+						in package
+						<ul class="phpdocumentor-breadcrumbs">
+							<li class="phpdocumentor-breadcrumb"><a href="packages/Default.html">Default</a></li>
+						</ul>
+					</div>
+				
+				
+				</h2>
+				
+				<aside class="phpdocumentor-element-found-in">
+					<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+							href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr
+							title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+					:
+					<span class="phpdocumentor-element-found-in__line">20</span>
+				</aside>
+				
+				<p class="phpdocumentor-summary">The main SQL Adapter class</p>
+				
+				<section class="phpdocumentor-description"><p>This class is the mother sql adapter inherited for specific DBMS.</p>
+				</section>
+				
+				
+				<h3 id="toc">
+					Table of Contents
+					<a class="headerlink" href="#toc"><i class="fas fa-link"></i></a>
+				</h3>
+				
+				<dl class="phpdocumentor-table-of-contents">
+					<dt class="phpdocumentor-table-of-contents__entry -constant -public">
+						<a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#constant_ARR_ASSOC">ARR_ASSOC</a>
+						<span>
+        &nbsp;= 3                    </span>
+					</dt>
+					<dd></dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -constant -public">
+						<a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#constant_ARR_FIRST">ARR_FIRST</a>
+						<span>
+        &nbsp;= 2                    </span>
+					</dt>
+					<dd></dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -constant -public">
+						<a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#constant_ARR_OBJECTS">ARR_OBJECTS</a>
+						<span>
+        &nbsp;= 4                    </span>
+					</dt>
+					<dd></dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -constant -public">
+						<a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#constant_NUMBER">NUMBER</a>
+						<span>
+        &nbsp;= 7                    </span>
+					</dt>
+					<dd></dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -constant -public">
+						<a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#constant_OBJECT">OBJECT</a>
+						<span>
+        &nbsp;= 1                    </span>
+					</dt>
+					<dd></dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -constant -public">
+						<a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#constant_SQLQUERY">SQLQUERY</a>
+						<span>
+        &nbsp;= 6                    </span>
+					</dt>
+					<dd></dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -constant -public">
+						<a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#constant_STATEMENT">STATEMENT</a>
+						<span>
+        &nbsp;= 5                    </span>
+					</dt>
+					<dd></dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -property -protected">
+						<a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#property_adapters">$adapters</a>
+						<span>
+                &nbsp;: array&lt;string|int, mixed&gt;            </span>
+					</dt>
+					<dd>Store drivers&#039; adapter</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -property -protected">
+						<a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#property_configs">$configs</a>
+						<span>
+                &nbsp;: array&lt;string|int, mixed&gt;            </span>
+					</dt>
+					<dd>Configurations</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -property -protected">
+						<a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#property_deleteDefaults">$deleteDefaults</a>
+						<span>
+                &nbsp;: array&lt;string|int, mixed&gt;            </span>
+					</dt>
+					<dd>Delete defaults options</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -property -protected">
+						<a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#property_IDFIELD">$IDFIELD</a>
+						<span>
+                &nbsp;: string            </span>
+					</dt>
+					<dd>The ID field</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -property -protected">
+						<a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#property_insertDefaults">$insertDefaults</a>
+						<span>
+                &nbsp;: array&lt;string|int, mixed&gt;            </span>
+					</dt>
+					<dd>Insert defaults options</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -property -protected">
+						<a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#property_instances">$instances</a>
+						<span>
+                &nbsp;: array&lt;string|int, mixed&gt;            </span>
+					</dt>
+					<dd>All Adapter instances by name</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -property -protected">
+						<a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#property_pdo">$pdo</a>
+						<span>
+                &nbsp;: <abbr title="\PDO">PDO</abbr>            </span>
+					</dt>
+					<dd>The PDO instance</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -property -protected">
+						<a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#property_selectDefaults">$selectDefaults</a>
+						<span>
+                &nbsp;: array&lt;string|int, mixed&gt;            </span>
+					</dt>
+					<dd>Select defaults options</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -property -protected">
+						<a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#property_updateDefaults">$updateDefaults</a>
+						<span>
+                &nbsp;: array&lt;string|int, mixed&gt;            </span>
+					</dt>
+					<dd>Update defaults options</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method___construct">__construct()</a>
+						<span>
+                        &nbsp;: mixed    </span>
+					</dt>
+					<dd>Constructor</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_delete">delete()</a>
+						<span>
+                        &nbsp;: int    </span>
+					</dt>
+					<dd>Delete something in database</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_doDelete">doDelete()</a>
+						<span>
+                        &nbsp;: mixed    </span>
+					</dt>
+					<dd>The static function to use for DELETE queries in global context</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_doEscapeIdentifier">doEscapeIdentifier()</a>
+						<span>
+                        &nbsp;: string    </span>
+					</dt>
+					<dd>Escapes SQL identifiers</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_doFormatString">doFormatString()</a>
+						<span>
+                        &nbsp;: string    </span>
+					</dt>
+					<dd>Escapes SQL identifiers</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_doFormatValue">doFormatValue()</a>
+						<span>
+                        &nbsp;: string    </span>
+					</dt>
+					<dd>The static function to quote</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_doInsert">doInsert()</a>
+						<span>
+                        &nbsp;: mixed    </span>
+					</dt>
+					<dd>The static function to use for INSERT queries in global context</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_doLastID">doLastID()</a>
+						<span>
+                        &nbsp;: mixed    </span>
+					</dt>
+					<dd>The static function to use to get last isnert id in global context</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_doSelect">doSelect()</a>
+						<span>
+                        &nbsp;: mixed    </span>
+					</dt>
+					<dd>The static function to use for SELECT queries in global context</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_doUpdate">doUpdate()</a>
+						<span>
+                        &nbsp;: mixed    </span>
+					</dt>
+					<dd>The static function to use for UPDATE queries in global context</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_escapeIdentifier">escapeIdentifier()</a>
+						<span>
+                        &nbsp;: string    </span>
+					</dt>
+					<dd>Escape SQL identifiers</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_escapeValue">escapeValue()</a>
+						<span>
+                        &nbsp;: string    </span>
+					</dt>
+					<dd>Escape SQL value</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_formatString">formatString()</a>
+						<span>
+                        &nbsp;: string    </span>
+					</dt>
+					<dd>Format SQL string</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_formatValue">formatValue()</a>
+						<span>
+                        &nbsp;: string    </span>
+					</dt>
+					<dd>Format SQL value</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_formatValueList">formatValueList()</a>
+						<span>
+                        &nbsp;: string    </span>
+					</dt>
+					<dd>Format a list of values</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_getDriver">getDriver()</a>
+						<span>
+                        &nbsp;: string    </span>
+					</dt>
+					<dd>Get the driven string</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_getInstance">getInstance()</a>
+						<span>
+                        &nbsp;: <a href="classes/Orpheus-SQLAdapter-SQLAdapter.html"><abbr title="\Orpheus\SQLAdapter\SQLAdapter">SQLAdapter</abbr></a>    </span>
+					</dt>
+					<dd>Get an unique instance of SQLAdapter by its name</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_getPdo">getPdo()</a>
+						<span>
+                        &nbsp;: <abbr title="\PDO">PDO</abbr>    </span>
+					</dt>
+					<dd></dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_insert">insert()</a>
+						<span>
+                        &nbsp;: int    </span>
+					</dt>
+					<dd>Insert something in database</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_lastID">lastID()</a>
+						<span>
+                        &nbsp;: mixed    </span>
+					</dt>
+					<dd>Get the last inserted ID</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_listConfig">listConfig()</a>
+						<span>
+                        &nbsp;: array&lt;string|int, mixed&gt;    </span>
+					</dt>
+					<dd>List all instance&#039;s configuration</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_make">make()</a>
+						<span>
+                        &nbsp;: <a href="classes/Orpheus-SQLAdapter-SQLAdapter.html"><abbr title="\Orpheus\SQLAdapter\SQLAdapter">SQLAdapter</abbr></a>    </span>
+					</dt>
+					<dd>Try to make a SQLAdapter by its name loading from configuration</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_prepareInstance">prepareInstance()</a>
+						<span>
+                        &nbsp;: mixed    </span>
+					</dt>
+					<dd>The static function to prepareInstance an adapter for the given instance</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_prepareQuery">prepareQuery()</a>
+						<span>
+                        &nbsp;: mixed    </span>
+					</dt>
+					<dd>Prepare the query for the given instance</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_query">query()</a>
+						<span>
+                        &nbsp;: mixed    </span>
+					</dt>
+					<dd>Query the DB server</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_registerAdapter">registerAdapter()</a>
+						<span>
+                        &nbsp;: mixed    </span>
+					</dt>
+					<dd>Register a driver adapter</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_select">select()</a>
+						<span>
+                        &nbsp;: mixed    </span>
+					</dt>
+					<dd>Select something from database</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_setIDField">setIDField()</a>
+						<span>
+                        &nbsp;: <a href="classes/Orpheus-SQLAdapter-SQLAdapter.html"><abbr title="\Orpheus\SQLAdapter\SQLAdapter">SQLAdapter</abbr></a>    </span>
+					</dt>
+					<dd>Set the IDFIELD</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_update">update()</a>
+						<span>
+                        &nbsp;: int    </span>
+					</dt>
+					<dd>Update something in database</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -protected">
+						<a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_connect">connect()</a>
+						<span>
+                        &nbsp;: mixed    </span>
+					</dt>
+					<dd>Connect to the DBMS using $config</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -protected">
+						<a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_formatFieldList">formatFieldList()</a>
+						<span>
+                        &nbsp;: string    </span>
+					</dt>
+					<dd>Format the given $fields into an escaped SQL string list of key=value</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -protected">
+						<a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_getDefaults">getDefaults()</a>
+						<span>
+                        &nbsp;: array&lt;string|int, string&gt;    </span>
+					</dt>
+					<dd>Get defaults configuration to fill missing options</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -protected">
+						<a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_registerInstance">registerInstance()</a>
+						<span>
+                        &nbsp;: mixed    </span>
+					</dt>
+					<dd>Register an unique instance by its name</dd>
+				
+				</dl>
+				
+				
+				<section class="phpdocumentor-constants">
+					<h3 class="phpdocumentor-elements__header" id="constants">
+						Constants
+						<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#constants"><i class="fas fa-link"></i></a>
+					</h3>
+					<article class="phpdocumentor-element -constant -public ">
+						<h4 class="phpdocumentor-element__name" id="constant_ARR_ASSOC">
+							ARR_ASSOC
+							<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#constant_ARR_ASSOC"><i class="fas fa-link"></i></a>
+						</h4>
+						
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+									href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">24</span>
+						</aside>
+						
+						
+						<code class="phpdocumentor-signature phpdocumentor-code ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__type">mixed</span>
+							<span class="phpdocumentor-signature__name">ARR_ASSOC</span>
+							= <span class="phpdocumentor-signature__default-value">3</span>
+						</code>
+					
+					
+					</article>
+					<article class="phpdocumentor-element -constant -public ">
+						<h4 class="phpdocumentor-element__name" id="constant_ARR_FIRST">
+							ARR_FIRST
+							<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#constant_ARR_FIRST"><i class="fas fa-link"></i></a>
+						</h4>
+						
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+									href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">23</span>
+						</aside>
+						
+						
+						<code class="phpdocumentor-signature phpdocumentor-code ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__type">mixed</span>
+							<span class="phpdocumentor-signature__name">ARR_FIRST</span>
+							= <span class="phpdocumentor-signature__default-value">2</span>
+						</code>
+					
+					
+					</article>
+					<article class="phpdocumentor-element -constant -public ">
+						<h4 class="phpdocumentor-element__name" id="constant_ARR_OBJECTS">
+							ARR_OBJECTS
+							<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#constant_ARR_OBJECTS"><i class="fas fa-link"></i></a>
+						</h4>
+						
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+									href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">25</span>
+						</aside>
+						
+						
+						<code class="phpdocumentor-signature phpdocumentor-code ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__type">mixed</span>
+							<span class="phpdocumentor-signature__name">ARR_OBJECTS</span>
+							= <span class="phpdocumentor-signature__default-value">4</span>
+						</code>
+					
+					
+					</article>
+					<article class="phpdocumentor-element -constant -public ">
+						<h4 class="phpdocumentor-element__name" id="constant_NUMBER">
+							NUMBER
+							<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#constant_NUMBER"><i class="fas fa-link"></i></a>
+						</h4>
+						
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+									href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">30</span>
+						</aside>
+						
+						
+						<code class="phpdocumentor-signature phpdocumentor-code ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__type">mixed</span>
+							<span class="phpdocumentor-signature__name">NUMBER</span>
+							= <span class="phpdocumentor-signature__default-value">7</span>
+						</code>
+					
+					
+					</article>
+					<article class="phpdocumentor-element -constant -public ">
+						<h4 class="phpdocumentor-element__name" id="constant_OBJECT">
+							OBJECT
+							<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#constant_OBJECT"><i class="fas fa-link"></i></a>
+						</h4>
+						
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+									href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">22</span>
+						</aside>
+						
+						
+						<code class="phpdocumentor-signature phpdocumentor-code ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__type">mixed</span>
+							<span class="phpdocumentor-signature__name">OBJECT</span>
+							= <span class="phpdocumentor-signature__default-value">1</span>
+						</code>
+					
+					
+					</article>
+					<article class="phpdocumentor-element -constant -public ">
+						<h4 class="phpdocumentor-element__name" id="constant_SQLQUERY">
+							SQLQUERY
+							<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#constant_SQLQUERY"><i class="fas fa-link"></i></a>
+						</h4>
+						
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+									href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">27</span>
+						</aside>
+						
+						
+						<code class="phpdocumentor-signature phpdocumentor-code ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__type">mixed</span>
+							<span class="phpdocumentor-signature__name">SQLQUERY</span>
+							= <span class="phpdocumentor-signature__default-value">6</span>
+						</code>
+					
+					
+					</article>
+					<article class="phpdocumentor-element -constant -public ">
+						<h4 class="phpdocumentor-element__name" id="constant_STATEMENT">
+							STATEMENT
+							<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#constant_STATEMENT"><i class="fas fa-link"></i></a>
+						</h4>
+						
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+									href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">26</span>
+						</aside>
+						
+						
+						<code class="phpdocumentor-signature phpdocumentor-code ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__type">mixed</span>
+							<span class="phpdocumentor-signature__name">STATEMENT</span>
+							= <span class="phpdocumentor-signature__default-value">5</span>
+						</code>
+					
+					
+					</article>
+				</section>
+				
+				
+				<section class="phpdocumentor-properties">
+					<h3 class="phpdocumentor-elements__header" id="properties">
+						Properties
+						<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#properties"><i class="fas fa-link"></i></a>
+					</h3>
+					<article
+							class="
+            phpdocumentor-element
+            -property
+            -protected
+            -static                                            "
+					>
+						<h4 class="phpdocumentor-element__name" id="property_adapters">
+							$adapters
+							<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#property_adapters"><i class="fas fa-link"></i></a>
+							<span class="phpdocumentor-element__modifiers">
+                                </span>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+									href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">67</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Store drivers&#039; adapter</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">protected</span>
+							<span class="phpdocumentor-signature__static">static</span> <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
+							<span class="phpdocumentor-signature__name">$adapters</span>
+							= <span class="phpdocumentor-signature__default-value">[&#039;mysql&#039; =&gt; &#039;Orpheus\SQLAdapter\SQLAdapterMySQL&#039;, &#039;mssql&#039; =&gt; &#039;Orpheus\SQLAdapter\SQLAdapterMSSQL&#039;]</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="
+            phpdocumentor-element
+            -property
+            -protected
+            -static                                            "
+					>
+						<h4 class="phpdocumentor-element__name" id="property_configs">
+							$configs
+							<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#property_configs"><i class="fas fa-link"></i></a>
+							<span class="phpdocumentor-element__modifiers">
+                                </span>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+									href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">77</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Configurations</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">protected</span>
+							<span class="phpdocumentor-signature__static">static</span> <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
+							<span class="phpdocumentor-signature__name">$configs</span>
+						</code>
+						
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="
+            phpdocumentor-element
+            -property
+            -protected
+            -static                                            "
+					>
+						<h4 class="phpdocumentor-element__name" id="property_deleteDefaults">
+							$deleteDefaults
+							<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#property_deleteDefaults"><i class="fas fa-link"></i></a>
+							<span class="phpdocumentor-element__modifiers">
+                                </span>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+									href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">49</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Delete defaults options</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">protected</span>
+							<span class="phpdocumentor-signature__static">static</span> <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
+							<span class="phpdocumentor-signature__name">$deleteDefaults</span>
+							= <span class="phpdocumentor-signature__default-value">[]</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="
+            phpdocumentor-element
+            -property
+            -protected
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="property_IDFIELD">
+							$IDFIELD
+							<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#property_IDFIELD"><i class="fas fa-link"></i></a>
+							<span class="phpdocumentor-element__modifiers">
+                                </span>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+									href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">84</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">The ID field</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">protected</span>
+							<span class="phpdocumentor-signature__type">string</span>
+							<span class="phpdocumentor-signature__name">$IDFIELD</span>
+							= <span class="phpdocumentor-signature__default-value">&#039;id&#039;</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="
+            phpdocumentor-element
+            -property
+            -protected
+            -static                                            "
+					>
+						<h4 class="phpdocumentor-element__name" id="property_insertDefaults">
+							$insertDefaults
+							<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#property_insertDefaults"><i class="fas fa-link"></i></a>
+							<span class="phpdocumentor-element__modifiers">
+                                </span>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+									href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">55</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Insert defaults options</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">protected</span>
+							<span class="phpdocumentor-signature__static">static</span> <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
+							<span class="phpdocumentor-signature__name">$insertDefaults</span>
+							= <span class="phpdocumentor-signature__default-value">[]</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="
+            phpdocumentor-element
+            -property
+            -protected
+            -static                                            "
+					>
+						<h4 class="phpdocumentor-element__name" id="property_instances">
+							$instances
+							<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#property_instances"><i class="fas fa-link"></i></a>
+							<span class="phpdocumentor-element__modifiers">
+                                </span>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+									href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">61</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">All Adapter instances by name</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">protected</span>
+							<span class="phpdocumentor-signature__static">static</span> <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
+							<span class="phpdocumentor-signature__name">$instances</span>
+							= <span class="phpdocumentor-signature__default-value">[]</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="
+            phpdocumentor-element
+            -property
+            -protected
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="property_pdo">
+							$pdo
+							<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#property_pdo"><i class="fas fa-link"></i></a>
+							<span class="phpdocumentor-element__modifiers">
+                                </span>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+									href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">91</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">The PDO instance</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">protected</span>
+							<span class="phpdocumentor-signature__type"><abbr title="\PDO">PDO</abbr></span>
+							<span class="phpdocumentor-signature__name">$pdo</span>
+						</code>
+						
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="
+            phpdocumentor-element
+            -property
+            -protected
+            -static                                            "
+					>
+						<h4 class="phpdocumentor-element__name" id="property_selectDefaults">
+							$selectDefaults
+							<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#property_selectDefaults"><i class="fas fa-link"></i></a>
+							<span class="phpdocumentor-element__modifiers">
+                                </span>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+									href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">37</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Select defaults options</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">protected</span>
+							<span class="phpdocumentor-signature__static">static</span> <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
+							<span class="phpdocumentor-signature__name">$selectDefaults</span>
+							= <span class="phpdocumentor-signature__default-value">[]</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="
+            phpdocumentor-element
+            -property
+            -protected
+            -static                                            "
+					>
+						<h4 class="phpdocumentor-element__name" id="property_updateDefaults">
+							$updateDefaults
+							<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#property_updateDefaults"><i class="fas fa-link"></i></a>
+							<span class="phpdocumentor-element__modifiers">
+                                </span>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+									href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">43</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Update defaults options</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">protected</span>
+							<span class="phpdocumentor-signature__static">static</span> <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
+							<span class="phpdocumentor-signature__name">$updateDefaults</span>
+							= <span class="phpdocumentor-signature__default-value">[]</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+				</section>
+				
+				<section class="phpdocumentor-methods">
+					<h3 class="phpdocumentor-elements__header" id="methods">
+						Methods
+						<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#methods"><i class="fas fa-link"></i></a>
+					</h3>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method___construct">
+							__construct()
+							<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method___construct"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+									href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">99</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Constructor</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span
+								class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$name</span></span><span
+								class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$config</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">mixed</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$name</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The name of the instance</p>
+								</section>
+							
+							</dd>
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$config</span>
+								: <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>Instance config to use, maybe a config name, a config array or a PDO instance</p>
+								</section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">mixed</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                        -abstract                                "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_delete">
+							delete()
+							<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_delete"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+									href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">186</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Delete something in database</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__abstract">abstract</span> <span class="phpdocumentor-signature__name">delete</span><span>(</span><span
+								class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$options</span><span> = </span><span
+								class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">int</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$options</span>
+								: <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+								= <span class="phpdocumentor-signature__argument__default-value">[]</span></dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The options used to build the query</p>
+								</section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">int</span>
+						&mdash;
+						<section class="phpdocumentor-description"><p>The number of deleted rows</p>
+						</section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+            -deprecated                        -static                    "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_doDelete">
+							doDelete()
+							<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_doDelete"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+									href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">477</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">The static function to use for DELETE queries in global context</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature -deprecated">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__static">static</span> <span class="phpdocumentor-signature__name">doDelete</span><span>(</span><span
+								class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$options</span><span> = </span><span
+								class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span
+								class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$instance</span><span> = </span><span
+								class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span
+								class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$IDField</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">mixed</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$options</span>
+								: <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+								= <span class="phpdocumentor-signature__argument__default-value">[]</span></dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The options used to build the query.</p>
+								</section>
+							
+							</dd>
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$instance</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+								= <span class="phpdocumentor-signature__argument__default-value">null</span></dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The db instance used to send the query.</p>
+								</section>
+							
+							</dd>
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$IDField</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+								= <span class="phpdocumentor-signature__argument__default-value">null</span></dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The ID field of the table.</p>
+								</section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-tag-list__heading" id="tags">
+							Tags
+							<a class="headerlink" href="#tags"><i class="fas fa-link"></i></a>
+						</h5>
+						<dl class="phpdocumentor-tag-list">
+							<dt class="phpdocumentor-tag-list__entry">
+								<span class="phpdocumentor-tag__name">see</span>
+							</dt>
+							<dd class="phpdocumentor-tag-list__definition">
+								<span class="phpdocumentor-tag-link"><a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_delete"><abbr title="\Orpheus\SQLAdapter\SQLAdapter::delete()">SQLAdapter::delete()</abbr></a></span>
+								
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+							<dt class="phpdocumentor-tag-list__entry">
+								<span class="phpdocumentor-tag__name">deprecated</span>
+							</dt>
+							<dd class="phpdocumentor-tag-list__definition">
+								
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+						</dl>
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">mixed</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+            -deprecated                        -static                    "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_doEscapeIdentifier">
+							doEscapeIdentifier()
+							<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_doEscapeIdentifier"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+									href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">525</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Escapes SQL identifiers</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature -deprecated">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__static">static</span> <span class="phpdocumentor-signature__name">doEscapeIdentifier</span><span>(</span><span
+								class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$Identifier</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span
+								class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$instance</span><span> = </span><span
+								class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">string</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$Identifier</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The identifier to escape.</p>
+								</section>
+							
+							</dd>
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$instance</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+								= <span class="phpdocumentor-signature__argument__default-value">null</span></dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The db instance used to send the query.</p>
+								</section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-tag-list__heading" id="tags">
+							Tags
+							<a class="headerlink" href="#tags"><i class="fas fa-link"></i></a>
+						</h5>
+						<dl class="phpdocumentor-tag-list">
+							<dt class="phpdocumentor-tag-list__entry">
+								<span class="phpdocumentor-tag__name">throws</span>
+							</dt>
+							<dd class="phpdocumentor-tag-list__definition">
+								<span class="phpdocumentor-tag-link"><abbr title="\Exception">Exception</abbr></span>
+								
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+							<dt class="phpdocumentor-tag-list__entry">
+								<span class="phpdocumentor-tag__name">deprecated</span>
+							</dt>
+							<dd class="phpdocumentor-tag-list__definition">
+								
+								<section class="phpdocumentor-description"><p>Escapes the given string as an SQL identifier.</p>
+								</section>
+							
+							</dd>
+							<dt class="phpdocumentor-tag-list__entry">
+								<span class="phpdocumentor-tag__name">see</span>
+							</dt>
+							<dd class="phpdocumentor-tag-list__definition">
+								<span class="phpdocumentor-tag-link"><a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_escapeIdentifier"><abbr
+										title="\Orpheus\SQLAdapter\SQLAdapter::escapeIdentifier()">SQLAdapter::escapeIdentifier()</abbr></a></span>
+								
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+						</dl>
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">string</span>
+						&mdash;
+						<section class="phpdocumentor-description"><p>The escaped identifier.</p>
+						</section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+            -deprecated                        -static                    "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_doFormatString">
+							doFormatString()
+							<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_doFormatString"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+									href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">544</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Escapes SQL identifiers</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature -deprecated">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__static">static</span> <span class="phpdocumentor-signature__name">doFormatString</span><span>(</span><span
+								class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$String</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span
+								class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$instance</span><span> = </span><span
+								class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">string</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$String</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The value to format.</p>
+								</section>
+							
+							</dd>
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$instance</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+								= <span class="phpdocumentor-signature__argument__default-value">null</span></dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The db instance used to send the query.</p>
+								</section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-tag-list__heading" id="tags">
+							Tags
+							<a class="headerlink" href="#tags"><i class="fas fa-link"></i></a>
+						</h5>
+						<dl class="phpdocumentor-tag-list">
+							<dt class="phpdocumentor-tag-list__entry">
+								<span class="phpdocumentor-tag__name">throws</span>
+							</dt>
+							<dd class="phpdocumentor-tag-list__definition">
+								<span class="phpdocumentor-tag-link"><abbr title="\Exception">Exception</abbr></span>
+								
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+							<dt class="phpdocumentor-tag-list__entry">
+								<span class="phpdocumentor-tag__name">deprecated</span>
+							</dt>
+							<dd class="phpdocumentor-tag-list__definition">
+								
+								<section class="phpdocumentor-description"><p>Formats the given value to the matching SQL type.
+									If the value is a float, we make french decimal compatible with SQL.
+									If null, we use the NULL value, else we consider it as a string value.</p>
+								</section>
+							
+							</dd>
+							<dt class="phpdocumentor-tag-list__entry">
+								<span class="phpdocumentor-tag__name">see</span>
+							</dt>
+							<dd class="phpdocumentor-tag-list__definition">
+								<span class="phpdocumentor-tag-link"><a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_formatString"><abbr
+										title="\Orpheus\SQLAdapter\SQLAdapter::formatString()">SQLAdapter::formatString()</abbr></a></span>
+								
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+						</dl>
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">string</span>
+						&mdash;
+						<section class="phpdocumentor-description"><p>The formatted value.</p>
+						</section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+            -deprecated                        -static                    "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_doFormatValue">
+							doFormatValue()
+							<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_doFormatValue"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+									href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">562</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">The static function to quote</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature -deprecated">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__static">static</span> <span class="phpdocumentor-signature__name">doFormatValue</span><span>(</span><span
+								class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$value</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span
+								class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$instance</span><span> = </span><span
+								class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">string</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$value</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The string to quote.</p>
+								</section>
+							
+							</dd>
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$instance</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+								= <span class="phpdocumentor-signature__argument__default-value">null</span></dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The db instance used to send the query.</p>
+								</section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-tag-list__heading" id="tags">
+							Tags
+							<a class="headerlink" href="#tags"><i class="fas fa-link"></i></a>
+						</h5>
+						<dl class="phpdocumentor-tag-list">
+							<dt class="phpdocumentor-tag-list__entry">
+								<span class="phpdocumentor-tag__name">throws</span>
+							</dt>
+							<dd class="phpdocumentor-tag-list__definition">
+								<span class="phpdocumentor-tag-link"><abbr title="\Exception">Exception</abbr></span>
+								
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+							<dt class="phpdocumentor-tag-list__entry">
+								<span class="phpdocumentor-tag__name">deprecated</span>
+							</dt>
+							<dd class="phpdocumentor-tag-list__definition">
+								
+								<section class="phpdocumentor-description"><p>Add slashes before simple quotes in $String and surrounds it with simple quotes and .
+									Keep in mind this function does not really protect your DB server, especially against SQL injections.</p>
+								</section>
+							
+							</dd>
+							<dt class="phpdocumentor-tag-list__entry">
+								<span class="phpdocumentor-tag__name">see</span>
+							</dt>
+							<dd class="phpdocumentor-tag-list__definition">
+								<span class="phpdocumentor-tag-link"><a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_formatValue"><abbr
+										title="\Orpheus\SQLAdapter\SQLAdapter::formatValue()">SQLAdapter::formatValue()</abbr></a></span>
+								
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+						</dl>
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">string</span>
+						&mdash;
+						<section class="phpdocumentor-description"><p>The quoted string.</p>
+						</section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+            -deprecated                        -static                    "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_doInsert">
+							doInsert()
+							<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_doInsert"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+									href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">492</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">The static function to use for INSERT queries in global context</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature -deprecated">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__static">static</span> <span class="phpdocumentor-signature__name">doInsert</span><span>(</span><span
+								class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$options</span><span> = </span><span
+								class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span
+								class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$instance</span><span> = </span><span
+								class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span
+								class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$IDField</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">mixed</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$options</span>
+								: <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+								= <span class="phpdocumentor-signature__argument__default-value">[]</span></dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The options used to build the query.</p>
+								</section>
+							
+							</dd>
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$instance</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+								= <span class="phpdocumentor-signature__argument__default-value">null</span></dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The db instance used to send the query.</p>
+								</section>
+							
+							</dd>
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$IDField</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+								= <span class="phpdocumentor-signature__argument__default-value">null</span></dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The ID field of the table.</p>
+								</section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-tag-list__heading" id="tags">
+							Tags
+							<a class="headerlink" href="#tags"><i class="fas fa-link"></i></a>
+						</h5>
+						<dl class="phpdocumentor-tag-list">
+							<dt class="phpdocumentor-tag-list__entry">
+								<span class="phpdocumentor-tag__name">throws</span>
+							</dt>
+							<dd class="phpdocumentor-tag-list__definition">
+								<span class="phpdocumentor-tag-link"><abbr title="\Exception">Exception</abbr></span>
+								
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+							<dt class="phpdocumentor-tag-list__entry">
+								<span class="phpdocumentor-tag__name">deprecated</span>
+							</dt>
+							<dd class="phpdocumentor-tag-list__definition">
+								
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+							<dt class="phpdocumentor-tag-list__entry">
+								<span class="phpdocumentor-tag__name">see</span>
+							</dt>
+							<dd class="phpdocumentor-tag-list__definition">
+								<span class="phpdocumentor-tag-link"><a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_insert"><abbr title="\Orpheus\SQLAdapter\SQLAdapter::insert()">SQLAdapter::insert()</abbr></a></span>
+								
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+						</dl>
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">mixed</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+            -deprecated                        -static                    "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_doLastID">
+							doLastID()
+							<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_doLastID"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+									href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">507</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">The static function to use to get last isnert id in global context</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature -deprecated">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__static">static</span> <span class="phpdocumentor-signature__name">doLastID</span><span>(</span><span
+								class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$table</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span
+								class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$IDField</span><span> = </span><span
+								class="phpdocumentor-signature__argument__default-value">&#039;id&#039;</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span
+								class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$instance</span><span> = </span><span
+								class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">mixed</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$table</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The table to get the last ID. Some DBMS ignore it.</p>
+								</section>
+							
+							</dd>
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$IDField</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+								= <span class="phpdocumentor-signature__argument__default-value">&#039;id&#039;</span></dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The field id name.</p>
+								</section>
+							
+							</dd>
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$instance</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+								= <span class="phpdocumentor-signature__argument__default-value">null</span></dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The db instance used to send the query.</p>
+								</section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-tag-list__heading" id="tags">
+							Tags
+							<a class="headerlink" href="#tags"><i class="fas fa-link"></i></a>
+						</h5>
+						<dl class="phpdocumentor-tag-list">
+							<dt class="phpdocumentor-tag-list__entry">
+								<span class="phpdocumentor-tag__name">throws</span>
+							</dt>
+							<dd class="phpdocumentor-tag-list__definition">
+								<span class="phpdocumentor-tag-link"><abbr title="\Exception">Exception</abbr></span>
+								
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+							<dt class="phpdocumentor-tag-list__entry">
+								<span class="phpdocumentor-tag__name">deprecated</span>
+							</dt>
+							<dd class="phpdocumentor-tag-list__definition">
+								
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+							<dt class="phpdocumentor-tag-list__entry">
+								<span class="phpdocumentor-tag__name">see</span>
+							</dt>
+							<dd class="phpdocumentor-tag-list__definition">
+								<span class="phpdocumentor-tag-link"><a href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_lastID"><abbr title="\Orpheus\SQLAdapter\SQLAdapter::lastID()">SQLAdapter::lastID()</abbr></a></span>
+								
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+						</dl>
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">mixed</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+            -deprecated                        -static                    "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_doSelect">
+							doSelect()
+							<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_doSelect"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+									href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">409</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">The static function to use for SELECT queries in global context</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature -deprecated">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__static">static</span> <span class="phpdocumentor-signature__name">doSelect</span><span>(</span><span
+								class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$options</span><span> = </span><span
+								class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span
+								class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$instance</span><span> = </span><span
+								class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span
+								class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$IDField</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">mixed</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$options</span>
+								: <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+								= <span class="phpdocumentor-signature__argument__default-value">[]</span></dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The options used to build the query.</p>
+								</section>
+							
+							</dd>
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$instance</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+								= <span class="phpdocumentor-signature__argument__default-value">null</span></dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The db instance used to send the query.</p>
+								</section>
+							
+							</dd>
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$IDField</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+								= <span class="phpdocumentor-signature__argument__default-value">null</span></dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The ID field of the table.</p>
+								</section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-tag-list__heading" id="tags">
+							Tags
+							<a class="headerlink" href="#tags"><i class="fas fa-link"></i></a>
+						</h5>
+						<dl class="phpdocumentor-tag-list">
+							<dt class="phpdocumentor-tag-list__entry">
+								<span class="phpdocumentor-tag__name">throws</span>
+							</dt>
+							<dd class="phpdocumentor-tag-list__definition">
+								<span class="phpdocumentor-tag-link"><abbr title="\Exception">Exception</abbr></span>
+								
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+							<dt class="phpdocumentor-tag-list__entry">
+								<span class="phpdocumentor-tag__name">deprecated</span>
+							</dt>
+							<dd class="phpdocumentor-tag-list__definition">
+								
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+							<dt class="phpdocumentor-tag-list__entry">
+								<span class="phpdocumentor-tag__name">see</span>
+							</dt>
+							<dd class="phpdocumentor-tag-list__definition">
+								<span class="phpdocumentor-tag-link"><abbr title="\Orpheus\SQLAdapter\select()">select()</abbr></span>
+								
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+						</dl>
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">mixed</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+            -deprecated                        -static                    "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_doUpdate">
+							doUpdate()
+							<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_doUpdate"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+									href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">463</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">The static function to use for UPDATE queries in global context</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature -deprecated">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__static">static</span> <span class="phpdocumentor-signature__name">doUpdate</span><span>(</span><span
+								class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$options</span><span> = </span><span
+								class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span
+								class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$instance</span><span> = </span><span
+								class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span
+								class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$IDField</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">mixed</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$options</span>
+								: <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+								= <span class="phpdocumentor-signature__argument__default-value">[]</span></dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The options used to build the query.</p>
+								</section>
+							
+							</dd>
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$instance</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+								= <span class="phpdocumentor-signature__argument__default-value">null</span></dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The db instance used to send the query.</p>
+								</section>
+							
+							</dd>
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$IDField</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+								= <span class="phpdocumentor-signature__argument__default-value">null</span></dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The ID field of the table.</p>
+								</section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-tag-list__heading" id="tags">
+							Tags
+							<a class="headerlink" href="#tags"><i class="fas fa-link"></i></a>
+						</h5>
+						<dl class="phpdocumentor-tag-list">
+							<dt class="phpdocumentor-tag-list__entry">
+								<span class="phpdocumentor-tag__name">throws</span>
+							</dt>
+							<dd class="phpdocumentor-tag-list__definition">
+								<span class="phpdocumentor-tag-link"><abbr title="\Exception">Exception</abbr></span>
+								
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+							<dt class="phpdocumentor-tag-list__entry">
+								<span class="phpdocumentor-tag__name">deprecated</span>
+							</dt>
+							<dd class="phpdocumentor-tag-list__definition">
+								
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+							<dt class="phpdocumentor-tag-list__entry">
+								<span class="phpdocumentor-tag__name">see</span>
+							</dt>
+							<dd class="phpdocumentor-tag-list__definition">
+								<span class="phpdocumentor-tag-link"><abbr title="\Orpheus\SQLAdapter\update()">update()</abbr></span>
+								
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+						</dl>
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">mixed</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_escapeIdentifier">
+							escapeIdentifier()
+							<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_escapeIdentifier"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+									href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">308</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Escape SQL identifiers</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">escapeIdentifier</span><span>(</span><span class="phpdocumentor-signature__argument"><span
+								class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$identifier</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">string</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$identifier</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The identifier to escape</p>
+								</section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">string</span>
+						&mdash;
+						<section class="phpdocumentor-description"><p>The escaped identifier</p>
+							<p>Escapes the given string as an SQL identifier.</p>
+						</section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_escapeValue">
+							escapeValue()
+							<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_escapeValue"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+									href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">239</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Escape SQL value</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">escapeValue</span><span>(</span><span class="phpdocumentor-signature__argument"><span
+								class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$value</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">string</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$value</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The value to format.</p>
+								</section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-tag-list__heading" id="tags">
+							Tags
+							<a class="headerlink" href="#tags"><i class="fas fa-link"></i></a>
+						</h5>
+						<dl class="phpdocumentor-tag-list">
+							<dt class="phpdocumentor-tag-list__entry">
+								<span class="phpdocumentor-tag__name">see</span>
+							</dt>
+							<dd class="phpdocumentor-tag-list__definition">
+								<span class="phpdocumentor-tag-link"><abbr title="\Orpheus\SQLAdapter\formatValue()">formatValue()</abbr></span>
+								
+								<section class="phpdocumentor-description"><p>Escape the given value to the matching SQL type.
+									If the value is a float, we make french decimal compatible with SQL.
+									If null, we use the NULL value, else we consider it as a string value.</p>
+								</section>
+							
+							</dd>
+						</dl>
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">string</span>
+						&mdash;
+						<section class="phpdocumentor-description"><p>The formatted value.</p>
+						</section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_formatString">
+							formatString()
+							<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_formatString"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+									href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">257</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Format SQL string</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">formatString</span><span>(</span><span class="phpdocumentor-signature__argument"><span
+								class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$str</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">string</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$str</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The string to format.</p>
+								</section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">string</span>
+						&mdash;
+						<section class="phpdocumentor-description"><p>The formatted string.</p>
+							<p>Format the given string as an SQL string.</p>
+						</section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_formatValue">
+							formatValue()
+							<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_formatValue"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+									href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">224</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Format SQL value</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">formatValue</span><span>(</span><span class="phpdocumentor-signature__argument"><span
+								class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$value</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">string</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$value</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The value to format.</p>
+								</section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">string</span>
+						&mdash;
+						<section class="phpdocumentor-description"><p>The formatted value.</p>
+							<p>Format the given value to the matching SQL type.
+								If the value is a float, we make french decimal compatible with SQL.
+								If null, we use the NULL value, else we consider it as a string value.</p>
+						</section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_formatValueList">
+							formatValueList()
+							<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_formatValueList"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+									href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">206</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Format a list of values</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">formatValueList</span><span>(</span><span class="phpdocumentor-signature__argument"><span
+								class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$list</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">string</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$list</span>
+								: <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">string</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                        -abstract            -static                    "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_getDriver">
+							getDriver()
+							<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_getDriver"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+									href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">572</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Get the driven string</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__abstract">abstract</span> <span class="phpdocumentor-signature__static">static</span> <span class="phpdocumentor-signature__name">getDriver</span><span>(</span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">string</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">string</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_getInstance">
+							getInstance()
+							<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_getInstance"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+									href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">319</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Get an unique instance of SQLAdapter by its name</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__static">static</span> <span class="phpdocumentor-signature__name">getInstance</span><span>(</span><span
+								class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$name</span><span> = </span><span
+								class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type"><a href="classes/Orpheus-SQLAdapter-SQLAdapter.html"><abbr
+								title="\Orpheus\SQLAdapter\SQLAdapter">SQLAdapter</abbr></a></span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$name</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+								= <span class="phpdocumentor-signature__argument__default-value">null</span></dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>Name of the instance, default value is &quot;default&quot;</p>
+								</section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-tag-list__heading" id="tags">
+							Tags
+							<a class="headerlink" href="#tags"><i class="fas fa-link"></i></a>
+						</h5>
+						<dl class="phpdocumentor-tag-list">
+							<dt class="phpdocumentor-tag-list__entry">
+								<span class="phpdocumentor-tag__name">throws</span>
+							</dt>
+							<dd class="phpdocumentor-tag-list__definition">
+								<span class="phpdocumentor-tag-link"><a href="classes/Orpheus-SQLAdapter-Exception-SQLException.html"><abbr title="\Orpheus\SQLAdapter\Exception\SQLException">SQLException</abbr></a></span>
+								
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+						</dl>
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type"><a href="classes/Orpheus-SQLAdapter-SQLAdapter.html"><abbr
+								title="\Orpheus\SQLAdapter\SQLAdapter">SQLAdapter</abbr></a></span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_getPdo">
+							getPdo()
+							<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_getPdo"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+									href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">279</span>
+						</aside>
+						
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">getPdo</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr
+								title="\PDO">PDO</abbr></span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type"><abbr title="\PDO">PDO</abbr></span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                        -abstract                                "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_insert">
+							insert()
+							<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_insert"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+									href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">178</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Insert something in database</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__abstract">abstract</span> <span class="phpdocumentor-signature__name">insert</span><span>(</span><span
+								class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$options</span><span> = </span><span
+								class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">int</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$options</span>
+								: <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+								= <span class="phpdocumentor-signature__argument__default-value">[]</span></dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The options used to build the query</p>
+								</section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">int</span>
+						&mdash;
+						<section class="phpdocumentor-description"><p>The number of inserted rows</p>
+						</section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_lastID">
+							lastID()
+							<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_lastID"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+									href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">196</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Get the last inserted ID</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">lastID</span><span>(</span><span class="phpdocumentor-signature__argument"><span
+								class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$table</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">mixed</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$table</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The table to get the last inserted id</p>
+								</section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">mixed</span>
+						&mdash;
+						<section class="phpdocumentor-description"><p>The last inserted id value</p>
+							<p>It requires a successful call of insert() !</p>
+						</section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_listConfig">
+							listConfig()
+							<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_listConfig"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+									href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">363</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">List all instance&#039;s configuration</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__static">static</span> <span class="phpdocumentor-signature__name">listConfig</span><span>(</span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_make">
+							make()
+							<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_make"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+									href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">336</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Try to make a SQLAdapter by its name loading from configuration</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__static">static</span> <span class="phpdocumentor-signature__name">make</span><span>(</span><span
+								class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$name</span><span> = </span><span
+								class="phpdocumentor-signature__argument__default-value">&#039;default&#039;</span><span> ]</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type"><a href="classes/Orpheus-SQLAdapter-SQLAdapter.html"><abbr
+								title="\Orpheus\SQLAdapter\SQLAdapter">SQLAdapter</abbr></a></span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$name</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+								= <span class="phpdocumentor-signature__argument__default-value">&#039;default&#039;</span></dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-tag-list__heading" id="tags">
+							Tags
+							<a class="headerlink" href="#tags"><i class="fas fa-link"></i></a>
+						</h5>
+						<dl class="phpdocumentor-tag-list">
+							<dt class="phpdocumentor-tag-list__entry">
+								<span class="phpdocumentor-tag__name">throws</span>
+							</dt>
+							<dd class="phpdocumentor-tag-list__definition">
+								<span class="phpdocumentor-tag-link"><a href="classes/Orpheus-SQLAdapter-Exception-SQLException.html"><abbr title="\Orpheus\SQLAdapter\Exception\SQLException">SQLException</abbr></a></span>
+								
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+						</dl>
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type"><a href="classes/Orpheus-SQLAdapter-SQLAdapter.html"><abbr
+								title="\Orpheus\SQLAdapter\SQLAdapter">SQLAdapter</abbr></a></span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_prepareInstance">
+							prepareInstance()
+							<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_prepareInstance"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+									href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">436</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">The static function to prepareInstance an adapter for the given instance</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__static">static</span> <span class="phpdocumentor-signature__name">prepareInstance</span><span>(</span><span
+								class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span
+								class="phpdocumentor-signature__argument__reference-operator">&amp;</span><span class="phpdocumentor-signature__argument__name">$instance</span><span> = </span><span
+								class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">mixed</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$instance</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+								= <span class="phpdocumentor-signature__argument__default-value">null</span></dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The db instance name to prepareInstance.</p>
+								</section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-tag-list__heading" id="tags">
+							Tags
+							<a class="headerlink" href="#tags"><i class="fas fa-link"></i></a>
+						</h5>
+						<dl class="phpdocumentor-tag-list">
+							<dt class="phpdocumentor-tag-list__entry">
+								<span class="phpdocumentor-tag__name">throws</span>
+							</dt>
+							<dd class="phpdocumentor-tag-list__definition">
+								<span class="phpdocumentor-tag-link"><abbr title="\Exception">Exception</abbr></span>
+								
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+						</dl>
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">mixed</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_prepareQuery">
+							prepareQuery()
+							<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_prepareQuery"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+									href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">422</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Prepare the query for the given instance</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__static">static</span> <span class="phpdocumentor-signature__name">prepareQuery</span><span>(</span><span
+								class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span
+								class="phpdocumentor-signature__argument__reference-operator">&amp;</span><span class="phpdocumentor-signature__argument__name">$options</span><span> = </span><span
+								class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span
+								class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span
+								class="phpdocumentor-signature__argument__reference-operator">&amp;</span><span class="phpdocumentor-signature__argument__name">$instance</span><span> = </span><span
+								class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span
+								class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$IDField</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">mixed</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$options</span>
+								: <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+								= <span class="phpdocumentor-signature__argument__default-value">[]</span></dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The options used to build the query.</p>
+								</section>
+							
+							</dd>
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$instance</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+								= <span class="phpdocumentor-signature__argument__default-value">null</span></dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The db instance used to send the query.</p>
+								</section>
+							
+							</dd>
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$IDField</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+								= <span class="phpdocumentor-signature__argument__default-value">null</span></dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The ID field of the table.</p>
+								</section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-tag-list__heading" id="tags">
+							Tags
+							<a class="headerlink" href="#tags"><i class="fas fa-link"></i></a>
+						</h5>
+						<dl class="phpdocumentor-tag-list">
+							<dt class="phpdocumentor-tag-list__entry">
+								<span class="phpdocumentor-tag__name">throws</span>
+							</dt>
+							<dd class="phpdocumentor-tag-list__definition">
+								<span class="phpdocumentor-tag-link"><abbr title="\Exception">Exception</abbr></span>
+								
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+						</dl>
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">mixed</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_query">
+							query()
+							<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_query"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+									href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">152</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Query the DB server</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">query</span><span>(</span><span class="phpdocumentor-signature__argument"><span
+								class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$Query</span></span><span
+								class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$Fetch</span><span> = </span><span
+								class="phpdocumentor-signature__argument__default-value">PDOQUERY</span><span> ]</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">mixed</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$Query</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The query to execute.</p>
+								</section>
+							
+							</dd>
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$Fetch</span>
+								: <span class="phpdocumentor-signature__argument__return-type">int</span>
+								= <span class="phpdocumentor-signature__argument__default-value">PDOQUERY</span></dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>See PDO constants above. Optional, default is PDOQUERY.</p>
+								</section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-tag-list__heading" id="tags">
+							Tags
+							<a class="headerlink" href="#tags"><i class="fas fa-link"></i></a>
+						</h5>
+						<dl class="phpdocumentor-tag-list">
+							<dt class="phpdocumentor-tag-list__entry">
+								<span class="phpdocumentor-tag__name">see</span>
+							</dt>
+							<dd class="phpdocumentor-tag-list__definition">
+								<span class="phpdocumentor-tag-link"><abbr title="\Orpheus\SQLAdapter\pdo_query()">pdo_query()</abbr></span>
+								
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+						</dl>
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">mixed</span>
+						&mdash;
+						<section class="phpdocumentor-description"><p>The result of pdo_query()</p>
+						</section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_registerAdapter">
+							registerAdapter()
+							<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_registerAdapter"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+									href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">395</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Register a driver adapter</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__static">static</span> <span class="phpdocumentor-signature__name">registerAdapter</span><span>(</span><span
+								class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$driver</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span
+								class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$class</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">mixed</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$driver</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$class</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">mixed</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                        -abstract                                "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_select">
+							select()
+							<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_select"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+									href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">162</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Select something from database</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__abstract">abstract</span> <span class="phpdocumentor-signature__name">select</span><span>(</span><span
+								class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$options</span><span> = </span><span
+								class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">mixed</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$options</span>
+								: <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+								= <span class="phpdocumentor-signature__argument__default-value">[]</span></dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The options used to build the query</p>
+								</section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">mixed</span>
+						&mdash;
+						<section class="phpdocumentor-description"><p>Mixed return, depending on the 'output' option</p>
+						</section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_setIDField">
+							setIDField()
+							<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_setIDField"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+									href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">269</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Set the IDFIELD</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">setIDField</span><span>(</span><span class="phpdocumentor-signature__argument"><span
+								class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$field</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type"><a href="classes/Orpheus-SQLAdapter-SQLAdapter.html"><abbr
+								title="\Orpheus\SQLAdapter\SQLAdapter">SQLAdapter</abbr></a></span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$field</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The new ID field.</p>
+								</section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type"><a href="classes/Orpheus-SQLAdapter-SQLAdapter.html"><abbr
+								title="\Orpheus\SQLAdapter\SQLAdapter">SQLAdapter</abbr></a></span>
+						&mdash;
+						<section class="phpdocumentor-description"><p>Set the IDFIELD value to $field</p>
+						</section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                        -abstract                                "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_update">
+							update()
+							<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_update"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+									href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">170</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Update something in database</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__abstract">abstract</span> <span class="phpdocumentor-signature__name">update</span><span>(</span><span
+								class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$options</span><span> = </span><span
+								class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">int</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$options</span>
+								: <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+								= <span class="phpdocumentor-signature__argument__default-value">[]</span></dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The options used to build the query</p>
+								</section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">int</span>
+						&mdash;
+						<section class="phpdocumentor-description"><p>The number of affected rows</p>
+						</section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -protected
+                        -abstract                                "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_connect">
+							connect()
+							<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_connect"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+									href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">119</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Connect to the DBMS using $config</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">protected</span>
+							<span class="phpdocumentor-signature__abstract">abstract</span> <span class="phpdocumentor-signature__name">connect</span><span>(</span><span
+								class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$config</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">mixed</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$config</span>
+								: <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">mixed</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -protected
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_formatFieldList">
+							formatFieldList()
+							<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_formatFieldList"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+									href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">289</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Format the given $fields into an escaped SQL string list of key=value</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">protected</span>
+							<span class="phpdocumentor-signature__name">formatFieldList</span><span>(</span><span class="phpdocumentor-signature__argument"><span
+								class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;|string&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$fields</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">string</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$fields</span>
+								: <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;|string</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">string</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -protected
+                                    -static                    "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_getDefaults">
+							getDefaults()
+							<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_getDefaults"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+									href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">126</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Get defaults configuration to fill missing options</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">protected</span>
+							<span class="phpdocumentor-signature__static">static</span> <span class="phpdocumentor-signature__name">getDefaults</span><span>(</span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">array&lt;string|int, string&gt;</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">array&lt;string|int, string&gt;</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -protected
+                                    -static                    "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_registerInstance">
+							registerInstance()
+							<a class="headerlink" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#method_registerInstance"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php"><a
+									href="files/vendor-orpheus-orpheus-sqladapter-src-sqladapter-sqladapter.html"><abbr title="vendor/orpheus/orpheus-sqladapter/src/SQLAdapter/SQLAdapter.php">SQLAdapter.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">140</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Register an unique instance by its name</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">protected</span>
+							<span class="phpdocumentor-signature__static">static</span> <span class="phpdocumentor-signature__name">registerInstance</span><span>(</span><span
+								class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$name</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span
+								class="phpdocumentor-signature__argument__return-type"><a href="classes/Orpheus-SQLAdapter-SQLAdapter.html"><abbr
+								title="\Orpheus\SQLAdapter\SQLAdapter">SQLAdapter</abbr></a>&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$adapter</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">mixed</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$name</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$adapter</span>
+								: <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Orpheus-SQLAdapter-SQLAdapter.html"><abbr title="\Orpheus\SQLAdapter\SQLAdapter">SQLAdapter</abbr></a></span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">mixed</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+				</section>
+			
+			</article>
+			<section class="phpdocumentor-search-results phpdocumentor-search-results--hidden" data-search-results>
+				<section class="phpdocumentor-search-results__dialog">
+					<header class="phpdocumentor-search-results__header">
+						<h2 class="phpdocumentor-search-results__title">Search results</h2>
+						<button class="phpdocumentor-search-results__close"><i class="fas fa-times"></i></button>
+					</header>
+					<section class="phpdocumentor-search-results__body">
+						<ul class="phpdocumentor-search-results__entries"></ul>
+					</section>
+				</section>
+			</section>
+		</div>
+	</div>
+	<a class="phpdocumentor-back-to-top" href="classes/Orpheus-SQLAdapter-SQLAdapter.html#top"><i class="fas fa-chevron-circle-up"></i></a>
+
+</main>
+
+<script>
+cssVars({});
+</script>
+</body>
+</html>

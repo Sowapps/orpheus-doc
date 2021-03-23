@@ -1,0 +1,1749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Documentation</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<base href="../">
+	<link href="images/favicon.ico" rel="icon"/>
+	<link href="css/normalize.css" rel="stylesheet">
+	<link href="css/base.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+	<link href="css/template.css" rel="stylesheet">
+	<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" rel="stylesheet"/>
+	<script src="https://cdn.jsdelivr.net/npm/fuse.js@3.4.6"></script>
+	<script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+	<script crossorigin="anonymous" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js"></script>
+	<script src="js/search.js"></script>
+	<script defer src="js/searchIndex.js"></script>
+</head>
+<body id="top">
+<header class="phpdocumentor-header phpdocumentor-section">
+	<h1 class="phpdocumentor-title"><a class="phpdocumentor-title__link" href="">Documentation</a></h1>
+	<input class="phpdocumentor-header__menu-button" id="menu-button" name="menu-button" type="checkbox"/>
+	<label class="phpdocumentor-header__menu-icon" for="menu-button">
+		<i class="fas fa-bars"></i>
+	</label>
+	<section class="phpdocumentor-search" data-search-form>
+		<label>
+			<span class="visually-hidden">Search for</span>
+			<svg class="phpdocumentor-search__icon" fill="none" height="20" viewBox="0 0 21 20" width="21" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="7.5" cy="7.5" r="6.5" stroke="currentColor" stroke-width="2"/>
+				<line stroke="currentColor" stroke-width="3" x1="12.4892" x2="19.1559" y1="12.2727" y2="18.9393"/>
+			</svg>
+			<input class="phpdocumentor-field phpdocumentor-search__field" disabled placeholder="Loading .." type="search"/>
+		</label>
+	</section>
+	
+	<nav class="phpdocumentor-topnav">
+		<ul class="phpdocumentor-topnav__menu">
+		</ul>
+	</nav>
+</header>
+
+<main class="phpdocumentor">
+	<div class="phpdocumentor-section">
+		<input class="phpdocumentor-sidebar__menu-button" id="sidebar-button" name="sidebar-button" type="checkbox"/>
+		<label class="phpdocumentor-sidebar__menu-icon" for="sidebar-button">
+			Menu
+		</label>
+		<aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+			
+			<section class="phpdocumentor-sidebar__category">
+				<h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+				<h3 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+				<h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/orpheus.html"><abbr title="\Orpheus">Orpheus</abbr></a></h4>
+				<ul class="phpdocumentor-list">
+					<li><a href="namespaces/orpheus-cache.html"><abbr title="\Orpheus\Cache">Cache</abbr></a></li>
+					<li><a href="namespaces/orpheus-config.html"><abbr title="\Orpheus\Config">Config</abbr></a></li>
+					<li><a href="namespaces/orpheus-core.html"><abbr title="\Orpheus\Core">Core</abbr></a></li>
+					<li><a href="namespaces/orpheus-exception.html"><abbr title="\Orpheus\Exception">Exception</abbr></a></li>
+					<li><a href="namespaces/orpheus-entitydescriptor.html"><abbr title="\Orpheus\EntityDescriptor">EntityDescriptor</abbr></a></li>
+					<li><a href="namespaces/orpheus-time.html"><abbr title="\Orpheus\Time">Time</abbr></a></li>
+					<li><a href="namespaces/orpheus-form.html"><abbr title="\Orpheus\Form">Form</abbr></a></li>
+					<li><a href="namespaces/orpheus-hook.html"><abbr title="\Orpheus\Hook">Hook</abbr></a></li>
+					<li><a href="namespaces/orpheus-controller.html"><abbr title="\Orpheus\Controller">Controller</abbr></a></li>
+					<li><a href="namespaces/orpheus-datatype.html"><abbr title="\Orpheus\DataType">DataType</abbr></a></li>
+					<li><a href="namespaces/orpheus-inputcontroller.html"><abbr title="\Orpheus\InputController">InputController</abbr></a></li>
+					<li><a href="namespaces/orpheus-rendering.html"><abbr title="\Orpheus\Rendering">Rendering</abbr></a></li>
+					<li><a href="namespaces/orpheus-pdo.html"><abbr title="\Orpheus\Pdo">Pdo</abbr></a></li>
+					<li><a href="namespaces/orpheus-sqladapter.html"><abbr title="\Orpheus\SQLAdapter">SQLAdapter</abbr></a></li>
+					<li><a href="namespaces/orpheus-sqlrequest.html"><abbr title="\Orpheus\SQLRequest">SQLRequest</abbr></a></li>
+					<li><a href="namespaces/orpheus-email.html"><abbr title="\Orpheus\Email">Email</abbr></a></li>
+					<li><a href="namespaces/orpheus-file.html"><abbr title="\Orpheus\File">File</abbr></a></li>
+					<li><a href="namespaces/orpheus-publisher.html"><abbr title="\Orpheus\Publisher">Publisher</abbr></a></li>
+				</ul>
+			</section>
+			
+			<section class="phpdocumentor-sidebar__category">
+				<h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+				<h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+				<h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Orpheus.html"><abbr title="\Orpheus">Orpheus</abbr></a></h3>
+				<ul class="phpdocumentor-list">
+					<li><a href="packages/Orpheus-Controller.html"><abbr title="\Orpheus\Controller">Controller</abbr></a></li>
+					<li><a href="packages/Orpheus-Rendering.html"><abbr title="\Orpheus\Rendering">Rendering</abbr></a></li>
+				</ul>
+			</section>
+			
+			<section class="phpdocumentor-sidebar__category">
+				<h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+				<h3 class="phpdocumentor-sidebar__root-package"><a href="reports/deprecated.html">Deprecated</a></h3>
+				<h3 class="phpdocumentor-sidebar__root-package"><a href="reports/errors.html">Errors</a></h3>
+				<h3 class="phpdocumentor-sidebar__root-package"><a href="reports/markers.html">Markers</a></h3>
+			</section>
+			
+			<section class="phpdocumentor-sidebar__category">
+				<h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+				<h3 class="phpdocumentor-sidebar__root-package"><a href="indices/files.html">Files</a></h3>
+			</section>
+		</aside>
+		
+		<div class="phpdocumentor-column -eight phpdocumentor-content">
+			<ul class="phpdocumentor-breadcrumbs">
+				<li class="phpdocumentor-breadcrumb"><a href="namespaces/orpheus.html">Orpheus</a></li>
+				<li class="phpdocumentor-breadcrumb"><a href="namespaces/orpheus-config.html">Config</a></li>
+				<li class="phpdocumentor-breadcrumb"><a href="namespaces/orpheus-config-yaml.html">YAML</a></li>
+			</ul>
+			
+			<article class="phpdocumentor-element -class">
+				<h2 class="phpdocumentor-content__title">
+					YAML
+					
+					<span class="phpdocumentor-element__extends">
+        extends <a href="classes/Orpheus-Config-Config.html"><abbr title="\Orpheus\Config\Config">Config</abbr></a>
+    </span>
+					
+					<div class="phpdocumentor-element__package">
+						in package
+						<ul class="phpdocumentor-breadcrumbs">
+							<li class="phpdocumentor-breadcrumb"><a href="packages/Default.html">Default</a></li>
+						</ul>
+					</div>
+				
+				
+				</h2>
+				
+				<aside class="phpdocumentor-element-found-in">
+					<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-yaml/src/Config/YAML/YAML.php"><a
+							href="files/vendor-orpheus-orpheus-yaml-src-config-yaml-yaml.html"><abbr title="vendor/orpheus/orpheus-yaml/src/Config/YAML/YAML.php">YAML.php</abbr></a></abbr>
+					:
+					<span class="phpdocumentor-element-found-in__line">15</span>
+				</aside>
+				
+				<p class="phpdocumentor-summary">The YAML configuration class</p>
+				
+				<section class="phpdocumentor-description"><p>This class is made to get YAML configuration.</p>
+				</section>
+				
+				
+				<h3 id="toc">
+					Table of Contents
+					<a class="headerlink" href="#toc"><i class="fas fa-link"></i></a>
+				</h3>
+				
+				<dl class="phpdocumentor-table-of-contents">
+					<dt class="phpdocumentor-table-of-contents__entry -property -protected">
+						<a href="classes/Orpheus-Config-Config.html#property_caching">$caching</a>
+						<span>
+                &nbsp;: bool            </span>
+					</dt>
+					<dd>The config uses cache</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -property -protected">
+						<a href="classes/Orpheus-Config-Config.html#property_config">$config</a>
+						<span>
+                &nbsp;: array&lt;string|int, mixed&gt;            </span>
+					</dt>
+					<dd>Contains the configuration for this Config Object.</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -property -protected">
+						<a href="classes/Orpheus-Config-YAML-YAML.html#property_extension">$extension</a>
+						<span>
+                &nbsp;: string            </span>
+					</dt>
+					<dd>Extension for this config files</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -property -protected">
+						<a href="classes/Orpheus-Config-Config.html#property_main">$main</a>
+						<span>
+                &nbsp;: <a href="classes/Orpheus-Config-Config.html"><abbr title="\Orpheus\Config\Config">Config</abbr></a>            </span>
+					</dt>
+					<dd>Contains the main configuration, reachable from everywhere.</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -property -protected">
+						<a href="classes/Orpheus-Config-Config.html#property_repositories">$repositories</a>
+						<span>
+                &nbsp;: array&lt;string|int, mixed&gt;            </span>
+					</dt>
+					<dd>The repositories</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-Config-Config.html#method___get">__get()</a>
+						<span>
+                        &nbsp;: string|<abbr title="\stdClass">stdClass</abbr>    </span>
+					</dt>
+					<dd>The magic function to get config</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-Config-Config.html#method___isset">__isset()</a>
+						<span>
+                        &nbsp;: mixed    </span>
+					</dt>
+					<dd>Magic isset</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-Config-Config.html#method___set">__set()</a>
+						<span>
+                        &nbsp;: mixed    </span>
+					</dt>
+					<dd>The magic function to set config</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-Config-Config.html#method_add">add()</a>
+						<span>
+                        &nbsp;: mixed    </span>
+					</dt>
+					<dd>Add configuration to this object</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-Config-Config.html#method_addRepository">addRepository()</a>
+						<span>
+                        &nbsp;: mixed    </span>
+					</dt>
+					<dd>Add a repository to load configs</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-Config-Config.html#method_addRepositoryLibrary">addRepositoryLibrary()</a>
+						<span>
+                        &nbsp;: mixed    </span>
+					</dt>
+					<dd>Add a repository library to load configs</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-Config-Config.html#method_asArray">asArray()</a>
+						<span>
+                        &nbsp;: array&lt;string|int, mixed&gt;    </span>
+					</dt>
+					<dd>Get this config as array</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-Config-Config.html#method_build">build()</a>
+						<span>
+                        &nbsp;: <a href="classes/Orpheus-Config-Config.html"><abbr title="\Orpheus\Config\Config">Config</abbr></a>    </span>
+					</dt>
+					<dd>Build a configuration from $source using load() method.</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-Config-Config.html#method_buildFrom">buildFrom()</a>
+						<span>
+                        &nbsp;: <a href="classes/Orpheus-Config-Config.html"><abbr title="\Orpheus\Config\Config">Config</abbr></a>    </span>
+					</dt>
+					<dd>Build new configuration source from package</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-Config-Config.html#method_checkSource">checkSource()</a>
+						<span>
+                        &nbsp;: bool    </span>
+					</dt>
+					<dd>Check if source is available</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-Config-Config.html#method_get">get()</a>
+						<span>
+                        &nbsp;: string    </span>
+					</dt>
+					<dd>Get configuration from the main configuration object</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-Config-Config.html#method_getFilePath">getFilePath()</a>
+						<span>
+                        &nbsp;: string    </span>
+					</dt>
+					<dd>Get the file path</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-Config-Config.html#method_getOne">getOne()</a>
+						<span>
+                        &nbsp;: mixed    </span>
+					</dt>
+					<dd>Get one config value</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-Config-Config.html#method_hasSource">hasSource()</a>
+						<span>
+                        &nbsp;: bool    </span>
+					</dt>
+					<dd>Check if source is available</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-Config-Config.html#method_isCaching">isCaching()</a>
+						<span>
+                        &nbsp;: bool    </span>
+					</dt>
+					<dd>Test if config is caching</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-Config-Config.html#method_load">load()</a>
+						<span>
+                        &nbsp;: bool    </span>
+					</dt>
+					<dd>Load new configuration from source</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-Config-Config.html#method_loadFrom">loadFrom()</a>
+						<span>
+                        &nbsp;: bool    </span>
+					</dt>
+					<dd>Load new configuration from source in package</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-Config-YAML-YAML.html#method_parse">parse()</a>
+						<span>
+                        &nbsp;: mixed    </span>
+					</dt>
+					<dd>Parse configuration from given source.</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-Config-Config.html#method_set">set()</a>
+						<span>
+                        &nbsp;: mixed    </span>
+					</dt>
+					<dd>Set configuration to the main configuration object
+						Call __set() method to main configuration object.
+					</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-Config-Config.html#method_setCaching">setCaching()</a>
+						<span>
+                        &nbsp;: mixed    </span>
+					</dt>
+					<dd>Set if config is caching</dd>
+				
+				</dl>
+				
+				
+				<section class="phpdocumentor-properties">
+					<h3 class="phpdocumentor-elements__header" id="properties">
+						Properties
+						<a class="headerlink" href="classes/Orpheus-Config-YAML-YAML.html#properties"><i class="fas fa-link"></i></a>
+					</h3>
+					<article
+							class="
+            phpdocumentor-element
+            -property
+            -protected
+            -static                                            "
+					>
+						<h4 class="phpdocumentor-element__name" id="property_caching">
+							$caching
+							<a class="headerlink" href="classes/Orpheus-Config-Config.html#property_caching"><i class="fas fa-link"></i></a>
+							<span class="phpdocumentor-element__modifiers">
+                                </span>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-core/src/Config/Config.php"><a
+									href="files/vendor-orpheus-orpheus-core-src-config-config.html"><abbr title="vendor/orpheus/orpheus-core/src/Config/Config.php">Config.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">32</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">The config uses cache</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">protected</span>
+							<span class="phpdocumentor-signature__static">static</span> <span class="phpdocumentor-signature__type">bool</span>
+							<span class="phpdocumentor-signature__name">$caching</span>
+							= <span class="phpdocumentor-signature__default-value">true</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="
+            phpdocumentor-element
+            -property
+            -protected
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="property_config">
+							$config
+							<a class="headerlink" href="classes/Orpheus-Config-Config.html#property_config"><i class="fas fa-link"></i></a>
+							<span class="phpdocumentor-element__modifiers">
+                                </span>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-core/src/Config/Config.php"><a
+									href="files/vendor-orpheus-orpheus-core-src-config-config.html"><abbr title="vendor/orpheus/orpheus-core/src/Config/Config.php">Config.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">45</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Contains the configuration for this Config Object.</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">protected</span>
+							<span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
+							<span class="phpdocumentor-signature__name">$config</span>
+							= <span class="phpdocumentor-signature__default-value">[]</span></code>
+						
+						<section class="phpdocumentor-description"><p>Must be inherited from ConfigCore.</p>
+						</section>
+					
+					
+					</article>
+					<article
+							class="
+            phpdocumentor-element
+            -property
+            -protected
+            -static                                            "
+					>
+						<h4 class="phpdocumentor-element__name" id="property_extension">
+							$extension
+							<a class="headerlink" href="classes/Orpheus-Config-YAML-YAML.html#property_extension"><i class="fas fa-link"></i></a>
+							<span class="phpdocumentor-element__modifiers">
+                                </span>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-yaml/src/Config/YAML/YAML.php"><a
+									href="files/vendor-orpheus-orpheus-yaml-src-config-yaml-yaml.html"><abbr title="vendor/orpheus/orpheus-yaml/src/Config/YAML/YAML.php">YAML.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">22</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Extension for this config files</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">protected</span>
+							<span class="phpdocumentor-signature__static">static</span> <span class="phpdocumentor-signature__type">string</span>
+							<span class="phpdocumentor-signature__name">$extension</span>
+							= <span class="phpdocumentor-signature__default-value">&#039;yaml&#039;</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="
+            phpdocumentor-element
+            -property
+            -protected
+            -static                                            "
+					>
+						<h4 class="phpdocumentor-element__name" id="property_main">
+							$main
+							<a class="headerlink" href="classes/Orpheus-Config-Config.html#property_main"><i class="fas fa-link"></i></a>
+							<span class="phpdocumentor-element__modifiers">
+                                </span>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-core/src/Config/Config.php"><a
+									href="files/vendor-orpheus-orpheus-core-src-config-config.html"><abbr title="vendor/orpheus/orpheus-core/src/Config/Config.php">Config.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">25</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Contains the main configuration, reachable from everywhere.</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">protected</span>
+							<span class="phpdocumentor-signature__static">static</span> <span class="phpdocumentor-signature__type"><a href="classes/Orpheus-Config-Config.html"><abbr
+								title="\Orpheus\Config\Config">Config</abbr></a></span>
+							<span class="phpdocumentor-signature__name">$main</span>
+						</code>
+						
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="
+            phpdocumentor-element
+            -property
+            -protected
+            -static                                            "
+					>
+						<h4 class="phpdocumentor-element__name" id="property_repositories">
+							$repositories
+							<a class="headerlink" href="classes/Orpheus-Config-Config.html#property_repositories"><i class="fas fa-link"></i></a>
+							<span class="phpdocumentor-element__modifiers">
+                                </span>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-core/src/Config/Config.php"><a
+									href="files/vendor-orpheus-orpheus-core-src-config-config.html"><abbr title="vendor/orpheus/orpheus-core/src/Config/Config.php">Config.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">38</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">The repositories</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">protected</span>
+							<span class="phpdocumentor-signature__static">static</span> <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
+							<span class="phpdocumentor-signature__name">$repositories</span>
+							= <span class="phpdocumentor-signature__default-value">[]</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+				</section>
+				
+				<section class="phpdocumentor-methods">
+					<h3 class="phpdocumentor-elements__header" id="methods">
+						Methods
+						<a class="headerlink" href="classes/Orpheus-Config-YAML-YAML.html#methods"><i class="fas fa-link"></i></a>
+					</h3>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method___get">
+							__get()
+							<a class="headerlink" href="classes/Orpheus-Config-Config.html#method___get"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-core/src/Config/Config.php"><a
+									href="files/vendor-orpheus-orpheus-core-src-config-config.html"><abbr title="vendor/orpheus/orpheus-core/src/Config/Config.php">Config.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">57</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">The magic function to get config</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">__get</span><span>(</span><span class="phpdocumentor-signature__argument"><span
+								class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$key</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string|<abbr
+								title="\stdClass">stdClass</abbr></span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$key</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The key to get the value.</p>
+								</section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">string|<abbr title="\stdClass">stdClass</abbr></span>
+						&mdash;
+						<section class="phpdocumentor-description"><p>A config value.</p>
+							<p>Return the configuration item with key $key.
+								Except for:</p>
+							<ul>
+								<li>'all' : It returns an array containing all configuration items.</li>
+							</ul>
+						</section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method___isset">
+							__isset()
+							<a class="headerlink" href="classes/Orpheus-Config-Config.html#method___isset"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-core/src/Config/Config.php"><a
+									href="files/vendor-orpheus-orpheus-core-src-config-config.html"><abbr title="vendor/orpheus/orpheus-core/src/Config/Config.php">Config.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">111</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Magic isset</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">__isset</span><span>(</span><span class="phpdocumentor-signature__argument"><span
+								class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$key</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$key</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>Key of the config to check is set</p>
+									<p>Checks if the config $key is set.</p>
+								</section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">mixed</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method___set">
+							__set()
+							<a class="headerlink" href="classes/Orpheus-Config-Config.html#method___set"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-core/src/Config/Config.php"><a
+									href="files/vendor-orpheus-orpheus-core-src-config-config.html"><abbr title="vendor/orpheus/orpheus-core/src/Config/Config.php">Config.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">74</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">The magic function to set config</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">__set</span><span>(</span><span class="phpdocumentor-signature__argument"><span
+								class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$key</span></span><span
+								class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$value</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">mixed</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$key</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The key to set the value.</p>
+								</section>
+							
+							</dd>
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$value</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The new config value.</p>
+									<p>Sets the configuration item with key $key.
+										Except for:</p>
+									<ul>
+										<li>'all' : It sets all the array containing all configuration items.</li>
+									</ul>
+								</section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">mixed</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_add">
+							add()
+							<a class="headerlink" href="classes/Orpheus-Config-Config.html#method_add"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-core/src/Config/Config.php"><a
+									href="files/vendor-orpheus-orpheus-core-src-config-config.html"><abbr title="vendor/orpheus/orpheus-core/src/Config/Config.php">Config.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">260</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Add configuration to this object</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">add</span><span>(</span><span class="phpdocumentor-signature__argument"><span
+								class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$conf</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">mixed</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$conf</span>
+								: <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The configuration array to add to the current object.</p>
+									<p>Add the configuration array $conf to this configuration.</p>
+								</section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">mixed</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_addRepository">
+							addRepository()
+							<a class="headerlink" href="classes/Orpheus-Config-Config.html#method_addRepository"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-core/src/Config/Config.php"><a
+									href="files/vendor-orpheus-orpheus-core-src-config-config.html"><abbr title="vendor/orpheus/orpheus-core/src/Config/Config.php">Config.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">375</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Add a repository to load configs</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__static">static</span> <span class="phpdocumentor-signature__name">addRepository</span><span>(</span><span
+								class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$repos</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">mixed</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$repos</span>
+								: <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The repository to add. Commonly a path to a directory.</p>
+								</section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">mixed</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_addRepositoryLibrary">
+							addRepositoryLibrary()
+							<a class="headerlink" href="classes/Orpheus-Config-Config.html#method_addRepositoryLibrary"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-core/src/Config/Config.php"><a
+									href="files/vendor-orpheus-orpheus-core-src-config-config.html"><abbr title="vendor/orpheus/orpheus-core/src/Config/Config.php">Config.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">366</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Add a repository library to load configs</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__static">static</span> <span class="phpdocumentor-signature__name">addRepositoryLibrary</span><span>(</span><span
+								class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$library</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">mixed</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$library</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The library folder</p>
+								</section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-tag-list__heading" id="tags">
+							Tags
+							<a class="headerlink" href="#tags"><i class="fas fa-link"></i></a>
+						</h5>
+						<dl class="phpdocumentor-tag-list">
+							<dt class="phpdocumentor-tag-list__entry">
+								<span class="phpdocumentor-tag__name">throws</span>
+							</dt>
+							<dd class="phpdocumentor-tag-list__definition">
+								<span class="phpdocumentor-tag-link"><abbr title="\Exception">Exception</abbr></span>
+								
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+						</dl>
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">mixed</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_asArray">
+							asArray()
+							<a class="headerlink" href="classes/Orpheus-Config-Config.html#method_asArray"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-core/src/Config/Config.php"><a
+									href="files/vendor-orpheus-orpheus-core-src-config-config.html"><abbr title="vendor/orpheus/orpheus-core/src/Config/Config.php">Config.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">89</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Get this config as array</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">asArray</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_build">
+							build()
+							<a class="headerlink" href="classes/Orpheus-Config-Config.html#method_build"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-core/src/Config/Config.php"><a
+									href="files/vendor-orpheus-orpheus-core-src-config-config.html"><abbr title="vendor/orpheus/orpheus-core/src/Config/Config.php">Config.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">277</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Build a configuration from $source using load() method.</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__static">static</span> <span class="phpdocumentor-signature__name">build</span><span>(</span><span
+								class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$source</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span
+								class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$minor</span><span> = </span><span
+								class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span
+								class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$cached</span><span> = </span><span
+								class="phpdocumentor-signature__argument__default-value">true</span><span> ]</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type"><a href="classes/Orpheus-Config-Config.html"><abbr title="\Orpheus\Config\Config">Config</abbr></a></span></code>
+						
+						<section class="phpdocumentor-description"><p>If it is not a minor configuration, that new configuration is added to the main configuration.</p>
+						</section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$source</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>An identifier to build the source</p>
+								</section>
+							
+							</dd>
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$minor</span>
+								: <span class="phpdocumentor-signature__argument__return-type">bool</span>
+								= <span class="phpdocumentor-signature__argument__default-value">false</span></dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>True if this is a minor configuration</p>
+								</section>
+							
+							</dd>
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$cached</span>
+								: <span class="phpdocumentor-signature__argument__return-type">bool</span>
+								= <span class="phpdocumentor-signature__argument__default-value">true</span></dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>True if this configuration should be cached</p>
+								</section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-tag-list__heading" id="tags">
+							Tags
+							<a class="headerlink" href="#tags"><i class="fas fa-link"></i></a>
+						</h5>
+						<dl class="phpdocumentor-tag-list">
+							<dt class="phpdocumentor-tag-list__entry">
+								<span class="phpdocumentor-tag__name">throws</span>
+							</dt>
+							<dd class="phpdocumentor-tag-list__definition">
+								<span class="phpdocumentor-tag-link"><abbr title="\Exception">Exception</abbr></span>
+								
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+						</dl>
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type"><a href="classes/Orpheus-Config-Config.html"><abbr title="\Orpheus\Config\Config">Config</abbr></a></span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_buildFrom">
+							buildFrom()
+							<a class="headerlink" href="classes/Orpheus-Config-Config.html#method_buildFrom"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-core/src/Config/Config.php"><a
+									href="files/vendor-orpheus-orpheus-core-src-config-config.html"><abbr title="vendor/orpheus/orpheus-core/src/Config/Config.php">Config.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">178</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Build new configuration source from package</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__static">static</span> <span class="phpdocumentor-signature__name">buildFrom</span><span>(</span><span
+								class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$package</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span
+								class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$source</span></span><span
+								class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$cached</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">true</span><span> ]</span></span><span
+								class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$silent</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type"><a href="classes/Orpheus-Config-Config.html"><abbr title="\Orpheus\Config\Config">Config</abbr></a></span></code>
+						
+						<section class="phpdocumentor-description"><p>Build a configuration from $source using load() method.
+							If it is not a minor configuration, that new configuration is added to the main configuration.</p>
+						</section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$package</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The package to include config (null to get app config)</p>
+								</section>
+							
+							</dd>
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$source</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>An identifier to build the source</p>
+								</section>
+							
+							</dd>
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$cached</span>
+								: <span class="phpdocumentor-signature__argument__return-type">bool</span>
+								= <span class="phpdocumentor-signature__argument__default-value">true</span></dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>True if this configuration should be cached</p>
+								</section>
+							
+							</dd>
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$silent</span>
+								: <span class="phpdocumentor-signature__argument__return-type">bool</span>
+								= <span class="phpdocumentor-signature__argument__default-value">false</span></dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>True if ignoring config loading issues</p>
+								</section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-tag-list__heading" id="tags">
+							Tags
+							<a class="headerlink" href="#tags"><i class="fas fa-link"></i></a>
+						</h5>
+						<dl class="phpdocumentor-tag-list">
+							<dt class="phpdocumentor-tag-list__entry">
+								<span class="phpdocumentor-tag__name">throws</span>
+							</dt>
+							<dd class="phpdocumentor-tag-list__definition">
+								<span class="phpdocumentor-tag-link"><abbr title="\Exception">Exception</abbr></span>
+								
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+						</dl>
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type"><a href="classes/Orpheus-Config-Config.html"><abbr title="\Orpheus\Config\Config">Config</abbr></a></span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+            -deprecated                                            "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_checkSource">
+							checkSource()
+							<a class="headerlink" href="classes/Orpheus-Config-Config.html#method_checkSource"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-core/src/Config/Config.php"><a
+									href="files/vendor-orpheus-orpheus-core-src-config-config.html"><abbr title="vendor/orpheus/orpheus-core/src/Config/Config.php">Config.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">122</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Check if source is available</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature -deprecated">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">checkSource</span><span>(</span><span class="phpdocumentor-signature__argument"><span
+								class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$source</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">bool</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$source</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>An identifier to get the source.</p>
+								</section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-tag-list__heading" id="tags">
+							Tags
+							<a class="headerlink" href="#tags"><i class="fas fa-link"></i></a>
+						</h5>
+						<dl class="phpdocumentor-tag-list">
+							<dt class="phpdocumentor-tag-list__entry">
+								<span class="phpdocumentor-tag__name">deprecated</span>
+							</dt>
+							<dd class="phpdocumentor-tag-list__definition">
+								
+								<section class="phpdocumentor-description"><p>Prefer #hasSource()</p>
+								</section>
+							
+							</dd>
+						</dl>
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">bool</span>
+						&mdash;
+						<section class="phpdocumentor-description"><p>True if source is available</p>
+						</section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_get">
+							get()
+							<a class="headerlink" href="classes/Orpheus-Config-Config.html#method_get"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-core/src/Config/Config.php"><a
+									href="files/vendor-orpheus-orpheus-core-src-config-config.html"><abbr title="vendor/orpheus/orpheus-core/src/Config/Config.php">Config.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">338</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Get configuration from the main configuration object</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__static">static</span> <span class="phpdocumentor-signature__name">get</span><span>(</span><span
+								class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$key</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span
+								class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$default</span><span> = </span><span
+								class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">string</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$key</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The key to get the value.</p>
+								</section>
+							
+							</dd>
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$default</span>
+								: <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+								= <span class="phpdocumentor-signature__argument__default-value">null</span></dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The default value to use.</p>
+								</section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">string</span>
+						&mdash;
+						<section class="phpdocumentor-description"><p>A config value.</p>
+							<p>Calls __get() method from main configuration object.</p>
+						</section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_getFilePath">
+							getFilePath()
+							<a class="headerlink" href="classes/Orpheus-Config-Config.html#method_getFilePath"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-core/src/Config/Config.php"><a
+									href="files/vendor-orpheus-orpheus-core-src-config-config.html"><abbr title="vendor/orpheus/orpheus-core/src/Config/Config.php">Config.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">141</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Get the file path</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__static">static</span> <span class="phpdocumentor-signature__name">getFilePath</span><span>(</span><span
+								class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$source</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span
+								class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$package</span><span> = </span><span
+								class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">string</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$source</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>An identifier to get the source.</p>
+								</section>
+							
+							</dd>
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$package</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+								= <span class="phpdocumentor-signature__argument__default-value">null</span></dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The package to get file path (null to get app file path). Default is null</p>
+								</section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-tag-list__heading" id="tags">
+							Tags
+							<a class="headerlink" href="#tags"><i class="fas fa-link"></i></a>
+						</h5>
+						<dl class="phpdocumentor-tag-list">
+							<dt class="phpdocumentor-tag-list__entry">
+								<span class="phpdocumentor-tag__name">exception</span>
+							</dt>
+							<dd class="phpdocumentor-tag-list__definition">
+								
+								<section class="phpdocumentor-description"><p>\Exception if file is not found</p>
+									<p>Get the configuration file path in CONFDIR.</p>
+								</section>
+							
+							</dd>
+							<dt class="phpdocumentor-tag-list__entry">
+								<span class="phpdocumentor-tag__name">throws</span>
+							</dt>
+							<dd class="phpdocumentor-tag-list__definition">
+								<span class="phpdocumentor-tag-link"><abbr title="\Exception">Exception</abbr></span>
+								
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+						</dl>
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">string</span>
+						&mdash;
+						<section class="phpdocumentor-description"><p>The configuration file path, this file exists or an exception is thrown.</p>
+						</section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_getOne">
+							getOne()
+							<a class="headerlink" href="classes/Orpheus-Config-Config.html#method_getOne"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-core/src/Config/Config.php"><a
+									href="files/vendor-orpheus-orpheus-core-src-config-config.html"><abbr title="vendor/orpheus/orpheus-core/src/Config/Config.php">Config.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">100</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Get one config value</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">getOne</span><span>(</span><span class="phpdocumentor-signature__argument"><span
+								class="phpdocumentor-signature__argument__return-type"><a href=""><abbr title=""></abbr></a>&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$key</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span
+								class="phpdocumentor-signature__argument__return-type">null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$default</span><span> = </span><span
+								class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">mixed</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$key</span>
+								: <span class="phpdocumentor-signature__argument__return-type"><a href=""><abbr title=""></abbr></a></span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$default</span>
+								: <span class="phpdocumentor-signature__argument__return-type">null</span>
+								= <span class="phpdocumentor-signature__argument__default-value">null</span></dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">mixed</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_hasSource">
+							hasSource()
+							<a class="headerlink" href="classes/Orpheus-Config-Config.html#method_hasSource"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-core/src/Config/Config.php"><a
+									href="files/vendor-orpheus-orpheus-core-src-config-config.html"><abbr title="vendor/orpheus/orpheus-core/src/Config/Config.php">Config.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">196</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Check if source is available</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">hasSource</span><span>(</span><span class="phpdocumentor-signature__argument"><span
+								class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$source</span></span><span
+								class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$package</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">bool</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$source</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>An identifier to get the source.</p>
+								</section>
+							
+							</dd>
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$package</span>
+								: <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+								= <span class="phpdocumentor-signature__argument__default-value">null</span></dt>
+							<dd class="phpdocumentor-argument-list__definition">
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">bool</span>
+						&mdash;
+						<section class="phpdocumentor-description"><p>True if source is available</p>
+						</section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_isCaching">
+							isCaching()
+							<a class="headerlink" href="classes/Orpheus-Config-Config.html#method_isCaching"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-core/src/Config/Config.php"><a
+									href="files/vendor-orpheus-orpheus-core-src-config-config.html"><abbr title="vendor/orpheus/orpheus-core/src/Config/Config.php">Config.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">384</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Test if config is caching</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__static">static</span> <span class="phpdocumentor-signature__name">isCaching</span><span>(</span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">bool</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">bool</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_load">
+							load()
+							<a class="headerlink" href="classes/Orpheus-Config-Config.html#method_load"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-core/src/Config/Config.php"><a
+									href="files/vendor-orpheus-orpheus-core-src-config-config.html"><abbr title="vendor/orpheus/orpheus-core/src/Config/Config.php">Config.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">303</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Load new configuration from source</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">load</span><span>(</span><span class="phpdocumentor-signature__argument"><span
+								class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$source</span></span><span
+								class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$cached</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">true</span><span> ]</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">bool</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$source</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>An identifier to get the source</p>
+								</section>
+							
+							</dd>
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$cached</span>
+								: <span class="phpdocumentor-signature__argument__return-type">bool</span>
+								= <span class="phpdocumentor-signature__argument__default-value">true</span></dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>True if this configuration should be cached</p>
+								</section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">bool</span>
+						&mdash;
+						<section class="phpdocumentor-description"><p>True if this configuration was loaded successfully</p>
+							<p>Load a configuration from a source identified by $source.</p>
+						</section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_loadFrom">
+							loadFrom()
+							<a class="headerlink" href="classes/Orpheus-Config-Config.html#method_loadFrom"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-core/src/Config/Config.php"><a
+									href="files/vendor-orpheus-orpheus-core-src-config-config.html"><abbr title="vendor/orpheus/orpheus-core/src/Config/Config.php">Config.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">214</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Load new configuration from source in package</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">loadFrom</span><span>(</span><span class="phpdocumentor-signature__argument"><span
+								class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$package</span></span><span
+								class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$source</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span
+								class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$cached</span><span> = </span><span
+								class="phpdocumentor-signature__argument__default-value">true</span><span> ]</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">bool</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$package</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The package to include config (null to get app config)</p>
+								</section>
+							
+							</dd>
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$source</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>An identifier to get the source</p>
+								</section>
+							
+							</dd>
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$cached</span>
+								: <span class="phpdocumentor-signature__argument__return-type">bool</span>
+								= <span class="phpdocumentor-signature__argument__default-value">true</span></dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>True if this configuration should be cached</p>
+								</section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">bool</span>
+						&mdash;
+						<section class="phpdocumentor-description"><p>True if this configuration was loaded successfully</p>
+							<p>Load a configuration from a source identified by $source.</p>
+						</section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_parse">
+							parse()
+							<a class="headerlink" href="classes/Orpheus-Config-YAML-YAML.html#method_parse"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-yaml/src/Config/YAML/YAML.php"><a
+									href="files/vendor-orpheus-orpheus-yaml-src-config-yaml-yaml.html"><abbr title="vendor/orpheus/orpheus-yaml/src/Config/YAML/YAML.php">YAML.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">33</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Parse configuration from given source.</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__static">static</span> <span class="phpdocumentor-signature__name">parse</span><span>(</span><span
+								class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$path</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">mixed</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$path</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The path to the config file</p>
+								</section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">mixed</span>
+						&mdash;
+						<section class="phpdocumentor-description"><p>The loaded configuration array</p>
+							<p>If an identifier, load a configuration from a .yaml file in CONFDIR.
+								Else $source is a full path to the YAML configuration file.</p>
+						</section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_set">
+							set()
+							<a class="headerlink" href="classes/Orpheus-Config-Config.html#method_set"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-core/src/Config/Config.php"><a
+									href="files/vendor-orpheus-orpheus-core-src-config-config.html"><abbr title="vendor/orpheus/orpheus-core/src/Config/Config.php">Config.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">353</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Set configuration to the main configuration object
+							Call __set() method to main configuration object.</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__static">static</span> <span class="phpdocumentor-signature__name">set</span><span>(</span><span
+								class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$key</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span
+								class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$value</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">mixed</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$key</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The key to set the value</p>
+								</section>
+							
+							</dd>
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$value</span>
+								: <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"><p>The new config value</p>
+								</section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-tag-list__heading" id="tags">
+							Tags
+							<a class="headerlink" href="#tags"><i class="fas fa-link"></i></a>
+						</h5>
+						<dl class="phpdocumentor-tag-list">
+							<dt class="phpdocumentor-tag-list__entry">
+								<span class="phpdocumentor-tag__name">throws</span>
+							</dt>
+							<dd class="phpdocumentor-tag-list__definition">
+								<span class="phpdocumentor-tag-link"><abbr title="\Exception">Exception</abbr></span>
+								
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+						</dl>
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">mixed</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_setCaching">
+							setCaching()
+							<a class="headerlink" href="classes/Orpheus-Config-Config.html#method_setCaching"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-core/src/Config/Config.php"><a
+									href="files/vendor-orpheus-orpheus-core-src-config-config.html"><abbr title="vendor/orpheus/orpheus-core/src/Config/Config.php">Config.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">393</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Set if config is caching</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__static">static</span> <span class="phpdocumentor-signature__name">setCaching</span><span>(</span><span
+								class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$caching</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">mixed</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$caching</span>
+								: <span class="phpdocumentor-signature__argument__return-type">bool</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">mixed</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+				</section>
+			
+			</article>
+			<section class="phpdocumentor-search-results phpdocumentor-search-results--hidden" data-search-results>
+				<section class="phpdocumentor-search-results__dialog">
+					<header class="phpdocumentor-search-results__header">
+						<h2 class="phpdocumentor-search-results__title">Search results</h2>
+						<button class="phpdocumentor-search-results__close"><i class="fas fa-times"></i></button>
+					</header>
+					<section class="phpdocumentor-search-results__body">
+						<ul class="phpdocumentor-search-results__entries"></ul>
+					</section>
+				</section>
+			</section>
+		</div>
+	</div>
+	<a class="phpdocumentor-back-to-top" href="classes/Orpheus-Config-YAML-YAML.html#top"><i class="fas fa-chevron-circle-up"></i></a>
+
+</main>
+
+<script>
+cssVars({});
+</script>
+</body>
+</html>

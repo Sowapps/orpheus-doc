@@ -1,0 +1,1779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Documentation</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<base href="../">
+	<link href="images/favicon.ico" rel="icon"/>
+	<link href="css/normalize.css" rel="stylesheet">
+	<link href="css/base.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+	<link href="css/template.css" rel="stylesheet">
+	<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" rel="stylesheet"/>
+	<script src="https://cdn.jsdelivr.net/npm/fuse.js@3.4.6"></script>
+	<script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+	<script crossorigin="anonymous" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js"></script>
+	<script src="js/search.js"></script>
+	<script defer src="js/searchIndex.js"></script>
+</head>
+<body id="top">
+<header class="phpdocumentor-header phpdocumentor-section">
+	<h1 class="phpdocumentor-title"><a class="phpdocumentor-title__link" href="">Documentation</a></h1>
+	<input class="phpdocumentor-header__menu-button" id="menu-button" name="menu-button" type="checkbox"/>
+	<label class="phpdocumentor-header__menu-icon" for="menu-button">
+		<i class="fas fa-bars"></i>
+	</label>
+	<section class="phpdocumentor-search" data-search-form>
+		<label>
+			<span class="visually-hidden">Search for</span>
+			<svg class="phpdocumentor-search__icon" fill="none" height="20" viewBox="0 0 21 20" width="21" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="7.5" cy="7.5" r="6.5" stroke="currentColor" stroke-width="2"/>
+				<line stroke="currentColor" stroke-width="3" x1="12.4892" x2="19.1559" y1="12.2727" y2="18.9393"/>
+			</svg>
+			<input class="phpdocumentor-field phpdocumentor-search__field" disabled placeholder="Loading .." type="search"/>
+		</label>
+	</section>
+	
+	<nav class="phpdocumentor-topnav">
+		<ul class="phpdocumentor-topnav__menu">
+		</ul>
+	</nav>
+</header>
+
+<main class="phpdocumentor">
+	<div class="phpdocumentor-section">
+		<input class="phpdocumentor-sidebar__menu-button" id="sidebar-button" name="sidebar-button" type="checkbox"/>
+		<label class="phpdocumentor-sidebar__menu-icon" for="sidebar-button">
+			Menu
+		</label>
+		<aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+			
+			<section class="phpdocumentor-sidebar__category">
+				<h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+				<h3 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+				<h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/orpheus.html"><abbr title="\Orpheus">Orpheus</abbr></a></h4>
+				<ul class="phpdocumentor-list">
+					<li><a href="namespaces/orpheus-cache.html"><abbr title="\Orpheus\Cache">Cache</abbr></a></li>
+					<li><a href="namespaces/orpheus-config.html"><abbr title="\Orpheus\Config">Config</abbr></a></li>
+					<li><a href="namespaces/orpheus-core.html"><abbr title="\Orpheus\Core">Core</abbr></a></li>
+					<li><a href="namespaces/orpheus-exception.html"><abbr title="\Orpheus\Exception">Exception</abbr></a></li>
+					<li><a href="namespaces/orpheus-entitydescriptor.html"><abbr title="\Orpheus\EntityDescriptor">EntityDescriptor</abbr></a></li>
+					<li><a href="namespaces/orpheus-time.html"><abbr title="\Orpheus\Time">Time</abbr></a></li>
+					<li><a href="namespaces/orpheus-form.html"><abbr title="\Orpheus\Form">Form</abbr></a></li>
+					<li><a href="namespaces/orpheus-hook.html"><abbr title="\Orpheus\Hook">Hook</abbr></a></li>
+					<li><a href="namespaces/orpheus-controller.html"><abbr title="\Orpheus\Controller">Controller</abbr></a></li>
+					<li><a href="namespaces/orpheus-datatype.html"><abbr title="\Orpheus\DataType">DataType</abbr></a></li>
+					<li><a href="namespaces/orpheus-inputcontroller.html"><abbr title="\Orpheus\InputController">InputController</abbr></a></li>
+					<li><a href="namespaces/orpheus-rendering.html"><abbr title="\Orpheus\Rendering">Rendering</abbr></a></li>
+					<li><a href="namespaces/orpheus-pdo.html"><abbr title="\Orpheus\Pdo">Pdo</abbr></a></li>
+					<li><a href="namespaces/orpheus-sqladapter.html"><abbr title="\Orpheus\SQLAdapter">SQLAdapter</abbr></a></li>
+					<li><a href="namespaces/orpheus-sqlrequest.html"><abbr title="\Orpheus\SQLRequest">SQLRequest</abbr></a></li>
+					<li><a href="namespaces/orpheus-email.html"><abbr title="\Orpheus\Email">Email</abbr></a></li>
+					<li><a href="namespaces/orpheus-file.html"><abbr title="\Orpheus\File">File</abbr></a></li>
+					<li><a href="namespaces/orpheus-publisher.html"><abbr title="\Orpheus\Publisher">Publisher</abbr></a></li>
+				</ul>
+			</section>
+			
+			<section class="phpdocumentor-sidebar__category">
+				<h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+				<h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+				<h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Orpheus.html"><abbr title="\Orpheus">Orpheus</abbr></a></h3>
+				<ul class="phpdocumentor-list">
+					<li><a href="packages/Orpheus-Controller.html"><abbr title="\Orpheus\Controller">Controller</abbr></a></li>
+					<li><a href="packages/Orpheus-Rendering.html"><abbr title="\Orpheus\Rendering">Rendering</abbr></a></li>
+				</ul>
+			</section>
+			
+			<section class="phpdocumentor-sidebar__category">
+				<h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+				<h3 class="phpdocumentor-sidebar__root-package"><a href="reports/deprecated.html">Deprecated</a></h3>
+				<h3 class="phpdocumentor-sidebar__root-package"><a href="reports/errors.html">Errors</a></h3>
+				<h3 class="phpdocumentor-sidebar__root-package"><a href="reports/markers.html">Markers</a></h3>
+			</section>
+			
+			<section class="phpdocumentor-sidebar__category">
+				<h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+				<h3 class="phpdocumentor-sidebar__root-package"><a href="indices/files.html">Files</a></h3>
+			</section>
+		</aside>
+		
+		<div class="phpdocumentor-column -eight phpdocumentor-content">
+			<ul class="phpdocumentor-breadcrumbs">
+				<li class="phpdocumentor-breadcrumb"><a href="namespaces/orpheus.html">Orpheus</a></li>
+				<li class="phpdocumentor-breadcrumb"><a href="namespaces/orpheus-publisher.html">Publisher</a></li>
+			</ul>
+			
+			<article class="phpdocumentor-element -class">
+				<h2 class="phpdocumentor-content__title">
+					Paginator
+					
+					
+					<div class="phpdocumentor-element__package">
+						in package
+						<ul class="phpdocumentor-breadcrumbs">
+							<li class="phpdocumentor-breadcrumb"><a href="packages/Default.html">Default</a></li>
+						</ul>
+					</div>
+					
+					<span class="phpdocumentor-element__implements">
+            implements
+                            <abbr title="\IteratorAggregate">IteratorAggregate</abbr>                    </span>
+				
+				</h2>
+				
+				<aside class="phpdocumentor-element-found-in">
+					<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php"><a
+							href="files/vendor-orpheus-orpheus-webtools-src-publisher-paginator.html"><abbr title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php">Paginator.php</abbr></a></abbr>
+					:
+					<span class="phpdocumentor-element-found-in__line">16</span>
+				</aside>
+				
+				<p class="phpdocumentor-summary">Class Paginator</p>
+				
+				<section class="phpdocumentor-description"><p>Tool to paginate result from query through multiple pages</p>
+				</section>
+				
+				
+				<h5 class="phpdocumentor-tag-list__heading" id="tags">
+					Tags
+					<a class="headerlink" href="#tags"><i class="fas fa-link"></i></a>
+				</h5>
+				<dl class="phpdocumentor-tag-list">
+					<dt class="phpdocumentor-tag-list__entry">
+						<span class="phpdocumentor-tag__name">author</span>
+					</dt>
+					<dd class="phpdocumentor-tag-list__definition">
+						
+						<section class="phpdocumentor-description"><p>Florent Hazard <a href="mailto:contact@sowapps.com">contact@sowapps.com</a></p>
+						</section>
+					
+					</dd>
+				</dl>
+				
+				
+				<h3 id="interfaces_class_traits">
+					Interfaces, Classes and Traits
+					<a class="headerlink" href="#interfaces_class_traits"><i class="fas fa-link"></i></a>
+				</h3>
+				
+				<dl class="phpdocumentor-table-of-contents">
+					<dt class="phpdocumentor-table-of-contents__entry -interface"><abbr title="\IteratorAggregate">IteratorAggregate</abbr></dt>
+					<dd></dd>
+				
+				
+				</dl>
+				
+				
+				<h3 id="toc">
+					Table of Contents
+					<a class="headerlink" href="#toc"><i class="fas fa-link"></i></a>
+				</h3>
+				
+				<dl class="phpdocumentor-table-of-contents">
+					<dt class="phpdocumentor-table-of-contents__entry -property -protected">
+						<a href="classes/Orpheus-Publisher-Paginator.html#property_displayEmpty">$displayEmpty</a>
+						<span>
+                &nbsp;: bool            </span>
+					</dt>
+					<dd></dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -property -protected">
+						<a href="classes/Orpheus-Publisher-Paginator.html#property_layout">$layout</a>
+						<span>
+                &nbsp;: string            </span>
+					</dt>
+					<dd></dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -property -protected">
+						<a href="classes/Orpheus-Publisher-Paginator.html#property_page">$page</a>
+						<span>
+                &nbsp;: int            </span>
+					</dt>
+					<dd></dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -property -protected">
+						<a href="classes/Orpheus-Publisher-Paginator.html#property_pageDelta">$pageDelta</a>
+						<span>
+                &nbsp;: int            </span>
+					</dt>
+					<dd></dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -property -protected">
+						<a href="classes/Orpheus-Publisher-Paginator.html#property_query">$query</a>
+						<span>
+                &nbsp;: <a href="classes/Orpheus-SQLRequest-SQLSelectRequest.html"><abbr title="\Orpheus\SQLRequest\SQLSelectRequest">SQLSelectRequest</abbr></a>            </span>
+					</dt>
+					<dd></dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -property -protected">
+						<a href="classes/Orpheus-Publisher-Paginator.html#property_rendered">$rendered</a>
+						<span>
+                &nbsp;: string            </span>
+					</dt>
+					<dd></dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -property -protected">
+						<a href="classes/Orpheus-Publisher-Paginator.html#property_rowCount">$rowCount</a>
+						<span>
+                &nbsp;: int            </span>
+					</dt>
+					<dd></dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -property -protected">
+						<a href="classes/Orpheus-Publisher-Paginator.html#property_rowPerPage">$rowPerPage</a>
+						<span>
+                &nbsp;: int            </span>
+					</dt>
+					<dd></dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -property -protected">
+						<a href="classes/Orpheus-Publisher-Paginator.html#property_url">$url</a>
+						<span>
+                &nbsp;: string            </span>
+					</dt>
+					<dd></dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-Publisher-Paginator.html#method___construct">__construct()</a>
+						<span>
+                        &nbsp;: mixed    </span>
+					</dt>
+					<dd></dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-Publisher-Paginator.html#method___toString">__toString()</a>
+						<span>
+                        &nbsp;: mixed    </span>
+					</dt>
+					<dd></dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-Publisher-Paginator.html#method_getDisplayEmpty">getDisplayEmpty()</a>
+						<span>
+                        &nbsp;: mixed    </span>
+					</dt>
+					<dd></dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-Publisher-Paginator.html#method_getIterator">getIterator()</a>
+						<span>
+                        &nbsp;: mixed    </span>
+					</dt>
+					<dd></dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-Publisher-Paginator.html#method_getLastPage">getLastPage()</a>
+						<span>
+                        &nbsp;: mixed    </span>
+					</dt>
+					<dd></dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-Publisher-Paginator.html#method_getLayout">getLayout()</a>
+						<span>
+                        &nbsp;: mixed    </span>
+					</dt>
+					<dd></dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-Publisher-Paginator.html#method_getMajorPage">getMajorPage()</a>
+						<span>
+                        &nbsp;: int    </span>
+					</dt>
+					<dd></dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-Publisher-Paginator.html#method_getMinorPage">getMinorPage()</a>
+						<span>
+                        &nbsp;: int    </span>
+					</dt>
+					<dd></dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-Publisher-Paginator.html#method_getPage">getPage()</a>
+						<span>
+                        &nbsp;: mixed    </span>
+					</dt>
+					<dd></dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-Publisher-Paginator.html#method_getPageDelta">getPageDelta()</a>
+						<span>
+                        &nbsp;: mixed    </span>
+					</dt>
+					<dd></dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-Publisher-Paginator.html#method_getPageLink">getPageLink()</a>
+						<span>
+                        &nbsp;: mixed    </span>
+					</dt>
+					<dd></dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-Publisher-Paginator.html#method_getQuery">getQuery()</a>
+						<span>
+                        &nbsp;: <a href="classes/Orpheus-SQLRequest-SQLSelectRequest.html"><abbr title="\Orpheus\SQLRequest\SQLSelectRequest">SQLSelectRequest</abbr></a>    </span>
+					</dt>
+					<dd></dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-Publisher-Paginator.html#method_getRendered">getRendered()</a>
+						<span>
+                        &nbsp;: mixed    </span>
+					</dt>
+					<dd></dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-Publisher-Paginator.html#method_getRowCount">getRowCount()</a>
+						<span>
+                        &nbsp;: int    </span>
+					</dt>
+					<dd></dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-Publisher-Paginator.html#method_getRowPerPage">getRowPerPage()</a>
+						<span>
+                        &nbsp;: mixed    </span>
+					</dt>
+					<dd></dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-Publisher-Paginator.html#method_getUrl">getUrl()</a>
+						<span>
+                        &nbsp;: mixed    </span>
+					</dt>
+					<dd></dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-Publisher-Paginator.html#method_next">next()</a>
+						<span>
+                        &nbsp;: mixed    </span>
+					</dt>
+					<dd></dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-Publisher-Paginator.html#method_render">render()</a>
+						<span>
+                        &nbsp;: mixed    </span>
+					</dt>
+					<dd></dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-Publisher-Paginator.html#method_setDisplayEmpty">setDisplayEmpty()</a>
+						<span>
+                        &nbsp;: mixed    </span>
+					</dt>
+					<dd></dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-Publisher-Paginator.html#method_setLayout">setLayout()</a>
+						<span>
+                        &nbsp;: mixed    </span>
+					</dt>
+					<dd></dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-Publisher-Paginator.html#method_setPage">setPage()</a>
+						<span>
+                        &nbsp;: mixed    </span>
+					</dt>
+					<dd></dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-Publisher-Paginator.html#method_setPageDelta">setPageDelta()</a>
+						<span>
+                        &nbsp;: mixed    </span>
+					</dt>
+					<dd></dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-Publisher-Paginator.html#method_setQuery">setQuery()</a>
+						<span>
+                        &nbsp;: mixed    </span>
+					</dt>
+					<dd></dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-Publisher-Paginator.html#method_setRowPerPage">setRowPerPage()</a>
+						<span>
+                        &nbsp;: mixed    </span>
+					</dt>
+					<dd></dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-Publisher-Paginator.html#method_setUrl">setUrl()</a>
+						<span>
+                        &nbsp;: mixed    </span>
+					</dt>
+					<dd></dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-Publisher-Paginator.html#method_verify">verify()</a>
+						<span>
+                        &nbsp;: mixed    </span>
+					</dt>
+					<dd></dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -protected">
+						<a href="classes/Orpheus-Publisher-Paginator.html#method_calculate">calculate()</a>
+						<span>
+                        &nbsp;: mixed    </span>
+					</dt>
+					<dd></dd>
+				
+				</dl>
+				
+				
+				<section class="phpdocumentor-properties">
+					<h3 class="phpdocumentor-elements__header" id="properties">
+						Properties
+						<a class="headerlink" href="classes/Orpheus-Publisher-Paginator.html#properties"><i class="fas fa-link"></i></a>
+					</h3>
+					<article
+							class="
+            phpdocumentor-element
+            -property
+            -protected
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="property_displayEmpty">
+							$displayEmpty
+							<a class="headerlink" href="classes/Orpheus-Publisher-Paginator.html#property_displayEmpty"><i class="fas fa-link"></i></a>
+							<span class="phpdocumentor-element__modifiers">
+                                </span>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-publisher-paginator.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php">Paginator.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">43</span>
+						</aside>
+						
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">protected</span>
+							<span class="phpdocumentor-signature__type">bool</span>
+							<span class="phpdocumentor-signature__name">$displayEmpty</span>
+							= <span class="phpdocumentor-signature__default-value">false</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="
+            phpdocumentor-element
+            -property
+            -protected
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="property_layout">
+							$layout
+							<a class="headerlink" href="classes/Orpheus-Publisher-Paginator.html#property_layout"><i class="fas fa-link"></i></a>
+							<span class="phpdocumentor-element__modifiers">
+                                </span>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-publisher-paginator.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php">Paginator.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">31</span>
+						</aside>
+						
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">protected</span>
+							<span class="phpdocumentor-signature__type">string</span>
+							<span class="phpdocumentor-signature__name">$layout</span>
+						</code>
+						
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="
+            phpdocumentor-element
+            -property
+            -protected
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="property_page">
+							$page
+							<a class="headerlink" href="classes/Orpheus-Publisher-Paginator.html#property_page"><i class="fas fa-link"></i></a>
+							<span class="phpdocumentor-element__modifiers">
+                                </span>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-publisher-paginator.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php">Paginator.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">25</span>
+						</aside>
+						
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">protected</span>
+							<span class="phpdocumentor-signature__type">int</span>
+							<span class="phpdocumentor-signature__name">$page</span>
+						</code>
+						
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="
+            phpdocumentor-element
+            -property
+            -protected
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="property_pageDelta">
+							$pageDelta
+							<a class="headerlink" href="classes/Orpheus-Publisher-Paginator.html#property_pageDelta"><i class="fas fa-link"></i></a>
+							<span class="phpdocumentor-element__modifiers">
+                                </span>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-publisher-paginator.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php">Paginator.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">37</span>
+						</aside>
+						
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">protected</span>
+							<span class="phpdocumentor-signature__type">int</span>
+							<span class="phpdocumentor-signature__name">$pageDelta</span>
+							= <span class="phpdocumentor-signature__default-value">3</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="
+            phpdocumentor-element
+            -property
+            -protected
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="property_query">
+							$query
+							<a class="headerlink" href="classes/Orpheus-Publisher-Paginator.html#property_query"><i class="fas fa-link"></i></a>
+							<span class="phpdocumentor-element__modifiers">
+                                </span>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-publisher-paginator.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php">Paginator.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">22</span>
+						</aside>
+						
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">protected</span>
+							<span class="phpdocumentor-signature__type"><a href="classes/Orpheus-SQLRequest-SQLSelectRequest.html"><abbr
+									title="\Orpheus\SQLRequest\SQLSelectRequest">SQLSelectRequest</abbr></a></span>
+							<span class="phpdocumentor-signature__name">$query</span>
+						</code>
+						
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="
+            phpdocumentor-element
+            -property
+            -protected
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="property_rendered">
+							$rendered
+							<a class="headerlink" href="classes/Orpheus-Publisher-Paginator.html#property_rendered"><i class="fas fa-link"></i></a>
+							<span class="phpdocumentor-element__modifiers">
+                                </span>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-publisher-paginator.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php">Paginator.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">34</span>
+						</aside>
+						
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">protected</span>
+							<span class="phpdocumentor-signature__type">string</span>
+							<span class="phpdocumentor-signature__name">$rendered</span>
+						</code>
+						
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="
+            phpdocumentor-element
+            -property
+            -protected
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="property_rowCount">
+							$rowCount
+							<a class="headerlink" href="classes/Orpheus-Publisher-Paginator.html#property_rowCount"><i class="fas fa-link"></i></a>
+							<span class="phpdocumentor-element__modifiers">
+                                </span>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-publisher-paginator.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php">Paginator.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">28</span>
+						</aside>
+						
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">protected</span>
+							<span class="phpdocumentor-signature__type">int</span>
+							<span class="phpdocumentor-signature__name">$rowCount</span>
+						</code>
+						
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="
+            phpdocumentor-element
+            -property
+            -protected
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="property_rowPerPage">
+							$rowPerPage
+							<a class="headerlink" href="classes/Orpheus-Publisher-Paginator.html#property_rowPerPage"><i class="fas fa-link"></i></a>
+							<span class="phpdocumentor-element__modifiers">
+                                </span>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-publisher-paginator.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php">Paginator.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">40</span>
+						</aside>
+						
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">protected</span>
+							<span class="phpdocumentor-signature__type">int</span>
+							<span class="phpdocumentor-signature__name">$rowPerPage</span>
+							= <span class="phpdocumentor-signature__default-value">100</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="
+            phpdocumentor-element
+            -property
+            -protected
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="property_url">
+							$url
+							<a class="headerlink" href="classes/Orpheus-Publisher-Paginator.html#property_url"><i class="fas fa-link"></i></a>
+							<span class="phpdocumentor-element__modifiers">
+                                </span>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-publisher-paginator.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php">Paginator.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">19</span>
+						</aside>
+						
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">protected</span>
+							<span class="phpdocumentor-signature__type">string</span>
+							<span class="phpdocumentor-signature__name">$url</span>
+						</code>
+						
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+				</section>
+				
+				<section class="phpdocumentor-methods">
+					<h3 class="phpdocumentor-elements__header" id="methods">
+						Methods
+						<a class="headerlink" href="classes/Orpheus-Publisher-Paginator.html#methods"><i class="fas fa-link"></i></a>
+					</h3>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method___construct">
+							__construct()
+							<a class="headerlink" href="classes/Orpheus-Publisher-Paginator.html#method___construct"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-publisher-paginator.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php">Paginator.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">45</span>
+						</aside>
+						
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span
+								class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$route</span></span><span
+								class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$query</span><span> = </span><span
+								class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span
+								class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$rowPerPage</span><span> = </span><span
+								class="phpdocumentor-signature__argument__default-value">100</span><span> ]</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">mixed</span></code>
+						
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$route</span>
+								: <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+							
+							</dd>
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$query</span>
+								: <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+								= <span class="phpdocumentor-signature__argument__default-value">null</span></dt>
+							<dd class="phpdocumentor-argument-list__definition">
+							
+							</dd>
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$rowPerPage</span>
+								: <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+								= <span class="phpdocumentor-signature__argument__default-value">100</span></dt>
+							<dd class="phpdocumentor-argument-list__definition">
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">mixed</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method___toString">
+							__toString()
+							<a class="headerlink" href="classes/Orpheus-Publisher-Paginator.html#method___toString"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-publisher-paginator.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php">Paginator.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">109</span>
+						</aside>
+						
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">__toString</span><span>(</span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">mixed</span></code>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">mixed</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_getDisplayEmpty">
+							getDisplayEmpty()
+							<a class="headerlink" href="classes/Orpheus-Publisher-Paginator.html#method_getDisplayEmpty"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-publisher-paginator.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php">Paginator.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">189</span>
+						</aside>
+						
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">getDisplayEmpty</span><span>(</span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">mixed</span></code>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">mixed</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_getIterator">
+							getIterator()
+							<a class="headerlink" href="classes/Orpheus-Publisher-Paginator.html#method_getIterator"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-publisher-paginator.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php">Paginator.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">198</span>
+						</aside>
+						
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">getIterator</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">mixed</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_getLastPage">
+							getLastPage()
+							<a class="headerlink" href="classes/Orpheus-Publisher-Paginator.html#method_getLastPage"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-publisher-paginator.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php">Paginator.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">88</span>
+						</aside>
+						
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">getLastPage</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">mixed</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_getLayout">
+							getLayout()
+							<a class="headerlink" href="classes/Orpheus-Publisher-Paginator.html#method_getLayout"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-publisher-paginator.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php">Paginator.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">153</span>
+						</aside>
+						
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">getLayout</span><span>(</span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">mixed</span></code>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">mixed</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_getMajorPage">
+							getMajorPage()
+							<a class="headerlink" href="classes/Orpheus-Publisher-Paginator.html#method_getMajorPage"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-publisher-paginator.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php">Paginator.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">185</span>
+						</aside>
+						
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">getMajorPage</span><span>(</span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">int</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">int</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_getMinorPage">
+							getMinorPage()
+							<a class="headerlink" href="classes/Orpheus-Publisher-Paginator.html#method_getMinorPage"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-publisher-paginator.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php">Paginator.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">178</span>
+						</aside>
+						
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">getMinorPage</span><span>(</span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">int</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">int</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_getPage">
+							getPage()
+							<a class="headerlink" href="classes/Orpheus-Publisher-Paginator.html#method_getPage"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-publisher-paginator.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php">Paginator.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">144</span>
+						</aside>
+						
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">getPage</span><span>(</span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">mixed</span></code>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">mixed</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_getPageDelta">
+							getPageDelta()
+							<a class="headerlink" href="classes/Orpheus-Publisher-Paginator.html#method_getPageDelta"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-publisher-paginator.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php">Paginator.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">166</span>
+						</aside>
+						
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">getPageDelta</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">mixed</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_getPageLink">
+							getPageLink()
+							<a class="headerlink" href="classes/Orpheus-Publisher-Paginator.html#method_getPageLink"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-publisher-paginator.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php">Paginator.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">75</span>
+						</aside>
+						
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">getPageLink</span><span>(</span><span class="phpdocumentor-signature__argument"><span
+								class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$page</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">mixed</span></code>
+						
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$page</span>
+								: <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">mixed</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_getQuery">
+							getQuery()
+							<a class="headerlink" href="classes/Orpheus-Publisher-Paginator.html#method_getQuery"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-publisher-paginator.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php">Paginator.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">205</span>
+						</aside>
+						
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">getQuery</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a
+								href="classes/Orpheus-SQLRequest-SQLSelectRequest.html"><abbr title="\Orpheus\SQLRequest\SQLSelectRequest">SQLSelectRequest</abbr></a></span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type"><a href="classes/Orpheus-SQLRequest-SQLSelectRequest.html"><abbr title="\Orpheus\SQLRequest\SQLSelectRequest">SQLSelectRequest</abbr></a></span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_getRendered">
+							getRendered()
+							<a class="headerlink" href="classes/Orpheus-Publisher-Paginator.html#method_getRendered"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-publisher-paginator.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php">Paginator.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">162</span>
+						</aside>
+						
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">getRendered</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">mixed</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_getRowCount">
+							getRowCount()
+							<a class="headerlink" href="classes/Orpheus-Publisher-Paginator.html#method_getRowCount"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-publisher-paginator.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php">Paginator.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">96</span>
+						</aside>
+						
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">getRowCount</span><span>(</span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">int</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						
+						<h5 class="phpdocumentor-tag-list__heading" id="tags">
+							Tags
+							<a class="headerlink" href="#tags"><i class="fas fa-link"></i></a>
+						</h5>
+						<dl class="phpdocumentor-tag-list">
+							<dt class="phpdocumentor-tag-list__entry">
+								<span class="phpdocumentor-tag__name">throws</span>
+							</dt>
+							<dd class="phpdocumentor-tag-list__definition">
+								<span class="phpdocumentor-tag-link"><abbr title="\Exception">Exception</abbr></span>
+								
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+						</dl>
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">int</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_getRowPerPage">
+							getRowPerPage()
+							<a class="headerlink" href="classes/Orpheus-Publisher-Paginator.html#method_getRowPerPage"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-publisher-paginator.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php">Paginator.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">100</span>
+						</aside>
+						
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">getRowPerPage</span><span>(</span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">mixed</span></code>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">mixed</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_getUrl">
+							getUrl()
+							<a class="headerlink" href="classes/Orpheus-Publisher-Paginator.html#method_getUrl"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-publisher-paginator.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php">Paginator.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">79</span>
+						</aside>
+						
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">getUrl</span><span>(</span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">mixed</span></code>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">mixed</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_next">
+							next()
+							<a class="headerlink" href="classes/Orpheus-Publisher-Paginator.html#method_next"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-publisher-paginator.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php">Paginator.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">140</span>
+						</aside>
+						
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">next</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">mixed</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_render">
+							render()
+							<a class="headerlink" href="classes/Orpheus-Publisher-Paginator.html#method_render"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-publisher-paginator.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php">Paginator.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">113</span>
+						</aside>
+						
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">render</span><span>(</span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">mixed</span></code>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">mixed</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_setDisplayEmpty">
+							setDisplayEmpty()
+							<a class="headerlink" href="classes/Orpheus-Publisher-Paginator.html#method_setDisplayEmpty"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-publisher-paginator.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php">Paginator.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">193</span>
+						</aside>
+						
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">setDisplayEmpty</span><span>(</span><span class="phpdocumentor-signature__argument"><span
+								class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$displayEmpty</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">mixed</span></code>
+						
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$displayEmpty</span>
+								: <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">mixed</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_setLayout">
+							setLayout()
+							<a class="headerlink" href="classes/Orpheus-Publisher-Paginator.html#method_setLayout"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-publisher-paginator.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php">Paginator.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">157</span>
+						</aside>
+						
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">setLayout</span><span>(</span><span class="phpdocumentor-signature__argument"><span
+								class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$layout</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">mixed</span></code>
+						
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$layout</span>
+								: <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">mixed</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_setPage">
+							setPage()
+							<a class="headerlink" href="classes/Orpheus-Publisher-Paginator.html#method_setPage"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-publisher-paginator.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php">Paginator.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">148</span>
+						</aside>
+						
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">setPage</span><span>(</span><span class="phpdocumentor-signature__argument"><span
+								class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$page</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">mixed</span></code>
+						
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$page</span>
+								: <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">mixed</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_setPageDelta">
+							setPageDelta()
+							<a class="headerlink" href="classes/Orpheus-Publisher-Paginator.html#method_setPageDelta"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-publisher-paginator.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php">Paginator.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">170</span>
+						</aside>
+						
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">setPageDelta</span><span>(</span><span class="phpdocumentor-signature__argument"><span
+								class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$pageDelta</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+						
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$pageDelta</span>
+								: <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">mixed</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_setQuery">
+							setQuery()
+							<a class="headerlink" href="classes/Orpheus-Publisher-Paginator.html#method_setQuery"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-publisher-paginator.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php">Paginator.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">212</span>
+						</aside>
+						
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">setQuery</span><span>(</span><span class="phpdocumentor-signature__argument"><span
+								class="phpdocumentor-signature__argument__return-type"><a href="classes/Orpheus-SQLRequest-SQLSelectRequest.html"><abbr title="\Orpheus\SQLRequest\SQLSelectRequest">SQLSelectRequest</abbr></a>&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$query</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">mixed</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$query</span>
+								: <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Orpheus-SQLRequest-SQLSelectRequest.html"><abbr
+									title="\Orpheus\SQLRequest\SQLSelectRequest">SQLSelectRequest</abbr></a></span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">mixed</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_setRowPerPage">
+							setRowPerPage()
+							<a class="headerlink" href="classes/Orpheus-Publisher-Paginator.html#method_setRowPerPage"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-publisher-paginator.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php">Paginator.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">104</span>
+						</aside>
+						
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">setRowPerPage</span><span>(</span><span class="phpdocumentor-signature__argument"><span
+								class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$rowPerPage</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+						
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$rowPerPage</span>
+								: <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">mixed</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_setUrl">
+							setUrl()
+							<a class="headerlink" href="classes/Orpheus-Publisher-Paginator.html#method_setUrl"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-publisher-paginator.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php">Paginator.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">83</span>
+						</aside>
+						
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">setUrl</span><span>(</span><span class="phpdocumentor-signature__argument"><span
+								class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$url</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+						
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$url</span>
+								: <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">mixed</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_verify">
+							verify()
+							<a class="headerlink" href="classes/Orpheus-Publisher-Paginator.html#method_verify"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-publisher-paginator.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php">Paginator.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">56</span>
+						</aside>
+						
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">verify</span><span>(</span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">mixed</span></code>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">mixed</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -protected
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_calculate">
+							calculate()
+							<a class="headerlink" href="classes/Orpheus-Publisher-Paginator.html#method_calculate"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-publisher-paginator.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/Publisher/Paginator.php">Paginator.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">129</span>
+						</aside>
+						
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">protected</span>
+							<span class="phpdocumentor-signature__name">calculate</span><span>(</span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">mixed</span></code>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">mixed</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+				</section>
+			
+			</article>
+			<section class="phpdocumentor-search-results phpdocumentor-search-results--hidden" data-search-results>
+				<section class="phpdocumentor-search-results__dialog">
+					<header class="phpdocumentor-search-results__header">
+						<h2 class="phpdocumentor-search-results__title">Search results</h2>
+						<button class="phpdocumentor-search-results__close"><i class="fas fa-times"></i></button>
+					</header>
+					<section class="phpdocumentor-search-results__body">
+						<ul class="phpdocumentor-search-results__entries"></ul>
+					</section>
+				</section>
+			</section>
+		</div>
+	</div>
+	<a class="phpdocumentor-back-to-top" href="classes/Orpheus-Publisher-Paginator.html#top"><i class="fas fa-chevron-circle-up"></i></a>
+
+</main>
+
+<script>
+cssVars({});
+</script>
+</body>
+</html>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="Orpheus Doc">
-        <wb-resource deploy-path="/" source-path="/doc"/>
-        <property name="context-root" value="Orpheus_Doc"/>
-    </wb-module>
-</project-modules>

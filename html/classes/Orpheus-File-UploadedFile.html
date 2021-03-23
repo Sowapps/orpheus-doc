@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Documentation</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<base href="../">
+	<link href="images/favicon.ico" rel="icon"/>
+	<link href="css/normalize.css" rel="stylesheet">
+	<link href="css/base.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+	<link href="css/template.css" rel="stylesheet">
+	<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" rel="stylesheet"/>
+	<script src="https://cdn.jsdelivr.net/npm/fuse.js@3.4.6"></script>
+	<script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+	<script crossorigin="anonymous" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js"></script>
+	<script src="js/search.js"></script>
+	<script defer src="js/searchIndex.js"></script>
+</head>
+<body id="top">
+<header class="phpdocumentor-header phpdocumentor-section">
+	<h1 class="phpdocumentor-title"><a class="phpdocumentor-title__link" href="">Documentation</a></h1>
+	<input class="phpdocumentor-header__menu-button" id="menu-button" name="menu-button" type="checkbox"/>
+	<label class="phpdocumentor-header__menu-icon" for="menu-button">
+		<i class="fas fa-bars"></i>
+	</label>
+	<section class="phpdocumentor-search" data-search-form>
+		<label>
+			<span class="visually-hidden">Search for</span>
+			<svg class="phpdocumentor-search__icon" fill="none" height="20" viewBox="0 0 21 20" width="21" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="7.5" cy="7.5" r="6.5" stroke="currentColor" stroke-width="2"/>
+				<line stroke="currentColor" stroke-width="3" x1="12.4892" x2="19.1559" y1="12.2727" y2="18.9393"/>
+			</svg>
+			<input class="phpdocumentor-field phpdocumentor-search__field" disabled placeholder="Loading .." type="search"/>
+		</label>
+	</section>
+	
+	<nav class="phpdocumentor-topnav">
+		<ul class="phpdocumentor-topnav__menu">
+		</ul>
+	</nav>
+</header>
+
+<main class="phpdocumentor">
+	<div class="phpdocumentor-section">
+		<input class="phpdocumentor-sidebar__menu-button" id="sidebar-button" name="sidebar-button" type="checkbox"/>
+		<label class="phpdocumentor-sidebar__menu-icon" for="sidebar-button">
+			Menu
+		</label>
+		<aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+			
+			<section class="phpdocumentor-sidebar__category">
+				<h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+				<h3 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+				<h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/orpheus.html"><abbr title="\Orpheus">Orpheus</abbr></a></h4>
+				<ul class="phpdocumentor-list">
+					<li><a href="namespaces/orpheus-cache.html"><abbr title="\Orpheus\Cache">Cache</abbr></a></li>
+					<li><a href="namespaces/orpheus-config.html"><abbr title="\Orpheus\Config">Config</abbr></a></li>
+					<li><a href="namespaces/orpheus-core.html"><abbr title="\Orpheus\Core">Core</abbr></a></li>
+					<li><a href="namespaces/orpheus-exception.html"><abbr title="\Orpheus\Exception">Exception</abbr></a></li>
+					<li><a href="namespaces/orpheus-entitydescriptor.html"><abbr title="\Orpheus\EntityDescriptor">EntityDescriptor</abbr></a></li>
+					<li><a href="namespaces/orpheus-time.html"><abbr title="\Orpheus\Time">Time</abbr></a></li>
+					<li><a href="namespaces/orpheus-form.html"><abbr title="\Orpheus\Form">Form</abbr></a></li>
+					<li><a href="namespaces/orpheus-hook.html"><abbr title="\Orpheus\Hook">Hook</abbr></a></li>
+					<li><a href="namespaces/orpheus-controller.html"><abbr title="\Orpheus\Controller">Controller</abbr></a></li>
+					<li><a href="namespaces/orpheus-datatype.html"><abbr title="\Orpheus\DataType">DataType</abbr></a></li>
+					<li><a href="namespaces/orpheus-inputcontroller.html"><abbr title="\Orpheus\InputController">InputController</abbr></a></li>
+					<li><a href="namespaces/orpheus-rendering.html"><abbr title="\Orpheus\Rendering">Rendering</abbr></a></li>
+					<li><a href="namespaces/orpheus-pdo.html"><abbr title="\Orpheus\Pdo">Pdo</abbr></a></li>
+					<li><a href="namespaces/orpheus-sqladapter.html"><abbr title="\Orpheus\SQLAdapter">SQLAdapter</abbr></a></li>
+					<li><a href="namespaces/orpheus-sqlrequest.html"><abbr title="\Orpheus\SQLRequest">SQLRequest</abbr></a></li>
+					<li><a href="namespaces/orpheus-email.html"><abbr title="\Orpheus\Email">Email</abbr></a></li>
+					<li><a href="namespaces/orpheus-file.html"><abbr title="\Orpheus\File">File</abbr></a></li>
+					<li><a href="namespaces/orpheus-publisher.html"><abbr title="\Orpheus\Publisher">Publisher</abbr></a></li>
+				</ul>
+			</section>
+			
+			<section class="phpdocumentor-sidebar__category">
+				<h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+				<h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+				<h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Orpheus.html"><abbr title="\Orpheus">Orpheus</abbr></a></h3>
+				<ul class="phpdocumentor-list">
+					<li><a href="packages/Orpheus-Controller.html"><abbr title="\Orpheus\Controller">Controller</abbr></a></li>
+					<li><a href="packages/Orpheus-Rendering.html"><abbr title="\Orpheus\Rendering">Rendering</abbr></a></li>
+				</ul>
+			</section>
+			
+			<section class="phpdocumentor-sidebar__category">
+				<h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+				<h3 class="phpdocumentor-sidebar__root-package"><a href="reports/deprecated.html">Deprecated</a></h3>
+				<h3 class="phpdocumentor-sidebar__root-package"><a href="reports/errors.html">Errors</a></h3>
+				<h3 class="phpdocumentor-sidebar__root-package"><a href="reports/markers.html">Markers</a></h3>
+			</section>
+			
+			<section class="phpdocumentor-sidebar__category">
+				<h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+				<h3 class="phpdocumentor-sidebar__root-package"><a href="indices/files.html">Files</a></h3>
+			</section>
+		</aside>
+		
+		<div class="phpdocumentor-column -eight phpdocumentor-content">
+			<ul class="phpdocumentor-breadcrumbs">
+				<li class="phpdocumentor-breadcrumb"><a href="namespaces/orpheus.html">Orpheus</a></li>
+				<li class="phpdocumentor-breadcrumb"><a href="namespaces/orpheus-file.html">File</a></li>
+			</ul>
+			
+			<article class="phpdocumentor-element -class">
+				<h2 class="phpdocumentor-content__title">
+					UploadedFile
+					
+					
+					<div class="phpdocumentor-element__package">
+						in package
+						<ul class="phpdocumentor-breadcrumbs">
+							<li class="phpdocumentor-breadcrumb"><a href="packages/Default.html">Default</a></li>
+						</ul>
+					</div>
+				
+				
+				</h2>
+				
+				<aside class="phpdocumentor-element-found-in">
+					<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/File/UploadedFile.php"><a
+							href="files/vendor-orpheus-orpheus-webtools-src-file-uploadedfile.html"><abbr title="vendor/orpheus/orpheus-webtools/src/File/UploadedFile.php">UploadedFile.php</abbr></a></abbr>
+					:
+					<span class="phpdocumentor-element-found-in__line">17</span>
+				</aside>
+				
+				<p class="phpdocumentor-summary">The UploadedFile class</p>
+				
+				<section class="phpdocumentor-description"></section>
+				
+				
+				<h5 class="phpdocumentor-tag-list__heading" id="tags">
+					Tags
+					<a class="headerlink" href="#tags"><i class="fas fa-link"></i></a>
+				</h5>
+				<dl class="phpdocumentor-tag-list">
+					<dt class="phpdocumentor-tag-list__entry">
+						<span class="phpdocumentor-tag__name">author</span>
+					</dt>
+					<dd class="phpdocumentor-tag-list__definition">
+						
+						<section class="phpdocumentor-description"><p>Florent Hazard <a href="mailto:contact@sowapps.com">contact@sowapps.com</a></p>
+						</section>
+					
+					</dd>
+				</dl>
+				
+				
+				<h3 id="toc">
+					Table of Contents
+					<a class="headerlink" href="#toc"><i class="fas fa-link"></i></a>
+				</h3>
+				
+				<dl class="phpdocumentor-table-of-contents">
+					<dt class="phpdocumentor-table-of-contents__entry -property -public">
+						<a href="classes/Orpheus-File-UploadedFile.html#property_allowedExtensions">$allowedExtensions</a>
+						<span>
+                &nbsp;: array&lt;string|int, mixed&gt;            </span>
+					</dt>
+					<dd>Allowed extension to upload</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -property -public">
+						<a href="classes/Orpheus-File-UploadedFile.html#property_allowedMimeTypes">$allowedMimeTypes</a>
+						<span>
+                &nbsp;: array&lt;string|int, mixed&gt;            </span>
+					</dt>
+					<dd>Allowed mime types to upload</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -property -public">
+						<a href="classes/Orpheus-File-UploadedFile.html#property_expectedType">$expectedType</a>
+						<span>
+                &nbsp;: array&lt;string|int, mixed&gt;            </span>
+					</dt>
+					<dd>Allowed type to upload</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -property -protected">
+						<a href="classes/Orpheus-File-UploadedFile.html#property_error">$error</a>
+						<span>
+                &nbsp;: int            </span>
+					</dt>
+					<dd>The file uploading error</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -property -protected">
+						<a href="classes/Orpheus-File-UploadedFile.html#property_fileName">$fileName</a>
+						<span>
+                &nbsp;: string            </span>
+					</dt>
+					<dd>The file name</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -property -protected">
+						<a href="classes/Orpheus-File-UploadedFile.html#property_fileSize">$fileSize</a>
+						<span>
+                &nbsp;: int            </span>
+					</dt>
+					<dd>The file size</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -property -protected">
+						<a href="classes/Orpheus-File-UploadedFile.html#property_tempPath">$tempPath</a>
+						<span>
+                &nbsp;: string            </span>
+					</dt>
+					<dd>The file temp path</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-File-UploadedFile.html#method___construct">__construct()</a>
+						<span>
+                        &nbsp;: mixed    </span>
+					</dt>
+					<dd>Constructor</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-File-UploadedFile.html#method___toString">__toString()</a>
+						<span>
+                        &nbsp;: string    </span>
+					</dt>
+					<dd>Get the uploaded file (file name) as string</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-File-UploadedFile.html#method_getBaseName">getBaseName()</a>
+						<span>
+                        &nbsp;: string    </span>
+					</dt>
+					<dd>Get the file basename</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-File-UploadedFile.html#method_getError">getError()</a>
+						<span>
+                        &nbsp;: int    </span>
+					</dt>
+					<dd>Get the upload error</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-File-UploadedFile.html#method_getExtension">getExtension()</a>
+						<span>
+                        &nbsp;: string    </span>
+					</dt>
+					<dd>Get the file extension</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-File-UploadedFile.html#method_getFileName">getFileName()</a>
+						<span>
+                        &nbsp;: string    </span>
+					</dt>
+					<dd>Get the file name</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-File-UploadedFile.html#method_getFileSize">getFileSize()</a>
+						<span>
+                        &nbsp;: <abbr title="\Orpheus\File\number">number</abbr>    </span>
+					</dt>
+					<dd>Get the file size</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-File-UploadedFile.html#method_getMIMEType">getMIMEType()</a>
+						<span>
+                        &nbsp;: string    </span>
+					</dt>
+					<dd>Get the file mime type</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-File-UploadedFile.html#method_getSplFileInfo">getSplFileInfo()</a>
+						<span>
+                        &nbsp;: <abbr title="\SplFileInfo">SplFileInfo</abbr>    </span>
+					</dt>
+					<dd>Get SplFileInfo object for this file</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-File-UploadedFile.html#method_getTempPath">getTempPath()</a>
+						<span>
+                        &nbsp;: string    </span>
+					</dt>
+					<dd>Get temporarily path to file</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-File-UploadedFile.html#method_getType">getType()</a>
+						<span>
+                        &nbsp;: mixed    </span>
+					</dt>
+					<dd>Get the type of the file from its mimetype</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-File-UploadedFile.html#method_load">load()</a>
+						<span>
+                        &nbsp;: <a href="classes/Orpheus-File-UploadedFile.html"><abbr title="\Orpheus\File\UploadedFile">UploadedFile</abbr></a>    </span>
+					</dt>
+					<dd>Load file from input $name</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-File-UploadedFile.html#method_moveTo">moveTo()</a>
+						<span>
+                        &nbsp;: bool    </span>
+					</dt>
+					<dd>Move the file to $path</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -public">
+						<a href="classes/Orpheus-File-UploadedFile.html#method_validate">validate()</a>
+						<span>
+                        &nbsp;: mixed    </span>
+					</dt>
+					<dd>Validate the input file is respecting upload restrictions</dd>
+					
+					<dt class="phpdocumentor-table-of-contents__entry -method -protected">
+						<a href="classes/Orpheus-File-UploadedFile.html#method_loadPath">loadPath()</a>
+						<span>
+                        &nbsp;: <a href="classes/Orpheus-File-UploadedFile.html"><abbr title="\Orpheus\File\UploadedFile">UploadedFile</abbr></a>    </span>
+					</dt>
+					<dd>Get uploaded file from path</dd>
+				
+				</dl>
+				
+				
+				<section class="phpdocumentor-properties">
+					<h3 class="phpdocumentor-elements__header" id="properties">
+						Properties
+						<a class="headerlink" href="classes/Orpheus-File-UploadedFile.html#properties"><i class="fas fa-link"></i></a>
+					</h3>
+					<article
+							class="
+            phpdocumentor-element
+            -property
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="property_allowedExtensions">
+							$allowedExtensions
+							<a class="headerlink" href="classes/Orpheus-File-UploadedFile.html#property_allowedExtensions"><i class="fas fa-link"></i></a>
+							<span class="phpdocumentor-element__modifiers">
+                                </span>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/File/UploadedFile.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-file-uploadedfile.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/File/UploadedFile.php">UploadedFile.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">24</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Allowed extension to upload</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
+							<span class="phpdocumentor-signature__name">$allowedExtensions</span>
+						</code>
+						
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="
+            phpdocumentor-element
+            -property
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="property_allowedMimeTypes">
+							$allowedMimeTypes
+							<a class="headerlink" href="classes/Orpheus-File-UploadedFile.html#property_allowedMimeTypes"><i class="fas fa-link"></i></a>
+							<span class="phpdocumentor-element__modifiers">
+                                </span>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/File/UploadedFile.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-file-uploadedfile.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/File/UploadedFile.php">UploadedFile.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">31</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Allowed mime types to upload</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
+							<span class="phpdocumentor-signature__name">$allowedMimeTypes</span>
+						</code>
+						
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="
+            phpdocumentor-element
+            -property
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="property_expectedType">
+							$expectedType
+							<a class="headerlink" href="classes/Orpheus-File-UploadedFile.html#property_expectedType"><i class="fas fa-link"></i></a>
+							<span class="phpdocumentor-element__modifiers">
+                                </span>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/File/UploadedFile.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-file-uploadedfile.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/File/UploadedFile.php">UploadedFile.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">38</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Allowed type to upload</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
+							<span class="phpdocumentor-signature__name">$expectedType</span>
+						</code>
+						
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="
+            phpdocumentor-element
+            -property
+            -protected
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="property_error">
+							$error
+							<a class="headerlink" href="classes/Orpheus-File-UploadedFile.html#property_error"><i class="fas fa-link"></i></a>
+							<span class="phpdocumentor-element__modifiers">
+                                </span>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/File/UploadedFile.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-file-uploadedfile.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/File/UploadedFile.php">UploadedFile.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">66</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">The file uploading error</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">protected</span>
+							<span class="phpdocumentor-signature__type">int</span>
+							<span class="phpdocumentor-signature__name">$error</span>
+						</code>
+						
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="
+            phpdocumentor-element
+            -property
+            -protected
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="property_fileName">
+							$fileName
+							<a class="headerlink" href="classes/Orpheus-File-UploadedFile.html#property_fileName"><i class="fas fa-link"></i></a>
+							<span class="phpdocumentor-element__modifiers">
+                                </span>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/File/UploadedFile.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-file-uploadedfile.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/File/UploadedFile.php">UploadedFile.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">45</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">The file name</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">protected</span>
+							<span class="phpdocumentor-signature__type">string</span>
+							<span class="phpdocumentor-signature__name">$fileName</span>
+						</code>
+						
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="
+            phpdocumentor-element
+            -property
+            -protected
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="property_fileSize">
+							$fileSize
+							<a class="headerlink" href="classes/Orpheus-File-UploadedFile.html#property_fileSize"><i class="fas fa-link"></i></a>
+							<span class="phpdocumentor-element__modifiers">
+                                </span>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/File/UploadedFile.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-file-uploadedfile.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/File/UploadedFile.php">UploadedFile.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">52</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">The file size</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">protected</span>
+							<span class="phpdocumentor-signature__type">int</span>
+							<span class="phpdocumentor-signature__name">$fileSize</span>
+						</code>
+						
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="
+            phpdocumentor-element
+            -property
+            -protected
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="property_tempPath">
+							$tempPath
+							<a class="headerlink" href="classes/Orpheus-File-UploadedFile.html#property_tempPath"><i class="fas fa-link"></i></a>
+							<span class="phpdocumentor-element__modifiers">
+                                </span>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/File/UploadedFile.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-file-uploadedfile.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/File/UploadedFile.php">UploadedFile.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">59</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">The file temp path</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">protected</span>
+							<span class="phpdocumentor-signature__type">string</span>
+							<span class="phpdocumentor-signature__name">$tempPath</span>
+						</code>
+						
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+				</section>
+				
+				<section class="phpdocumentor-methods">
+					<h3 class="phpdocumentor-elements__header" id="methods">
+						Methods
+						<a class="headerlink" href="classes/Orpheus-File-UploadedFile.html#methods"><i class="fas fa-link"></i></a>
+					</h3>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method___construct">
+							__construct()
+							<a class="headerlink" href="classes/Orpheus-File-UploadedFile.html#method___construct"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/File/UploadedFile.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-file-uploadedfile.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/File/UploadedFile.php">UploadedFile.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">76</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Constructor</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span
+								class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$fileName</span></span><span
+								class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$fileSize</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span
+								class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$tempPath</span></span><span
+								class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$error</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">mixed</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$fileName</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$fileSize</span>
+								: <span class="phpdocumentor-signature__argument__return-type">int</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$tempPath</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$error</span>
+								: <span class="phpdocumentor-signature__argument__return-type">int</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">mixed</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method___toString">
+							__toString()
+							<a class="headerlink" href="classes/Orpheus-File-UploadedFile.html#method___toString"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/File/UploadedFile.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-file-uploadedfile.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/File/UploadedFile.php">UploadedFile.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">88</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Get the uploaded file (file name) as string</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">__toString</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">string</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_getBaseName">
+							getBaseName()
+							<a class="headerlink" href="classes/Orpheus-File-UploadedFile.html#method_getBaseName"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/File/UploadedFile.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-file-uploadedfile.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/File/UploadedFile.php">UploadedFile.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">106</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Get the file basename</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">getBaseName</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">string</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_getError">
+							getError()
+							<a class="headerlink" href="classes/Orpheus-File-UploadedFile.html#method_getError"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/File/UploadedFile.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-file-uploadedfile.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/File/UploadedFile.php">UploadedFile.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">124</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Get the upload error</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">getError</span><span>(</span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">int</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">int</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_getExtension">
+							getExtension()
+							<a class="headerlink" href="classes/Orpheus-File-UploadedFile.html#method_getExtension"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/File/UploadedFile.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-file-uploadedfile.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/File/UploadedFile.php">UploadedFile.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">222</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Get the file extension</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">getExtension</span><span>(</span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">string</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">string</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_getFileName">
+							getFileName()
+							<a class="headerlink" href="classes/Orpheus-File-UploadedFile.html#method_getFileName"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/File/UploadedFile.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-file-uploadedfile.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/File/UploadedFile.php">UploadedFile.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">97</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Get the file name</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">getFileName</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">string</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_getFileSize">
+							getFileSize()
+							<a class="headerlink" href="classes/Orpheus-File-UploadedFile.html#method_getFileSize"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/File/UploadedFile.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-file-uploadedfile.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/File/UploadedFile.php">UploadedFile.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">115</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Get the file size</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">getFileSize</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr
+								title="\Orpheus\File\number">number</abbr></span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type"><abbr title="\Orpheus\File\number">number</abbr></span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_getMIMEType">
+							getMIMEType()
+							<a class="headerlink" href="classes/Orpheus-File-UploadedFile.html#method_getMIMEType"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/File/UploadedFile.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-file-uploadedfile.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/File/UploadedFile.php">UploadedFile.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">213</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Get the file mime type</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">getMIMEType</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">string</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_getSplFileInfo">
+							getSplFileInfo()
+							<a class="headerlink" href="classes/Orpheus-File-UploadedFile.html#method_getSplFileInfo"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/File/UploadedFile.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-file-uploadedfile.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/File/UploadedFile.php">UploadedFile.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">231</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Get SplFileInfo object for this file</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">getSplFileInfo</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr
+								title="\SplFileInfo">SplFileInfo</abbr></span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type"><abbr title="\SplFileInfo">SplFileInfo</abbr></span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_getTempPath">
+							getTempPath()
+							<a class="headerlink" href="classes/Orpheus-File-UploadedFile.html#method_getTempPath"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/File/UploadedFile.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-file-uploadedfile.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/File/UploadedFile.php">UploadedFile.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">143</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Get temporarily path to file</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">getTempPath</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">string</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_getType">
+							getType()
+							<a class="headerlink" href="classes/Orpheus-File-UploadedFile.html#method_getType"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/File/UploadedFile.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-file-uploadedfile.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/File/UploadedFile.php">UploadedFile.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">203</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Get the type of the file from its mimetype</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">getType</span><span>(</span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">mixed</span></code>
+						
+						<section class="phpdocumentor-description"><p>return string</p>
+						</section>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">mixed</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_load">
+							load()
+							<a class="headerlink" href="classes/Orpheus-File-UploadedFile.html#method_load"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/File/UploadedFile.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-file-uploadedfile.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/File/UploadedFile.php">UploadedFile.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">241</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Load file from input $name</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__static">static</span> <span class="phpdocumentor-signature__name">load</span><span>(</span><span
+								class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$name</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a
+								href="classes/Orpheus-File-UploadedFile.html"><abbr title="\Orpheus\File\UploadedFile">UploadedFile</abbr></a></span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$name</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type"><a href="classes/Orpheus-File-UploadedFile.html"><abbr title="\Orpheus\File\UploadedFile">UploadedFile</abbr></a></span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_moveTo">
+							moveTo()
+							<a class="headerlink" href="classes/Orpheus-File-UploadedFile.html#method_moveTo"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/File/UploadedFile.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-file-uploadedfile.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/File/UploadedFile.php">UploadedFile.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">134</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Move the file to $path</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">moveTo</span><span>(</span><span class="phpdocumentor-signature__argument"><span
+								class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$path</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">bool</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$path</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">bool</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_validate">
+							validate()
+							<a class="headerlink" href="classes/Orpheus-File-UploadedFile.html#method_validate"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/File/UploadedFile.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-file-uploadedfile.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/File/UploadedFile.php">UploadedFile.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">154</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Validate the input file is respecting upload restrictions</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">public</span>
+							<span class="phpdocumentor-signature__name">validate</span><span>(</span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type">mixed</span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						
+						<h5 class="phpdocumentor-tag-list__heading" id="tags">
+							Tags
+							<a class="headerlink" href="#tags"><i class="fas fa-link"></i></a>
+						</h5>
+						<dl class="phpdocumentor-tag-list">
+							<dt class="phpdocumentor-tag-list__entry">
+								<span class="phpdocumentor-tag__name">throws</span>
+							</dt>
+							<dd class="phpdocumentor-tag-list__definition">
+								<span class="phpdocumentor-tag-link"><a href="classes/Orpheus-Exception-UserException.html"><abbr
+										title="\Orpheus\Exception\UserException">UserException</abbr></a></span>
+								
+								<section class="phpdocumentor-description"><p>This function throws exception in case of error</p>
+								</section>
+							
+							</dd>
+						</dl>
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type">mixed</span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+					<article
+							class="phpdocumentor-element
+            -method
+            -protected
+                                    -static                    "
+					>
+						<h4 class="phpdocumentor-element__name" id="method_loadPath">
+							loadPath()
+							<a class="headerlink" href="classes/Orpheus-File-UploadedFile.html#method_loadPath"><i class="fas fa-link"></i></a>
+						</h4>
+						<aside class="phpdocumentor-element-found-in">
+							<abbr class="phpdocumentor-element-found-in__file" title="vendor/orpheus/orpheus-webtools/src/File/UploadedFile.php"><a
+									href="files/vendor-orpheus-orpheus-webtools-src-file-uploadedfile.html"><abbr
+									title="vendor/orpheus/orpheus-webtools/src/File/UploadedFile.php">UploadedFile.php</abbr></a></abbr>
+							:
+							<span class="phpdocumentor-element-found-in__line">259</span>
+						</aside>
+						
+						<p class="phpdocumentor-summary">Get uploaded file from path</p>
+						
+						<code class="phpdocumentor-code phpdocumentor-signature ">
+							<span class="phpdocumentor-signature__visibility">protected</span>
+							<span class="phpdocumentor-signature__static">static</span> <span class="phpdocumentor-signature__name">loadPath</span><span>(</span><span
+								class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$from</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span
+								class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__reference-operator">&amp;</span><span
+								class="phpdocumentor-signature__argument__name">$files</span><span> = </span><span
+								class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span
+								class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span
+								class="phpdocumentor-signature__argument__name">$path</span><span> = </span><span
+								class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span>)</span><span> : </span><span
+								class="phpdocumentor-signature__response_type"><a href="classes/Orpheus-File-UploadedFile.html"><abbr title="\Orpheus\File\UploadedFile">UploadedFile</abbr></a></span></code>
+						
+						<section class="phpdocumentor-description"></section>
+						
+						<h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+						<dl class="phpdocumentor-argument-list">
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$from</span>
+								: <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+							</dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$files</span>
+								: <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+								= <span class="phpdocumentor-signature__argument__default-value">[]</span></dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+							<dt class="phpdocumentor-argument-list__entry">
+								<span class="phpdocumentor-signature__argument__name">$path</span>
+								: <span class="phpdocumentor-signature__argument__return-type">string</span>
+								= <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span></dt>
+							<dd class="phpdocumentor-argument-list__definition">
+								<section class="phpdocumentor-description"></section>
+							
+							</dd>
+						</dl>
+						
+						
+						<h5 class="phpdocumentor-return-value__heading">Return values</h5>
+						<span class="phpdocumentor-signature__response_type"><a href="classes/Orpheus-File-UploadedFile.html"><abbr title="\Orpheus\File\UploadedFile">UploadedFile</abbr></a></span>
+						&mdash;
+						<section class="phpdocumentor-description"></section>
+					
+					
+					</article>
+				</section>
+			
+			</article>
+			<section class="phpdocumentor-search-results phpdocumentor-search-results--hidden" data-search-results>
+				<section class="phpdocumentor-search-results__dialog">
+					<header class="phpdocumentor-search-results__header">
+						<h2 class="phpdocumentor-search-results__title">Search results</h2>
+						<button class="phpdocumentor-search-results__close"><i class="fas fa-times"></i></button>
+					</header>
+					<section class="phpdocumentor-search-results__body">
+						<ul class="phpdocumentor-search-results__entries"></ul>
+					</section>
+				</section>
+			</section>
+		</div>
+	</div>
+	<a class="phpdocumentor-back-to-top" href="classes/Orpheus-File-UploadedFile.html#top"><i class="fas fa-chevron-circle-up"></i></a>
+
+</main>
+
+<script>
+cssVars({});
+</script>
+</body>
+</html>
