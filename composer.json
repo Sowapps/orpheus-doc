@@ -1,9 +1,9 @@
 {
-	"name" : "orpheus/orpheus-doc",
-	"description" : "Orpheus PHP Framework Documentation",
-	"type" : "project",
-	"license" : "MIT",
-	"keywords" : [
+	"name": "orpheus/orpheus-doc",
+	"description": "Orpheus PHP Framework Documentation",
+	"type": "project",
+	"license": "MIT",
+	"keywords": [
 		"framework",
 		"php",
 		"manual",
@@ -24,12 +24,13 @@
 		"orpheus/orpheus-webtools" : "dev-master",
 		"phpdocumentor/phpdocumentor" : "2.*"
 	},
-	"authors" : [{
-			"name" : "Florent HAZARD",
-			"email" : "contact@sowapps.com",
-			"homepage" : "http://sowapps.com",
-			"role" : "Developer"
+	"authors": [
+		{
+			"name": "Florent HAZARD",
+			"email": "contact@sowapps.com",
+			"homepage": "http://sowapps.com",
+			"role": "Developer"
 		}
 	],
-	"minimum-stability" : "stable"
+	"minimum-stability": "stable"
 }

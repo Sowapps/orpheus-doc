@@ -2211,65 +2211,65 @@ Search.appendIndex(
 		"summary": "Get\u0020create\u0020SQL\u0020query",
 		"url": "classes/Orpheus-EntityDescriptor-SQLGenerator-SQLGenerator.html#method_getCreate"
 	}, {
-		"fqsen": "\\Orpheus\\EntityDescriptor\\SQLGenerator\\SQLGeneratorMySQL",
-		"name": "SQLGeneratorMySQL",
-		"summary": "The\u0020SQLGeneratorMySQL\u0020class",
-		"url": "classes/Orpheus-EntityDescriptor-SQLGenerator-SQLGeneratorMySQL.html"
+		"fqsen": "\\Orpheus\\EntityDescriptor\\SQLGenerator\\SQLGeneratorMySql",
+		"name": "SQLGeneratorMySql",
+		"summary": "The\u0020SQLGeneratorMySql\u0020class",
+		"url": "classes/Orpheus-EntityDescriptor-SQLGenerator-SQLGeneratorMySql.html"
 	}, {
-		"fqsen": "\\Orpheus\\EntityDescriptor\\SQLGenerator\\SQLGeneratorMySQL\u003A\u003AgetColumnInfosFromField\u0028\u0029",
+		"fqsen": "\\Orpheus\\EntityDescriptor\\SQLGenerator\\SQLGeneratorMySql\u003A\u003AgetColumnInfosFromField\u0028\u0029",
 		"name": "getColumnInfosFromField",
 		"summary": "Get\u0020column\u0020informations\u0020from\u0020\u0024field",
-		"url": "classes/Orpheus-EntityDescriptor-SQLGenerator-SQLGeneratorMySQL.html#method_getColumnInfosFromField"
+		"url": "classes/Orpheus-EntityDescriptor-SQLGenerator-SQLGeneratorMySql.html#method_getColumnInfosFromField"
 	}, {
-		"fqsen": "\\Orpheus\\EntityDescriptor\\SQLGenerator\\SQLGeneratorMySQL\u003A\u003AgetColumnDefinition\u0028\u0029",
+		"fqsen": "\\Orpheus\\EntityDescriptor\\SQLGenerator\\SQLGeneratorMySql\u003A\u003AgetColumnDefinition\u0028\u0029",
 		"name": "getColumnDefinition",
 		"summary": "Get\u0020column\u0020definition",
-		"url": "classes/Orpheus-EntityDescriptor-SQLGenerator-SQLGeneratorMySQL.html#method_getColumnDefinition"
+		"url": "classes/Orpheus-EntityDescriptor-SQLGenerator-SQLGeneratorMySql.html#method_getColumnDefinition"
 	}, {
-		"fqsen": "\\Orpheus\\EntityDescriptor\\SQLGenerator\\SQLGeneratorMySQL\u003A\u003AgetIndexDefinition\u0028\u0029",
+		"fqsen": "\\Orpheus\\EntityDescriptor\\SQLGenerator\\SQLGeneratorMySql\u003A\u003AgetIndexDefinition\u0028\u0029",
 		"name": "getIndexDefinition",
 		"summary": "Get\u0020index\u0020definition",
-		"url": "classes/Orpheus-EntityDescriptor-SQLGenerator-SQLGeneratorMySQL.html#method_getIndexDefinition"
+		"url": "classes/Orpheus-EntityDescriptor-SQLGenerator-SQLGeneratorMySql.html#method_getIndexDefinition"
 	}, {
-		"fqsen": "\\Orpheus\\EntityDescriptor\\SQLGenerator\\SQLGeneratorMySQL\u003A\u003AmatchEntity\u0028\u0029",
+		"fqsen": "\\Orpheus\\EntityDescriptor\\SQLGenerator\\SQLGeneratorMySql\u003A\u003AmatchEntity\u0028\u0029",
 		"name": "matchEntity",
 		"summary": "Get\u0020changes\u0020with\u0020entity",
-		"url": "classes/Orpheus-EntityDescriptor-SQLGenerator-SQLGeneratorMySQL.html#method_matchEntity"
+		"url": "classes/Orpheus-EntityDescriptor-SQLGenerator-SQLGeneratorMySql.html#method_matchEntity"
 	}, {
-		"fqsen": "\\Orpheus\\EntityDescriptor\\SQLGenerator\\SQLGeneratorMySQL\u003A\u003AgetCreate\u0028\u0029",
+		"fqsen": "\\Orpheus\\EntityDescriptor\\SQLGenerator\\SQLGeneratorMySql\u003A\u003AgetCreate\u0028\u0029",
 		"name": "getCreate",
 		"summary": "Get\u0020create\u0020SQL\u0020query",
-		"url": "classes/Orpheus-EntityDescriptor-SQLGenerator-SQLGeneratorMySQL.html#method_getCreate"
+		"url": "classes/Orpheus-EntityDescriptor-SQLGenerator-SQLGeneratorMySql.html#method_getCreate"
 	}, {
-		"fqsen": "\\Orpheus\\EntityDescriptor\\SQLGenerator\\SQLGeneratorMySQL\u003A\u003AformatHTML_Command\u0028\u0029",
+		"fqsen": "\\Orpheus\\EntityDescriptor\\SQLGenerator\\SQLGeneratorMySql\u003A\u003AformatHTML_Command\u0028\u0029",
 		"name": "formatHTML_Command",
 		"summary": "Format\u0020command\u0020into\u0020HTML",
-		"url": "classes/Orpheus-EntityDescriptor-SQLGenerator-SQLGeneratorMySQL.html#method_formatHTML_Command"
+		"url": "classes/Orpheus-EntityDescriptor-SQLGenerator-SQLGeneratorMySql.html#method_formatHTML_Command"
 	}, {
-		"fqsen": "\\Orpheus\\EntityDescriptor\\SQLGenerator\\SQLGeneratorMySQL\u003A\u003AformatHTML_SubCommand\u0028\u0029",
+		"fqsen": "\\Orpheus\\EntityDescriptor\\SQLGenerator\\SQLGeneratorMySql\u003A\u003AformatHTML_SubCommand\u0028\u0029",
 		"name": "formatHTML_SubCommand",
 		"summary": "Format\u0020subcommand\u0020into\u0020HTML",
-		"url": "classes/Orpheus-EntityDescriptor-SQLGenerator-SQLGeneratorMySQL.html#method_formatHTML_SubCommand"
+		"url": "classes/Orpheus-EntityDescriptor-SQLGenerator-SQLGeneratorMySql.html#method_formatHTML_SubCommand"
 	}, {
-		"fqsen": "\\Orpheus\\EntityDescriptor\\SQLGenerator\\SQLGeneratorMySQL\u003A\u003AformatHTML_ColumnType\u0028\u0029",
+		"fqsen": "\\Orpheus\\EntityDescriptor\\SQLGenerator\\SQLGeneratorMySql\u003A\u003AformatHTML_ColumnType\u0028\u0029",
 		"name": "formatHTML_ColumnType",
 		"summary": "Format\u0020column\u0020type\u0020into\u0020HTML",
-		"url": "classes/Orpheus-EntityDescriptor-SQLGenerator-SQLGeneratorMySQL.html#method_formatHTML_ColumnType"
+		"url": "classes/Orpheus-EntityDescriptor-SQLGenerator-SQLGeneratorMySql.html#method_formatHTML_ColumnType"
 	}, {
-		"fqsen": "\\Orpheus\\EntityDescriptor\\SQLGenerator\\SQLGeneratorMySQL\u003A\u003AformatHTML_ReservedWord\u0028\u0029",
+		"fqsen": "\\Orpheus\\EntityDescriptor\\SQLGenerator\\SQLGeneratorMySql\u003A\u003AformatHTML_ReservedWord\u0028\u0029",
 		"name": "formatHTML_ReservedWord",
 		"summary": "Format\u0020reserved\u0020word\u0020into\u0020HTML",
-		"url": "classes/Orpheus-EntityDescriptor-SQLGenerator-SQLGeneratorMySQL.html#method_formatHTML_ReservedWord"
+		"url": "classes/Orpheus-EntityDescriptor-SQLGenerator-SQLGeneratorMySql.html#method_formatHTML_ReservedWord"
 	}, {
-		"fqsen": "\\Orpheus\\EntityDescriptor\\SQLGenerator\\SQLGeneratorMySQL\u003A\u003AformatHTML_Identifier\u0028\u0029",
+		"fqsen": "\\Orpheus\\EntityDescriptor\\SQLGenerator\\SQLGeneratorMySql\u003A\u003AformatHTML_Identifier\u0028\u0029",
 		"name": "formatHTML_Identifier",
 		"summary": "Format\u0020identifier\u0020into\u0020HTML",
-		"url": "classes/Orpheus-EntityDescriptor-SQLGenerator-SQLGeneratorMySQL.html#method_formatHTML_Identifier"
+		"url": "classes/Orpheus-EntityDescriptor-SQLGenerator-SQLGeneratorMySql.html#method_formatHTML_Identifier"
 	}, {
-		"fqsen": "\\Orpheus\\EntityDescriptor\\SQLGenerator\\SQLGeneratorMySQL\u003A\u003AformatHTML_InlineBlock\u0028\u0029",
+		"fqsen": "\\Orpheus\\EntityDescriptor\\SQLGenerator\\SQLGeneratorMySql\u003A\u003AformatHTML_InlineBlock\u0028\u0029",
 		"name": "formatHTML_InlineBlock",
 		"summary": "Format\u0020inline\u0020block",
-		"url": "classes/Orpheus-EntityDescriptor-SQLGenerator-SQLGeneratorMySQL.html#method_formatHTML_InlineBlock"
+		"url": "classes/Orpheus-EntityDescriptor-SQLGenerator-SQLGeneratorMySql.html#method_formatHTML_InlineBlock"
 	}, {
 		"fqsen": "\\Orpheus\\EntityDescriptor\\TypeDescriptor",
 		"name": "TypeDescriptor",
