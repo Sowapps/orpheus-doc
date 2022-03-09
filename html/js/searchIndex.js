@@ -5611,275 +5611,275 @@ Search.appendIndex(
 		"summary": "The\u0020object\u0020of\u0020this\u0020operation",
 		"url": "classes/Orpheus-Publisher-Transaction-UpdateTransactionOperation.html#property_object"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering",
-		"name": "HTMLRendering",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering",
+		"name": "HtmlRendering",
 		"summary": "The\u0020HTML\u0020rendering\u0020class",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003A__construct\u0028\u0029",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003A__construct\u0028\u0029",
 		"name": "__construct",
 		"summary": "",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#method___construct"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#method___construct"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003AgetDefaultTheme\u0028\u0029",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003AgetDefaultTheme\u0028\u0029",
 		"name": "getDefaultTheme",
 		"summary": "Get\u0020the\u0020default\u0020theme\u0020used\u0020to\u0020render\u0020layouts",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#method_getDefaultTheme"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#method_getDefaultTheme"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003AsetDefaultTheme\u0028\u0029",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003AsetDefaultTheme\u0028\u0029",
 		"name": "setDefaultTheme",
 		"summary": "Set\u0020the\u0020default\u0020theme\u0020used\u0020to\u0020render\u0020layouts",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#method_setDefaultTheme"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#method_setDefaultTheme"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003AaddCssFile\u0028\u0029",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003AaddCssFile\u0028\u0029",
 		"name": "addCssFile",
 		"summary": "Add\u0020a\u0020global\u0020css\u0020file\u0020to\u0020the\u0020list",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#method_addCssFile"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#method_addCssFile"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003AaddThemeCssFile\u0028\u0029",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003AaddThemeCssFile\u0028\u0029",
 		"name": "addThemeCssFile",
 		"summary": "Add\u0020a\u0020theme\u0020css\u0020file\u0020to\u0020the\u0020list",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#method_addThemeCssFile"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#method_addThemeCssFile"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003AaddCssUrl\u0028\u0029",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003AaddCssUrl\u0028\u0029",
 		"name": "addCssUrl",
 		"summary": "Add\u0020a\u0020css\u0020url\u0020to\u0020the\u0020list",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#method_addCssUrl"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#method_addCssUrl"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003AaddTypedUrl\u0028\u0029",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003AaddTypedUrl\u0028\u0029",
 		"name": "addTypedUrl",
 		"summary": "Add\u0020an\u0020\u0024url\u0020by\u0020\u0024type\u0020in\u0020\u0024array",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#method_addTypedUrl"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#method_addTypedUrl"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003AisRemote\u0028\u0029",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003AisRemote\u0028\u0029",
 		"name": "isRemote",
 		"summary": "",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#method_isRemote"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#method_isRemote"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003AsetRemote\u0028\u0029",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003AsetRemote\u0028\u0029",
 		"name": "setRemote",
 		"summary": "",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#method_setRemote"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#method_setRemote"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003AgetCssUrl\u0028\u0029",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003AgetCssUrl\u0028\u0029",
 		"name": "getCssUrl",
 		"summary": "Get\u0020the\u0020CSS\u0020files\u0020url",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#method_getCssUrl"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#method_getCssUrl"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003AgetThemeUrl\u0028\u0029",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003AgetThemeUrl\u0028\u0029",
 		"name": "getThemeUrl",
 		"summary": "Get\u0020the\u0020theme\u0020url",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#method_getThemeUrl"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#method_getThemeUrl"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003AgetThemeFolderUri\u0028\u0029",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003AgetThemeFolderUri\u0028\u0029",
 		"name": "getThemeFolderUri",
 		"summary": "Get\u0020Theme\u0020folder\u0020Url.\u0020Mainly,\u0020a\u0020http\u0020URL\u0020for\u0020a\u0020website.",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#method_getThemeFolderUri"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#method_getThemeFolderUri"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003AsetThemeFolderUri\u0028\u0029",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003AsetThemeFolderUri\u0028\u0029",
 		"name": "setThemeFolderUri",
 		"summary": "",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#method_setThemeFolderUri"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#method_setThemeFolderUri"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003AgetCssPath\u0028\u0029",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003AgetCssPath\u0028\u0029",
 		"name": "getCssPath",
 		"summary": "Get\u0020the\u0020css\u0020theme\u0020path",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#method_getCssPath"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#method_getCssPath"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003AgetThemePath\u0028\u0029",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003AgetThemePath\u0028\u0029",
 		"name": "getThemePath",
 		"summary": "Get\u0020the\u0020theme\u0020path.",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#method_getThemePath"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#method_getThemePath"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003AgetResourcePath\u0028\u0029",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003AgetResourcePath\u0028\u0029",
 		"name": "getResourcePath",
 		"summary": "",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#method_getResourcePath"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#method_getResourcePath"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003AsetResourcePath\u0028\u0029",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003AsetResourcePath\u0028\u0029",
 		"name": "setResourcePath",
 		"summary": "",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#method_setResourcePath"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#method_setResourcePath"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003AaddThemeJsFile\u0028\u0029",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003AaddThemeJsFile\u0028\u0029",
 		"name": "addThemeJsFile",
 		"summary": "Add\u0020a\u0020theme\u0020js\u0020file\u0020to\u0020the\u0020list",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#method_addThemeJsFile"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#method_addThemeJsFile"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003AaddJsUrl\u0028\u0029",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003AaddJsUrl\u0028\u0029",
 		"name": "addJsUrl",
 		"summary": "Add\u0020a\u0020js\u0020url\u0020to\u0020the\u0020list",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#method_addJsUrl"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#method_addJsUrl"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003AgetJsUrl\u0028\u0029",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003AgetJsUrl\u0028\u0029",
 		"name": "getJsUrl",
 		"summary": "Get\u0020the\u0020JS\u0020files\u0020url",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#method_getJsUrl"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#method_getJsUrl"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003AgetJsPath\u0028\u0029",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003AgetJsPath\u0028\u0029",
 		"name": "getJsPath",
 		"summary": "Get\u0020the\u0020js\u0020theme\u0020path",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#method_getJsPath"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#method_getJsPath"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003AaddJsFile\u0028\u0029",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003AaddJsFile\u0028\u0029",
 		"name": "addJsFile",
 		"summary": "Add\u0020a\u0020global\u0020js\u0020file\u0020to\u0020the\u0020list",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#method_addJsFile"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#method_addJsFile"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003AaddMetaProperty\u0028\u0029",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003AaddMetaProperty\u0028\u0029",
 		"name": "addMetaProperty",
 		"summary": "Add\u0020a\u0020html\u0020meta\u0020property\u0020to\u0020the\u0020list",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#method_addMetaProperty"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#method_addMetaProperty"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003AlistCssUrls\u0028\u0029",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003AlistCssUrls\u0028\u0029",
 		"name": "listCssUrls",
 		"summary": "List\u0020all\u0020registered\u0020css\u0020URLs",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#method_listCssUrls"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#method_listCssUrls"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003AlistTypedUrl\u0028\u0029",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003AlistTypedUrl\u0028\u0029",
 		"name": "listTypedUrl",
 		"summary": "List\u0020urls\u0020by\u0020\u0024type\u0020in\u0020\u0024array",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#method_listTypedUrl"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#method_listTypedUrl"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003AlistJsUrls\u0028\u0029",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003AlistJsUrls\u0028\u0029",
 		"name": "listJsUrls",
 		"summary": "List\u0020all\u0020registered\u0020js\u0020URLs",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#method_listJsUrls"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#method_listJsUrls"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003AlistMetaProperties\u0028\u0029",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003AlistMetaProperties\u0028\u0029",
 		"name": "listMetaProperties",
 		"summary": "List\u0020all\u0020registered\u0020html\u0020meta\u0020properties",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#method_listMetaProperties"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#method_listMetaProperties"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003AsetTheme\u0028\u0029",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003AsetTheme\u0028\u0029",
 		"name": "setTheme",
 		"summary": "Set\u0020the\u0020theme\u0020used\u0020to\u0020render\u0020layouts",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#method_setTheme"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#method_setTheme"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003AgetAbsThemePath\u0028\u0029",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003AgetAbsThemePath\u0028\u0029",
 		"name": "getAbsThemePath",
 		"summary": "Get\u0020the\u0020absolute\u0020theme\u0020path.",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#method_getAbsThemePath"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#method_getAbsThemePath"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003AgetModelsPath\u0028\u0029",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003AgetModelsPath\u0028\u0029",
 		"name": "getModelsPath",
 		"summary": "Get\u0020the\u0020models\u0020theme\u0020path",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#method_getModelsPath"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#method_getModelsPath"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003AgetLayoutsPath\u0028\u0029",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003AgetLayoutsPath\u0028\u0029",
 		"name": "getLayoutsPath",
 		"summary": "Get\u0020the\u0020layout\u0020theme\u0020path",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#method_getLayoutsPath"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#method_getLayoutsPath"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003AgetRenderingId\u0028\u0029",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003AgetRenderingId\u0028\u0029",
 		"name": "getRenderingId",
 		"summary": "",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#method_getRenderingId"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#method_getRenderingId"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003ArenderReport\u0028\u0029",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003ArenderReport\u0028\u0029",
 		"name": "renderReport",
 		"summary": "Render\u0020the\u0020given\u0020report\u0020as\u0020HTML",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#method_renderReport"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#method_renderReport"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003AexistsLayoutPath\u0028\u0029",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003AexistsLayoutPath\u0028\u0029",
 		"name": "existsLayoutPath",
 		"summary": "Test\u0020if\u0020the\u0020layout\u0020exists",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#method_existsLayoutPath"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#method_existsLayoutPath"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003AgetLayoutPath\u0028\u0029",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003AgetLayoutPath\u0028\u0029",
 		"name": "getLayoutPath",
 		"summary": "Get\u0020the\u0020path\u0020to\u0020the\u0020\u0024layout",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#method_getLayoutPath"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#method_getLayoutPath"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003Arender\u0028\u0029",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003Arender\u0028\u0029",
 		"name": "render",
 		"summary": "Render\u0020the\u0020model",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#method_render"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#method_render"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003Adisplay\u0028\u0029",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003Adisplay\u0028\u0029",
 		"name": "display",
 		"summary": "Display\u0020the\u0020model,\u0020allow\u0020an\u0020absolute\u0020path\u0020to\u0020the\u0020template\u0020file.",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#method_display"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#method_display"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003ALINK_TYPE_PLUGIN",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003ALINK_TYPE_PLUGIN",
 		"name": "LINK_TYPE_PLUGIN",
 		"summary": "LINK_TYPE_PLUGIN",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#constant_LINK_TYPE_PLUGIN"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#constant_LINK_TYPE_PLUGIN"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003ALINK_TYPE_CUSTOM",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003ALINK_TYPE_CUSTOM",
 		"name": "LINK_TYPE_CUSTOM",
 		"summary": "LINK_TYPE_CUSTOM",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#constant_LINK_TYPE_CUSTOM"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#constant_LINK_TYPE_CUSTOM"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003A\u0024defaultTheme",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003A\u0024defaultTheme",
 		"name": "defaultTheme",
 		"summary": "The\u0020default\u0020theme\u0020to\u0020use\u0020for\u0020\u0024theme",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#property_defaultTheme"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#property_defaultTheme"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003A\u0024SHOWMODEL",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003A\u0024SHOWMODEL",
 		"name": "SHOWMODEL",
 		"summary": "The\u0020default\u0020model\u0020to\u0020show",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#property_SHOWMODEL"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#property_SHOWMODEL"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003A\u0024current",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003A\u0024current",
 		"name": "current",
 		"summary": "The\u0020current\u0020global\u0020rendering",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#property_current"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#property_current"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003A\u0024cssURLs",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003A\u0024cssURLs",
 		"name": "cssURLs",
 		"summary": "List\u0020of\u0020CSS\u0020Urls\u0020to\u0020load",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#property_cssURLs"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#property_cssURLs"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003A\u0024jsURLs",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003A\u0024jsURLs",
 		"name": "jsURLs",
 		"summary": "List\u0020of\u0020JS\u0020Urls\u0020to\u0020load",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#property_jsURLs"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#property_jsURLs"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003A\u0024metaprop",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003A\u0024metaprop",
 		"name": "metaprop",
 		"summary": "List\u0020of\u0020meta\u002Dproperties\u0020to\u0020send",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#property_metaprop"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#property_metaprop"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003A\u0024cssPath",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003A\u0024cssPath",
 		"name": "cssPath",
 		"summary": "Path\u0020to\u0020css\u0020folder",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#property_cssPath"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#property_cssPath"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003A\u0024jsPath",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003A\u0024jsPath",
 		"name": "jsPath",
 		"summary": "Path\u0020to\u0020js\u0020folder",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#property_jsPath"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#property_jsPath"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003A\u0024layoutsPath",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003A\u0024layoutsPath",
 		"name": "layoutsPath",
 		"summary": "Path\u0020to\u0020layouts\u0020folder",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#property_layoutsPath"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#property_layoutsPath"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003A\u0024renderingId",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003A\u0024renderingId",
 		"name": "renderingId",
 		"summary": "",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#property_renderingId"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#property_renderingId"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003A\u0024resourcePath",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003A\u0024resourcePath",
 		"name": "resourcePath",
 		"summary": "",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#property_resourcePath"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#property_resourcePath"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003A\u0024themeFolderUri",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003A\u0024themeFolderUri",
 		"name": "themeFolderUri",
 		"summary": "",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#property_themeFolderUri"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#property_themeFolderUri"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003A\u0024remote",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003A\u0024remote",
 		"name": "remote",
 		"summary": "",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#property_remote"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#property_remote"
 	}, {
-		"fqsen": "\\Orpheus\\Rendering\\HTMLRendering\u003A\u003A\u0024theme",
+		"fqsen": "\\Orpheus\\Rendering\\HtmlRendering\u003A\u003A\u0024theme",
 		"name": "theme",
 		"summary": "The\u0020theme\u0020to\u0020use\u0020to\u0020render\u0020HTML\u0020layouts",
-		"url": "classes/Orpheus-Rendering-HTMLRendering.html#property_theme"
+		"url": "classes/Orpheus-Rendering-HtmlRendering.html#property_theme"
 	}, {
 		"fqsen": "\\Orpheus\\Rendering\\Menu\\MenuItem",
 		"name": "MenuItem",
