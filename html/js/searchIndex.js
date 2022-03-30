@@ -3086,120 +3086,120 @@ Search.appendIndex(
 		"summary": "Constructor",
 		"url": "classes/Orpheus-DataType-StringType.html#method___construct"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIArgument",
-		"name": "CLIArgument",
-		"summary": "The\u0020CLIArgument\u0020class",
-		"url": "classes/Orpheus-InputController-CLIController-CLIArgument.html"
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliArgument",
+		"name": "CliArgument",
+		"summary": "The\u0020CliArgument\u0020class",
+		"url": "classes/Orpheus-InputController-CLIController-CliArgument.html"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIArgument\u003A\u003A__construct\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliArgument\u003A\u003A__construct\u0028\u0029",
 		"name": "__construct",
 		"summary": "Constructor",
-		"url": "classes/Orpheus-InputController-CLIController-CLIArgument.html#method___construct"
+		"url": "classes/Orpheus-InputController-CLIController-CliArgument.html#method___construct"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIArgument\u003A\u003Amake\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliArgument\u003A\u003Amake\u0028\u0029",
 		"name": "make",
-		"summary": "Make\u0020a\u0020CLIArgument\u0020from\u0020config",
-		"url": "classes/Orpheus-InputController-CLIController-CLIArgument.html#method_make"
+		"summary": "Make\u0020a\u0020CliArgument\u0020from\u0020config",
+		"url": "classes/Orpheus-InputController-CLIController-CliArgument.html#method_make"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIArgument\u003A\u003AgetUsageCommand\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliArgument\u003A\u003AgetUsageCommand\u0028\u0029",
 		"name": "getUsageCommand",
 		"summary": "",
-		"url": "classes/Orpheus-InputController-CLIController-CLIArgument.html#method_getUsageCommand"
+		"url": "classes/Orpheus-InputController-CLIController-CliArgument.html#method_getUsageCommand"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIArgument\u003A\u003AgetLongCommand\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliArgument\u003A\u003AgetLongCommand\u0028\u0029",
 		"name": "getLongCommand",
 		"summary": "",
-		"url": "classes/Orpheus-InputController-CLIController-CLIArgument.html#method_getLongCommand"
+		"url": "classes/Orpheus-InputController-CLIController-CliArgument.html#method_getLongCommand"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIArgument\u003A\u003AisRequiringValue\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliArgument\u003A\u003AisRequiringValue\u0028\u0029",
 		"name": "isRequiringValue",
 		"summary": "",
-		"url": "classes/Orpheus-InputController-CLIController-CLIArgument.html#method_isRequiringValue"
+		"url": "classes/Orpheus-InputController-CLIController-CliArgument.html#method_isRequiringValue"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIArgument\u003A\u003AgetValueFrom\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliArgument\u003A\u003AgetValueFrom\u0028\u0029",
 		"name": "getValueFrom",
 		"summary": "",
-		"url": "classes/Orpheus-InputController-CLIController-CLIArgument.html#method_getValueFrom"
+		"url": "classes/Orpheus-InputController-CLIController-CliArgument.html#method_getValueFrom"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIArgument\u003A\u003Averify\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliArgument\u003A\u003Averify\u0028\u0029",
 		"name": "verify",
 		"summary": "",
-		"url": "classes/Orpheus-InputController-CLIController-CLIArgument.html#method_verify"
+		"url": "classes/Orpheus-InputController-CLIController-CliArgument.html#method_verify"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIArgument\u003A\u003AgetLongName\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliArgument\u003A\u003AgetLongName\u0028\u0029",
 		"name": "getLongName",
 		"summary": "Get\u0020the\u0020long\u0020name",
-		"url": "classes/Orpheus-InputController-CLIController-CLIArgument.html#method_getLongName"
+		"url": "classes/Orpheus-InputController-CLIController-CliArgument.html#method_getLongName"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIArgument\u003A\u003AgetShortName\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliArgument\u003A\u003AgetShortName\u0028\u0029",
 		"name": "getShortName",
 		"summary": "Get\u0020the\u0020short\u0020name",
-		"url": "classes/Orpheus-InputController-CLIController-CLIArgument.html#method_getShortName"
+		"url": "classes/Orpheus-InputController-CLIController-CliArgument.html#method_getShortName"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIArgument\u003A\u003AhasShortName\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliArgument\u003A\u003AhasShortName\u0028\u0029",
 		"name": "hasShortName",
 		"summary": "Test\u0020argument\u0020has\u0020a\u0020short\u0020name",
-		"url": "classes/Orpheus-InputController-CLIController-CLIArgument.html#method_hasShortName"
+		"url": "classes/Orpheus-InputController-CLIController-CliArgument.html#method_hasShortName"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIArgument\u003A\u003AgetType\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliArgument\u003A\u003AgetType\u0028\u0029",
 		"name": "getType",
 		"summary": "Get\u0020the\u0020type",
-		"url": "classes/Orpheus-InputController-CLIController-CLIArgument.html#method_getType"
+		"url": "classes/Orpheus-InputController-CLIController-CliArgument.html#method_getType"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIArgument\u003A\u003AgetTypeValidator\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliArgument\u003A\u003AgetTypeValidator\u0028\u0029",
 		"name": "getTypeValidator",
 		"summary": "Get\u0020the\u0020type",
-		"url": "classes/Orpheus-InputController-CLIController-CLIArgument.html#method_getTypeValidator"
+		"url": "classes/Orpheus-InputController-CLIController-CliArgument.html#method_getTypeValidator"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIArgument\u003A\u003AisRequired\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliArgument\u003A\u003AisRequired\u0028\u0029",
 		"name": "isRequired",
 		"summary": "Is\u0020this\u0020argument\u0020required\u0020\u003F",
-		"url": "classes/Orpheus-InputController-CLIController-CLIArgument.html#method_isRequired"
+		"url": "classes/Orpheus-InputController-CLIController-CliArgument.html#method_isRequired"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIArgument\u003A\u003AsetRequired\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliArgument\u003A\u003AsetRequired\u0028\u0029",
 		"name": "setRequired",
 		"summary": "Set\u0020the\u0020required\u0020state",
-		"url": "classes/Orpheus-InputController-CLIController-CLIArgument.html#method_setRequired"
+		"url": "classes/Orpheus-InputController-CLIController-CliArgument.html#method_setRequired"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIArgument\u003A\u003AgetValidatorByType\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliArgument\u003A\u003AgetValidatorByType\u0028\u0029",
 		"name": "getValidatorByType",
 		"summary": "Get\u0020a\u0020type\u0020validator\u0020by\u0020type\u0020name",
-		"url": "classes/Orpheus-InputController-CLIController-CLIArgument.html#method_getValidatorByType"
+		"url": "classes/Orpheus-InputController-CLIController-CliArgument.html#method_getValidatorByType"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIArgument\u003A\u003AregisterTypeValidator\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliArgument\u003A\u003AregisterTypeValidator\u0028\u0029",
 		"name": "registerTypeValidator",
 		"summary": "Add\u0020the\u0020type\u0020validator\u0020to\u0020validate\u0020parameters",
-		"url": "classes/Orpheus-InputController-CLIController-CLIArgument.html#method_registerTypeValidator"
+		"url": "classes/Orpheus-InputController-CLIController-CliArgument.html#method_registerTypeValidator"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIArgument\u003A\u003AvalidateParameter\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliArgument\u003A\u003AvalidateParameter\u0028\u0029",
 		"name": "validateParameter",
 		"summary": "Add\u0020the\u0020type\u0020validator\u0020to\u0020validate\u0020parameters",
-		"url": "classes/Orpheus-InputController-CLIController-CLIArgument.html#method_validateParameter"
+		"url": "classes/Orpheus-InputController-CLIController-CliArgument.html#method_validateParameter"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIArgument\u003A\u003A\u0024longName",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliArgument\u003A\u003A\u0024longName",
 		"name": "longName",
 		"summary": "The\u0020long\u0020name",
-		"url": "classes/Orpheus-InputController-CLIController-CLIArgument.html#property_longName"
+		"url": "classes/Orpheus-InputController-CLIController-CliArgument.html#property_longName"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIArgument\u003A\u003A\u0024shortName",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliArgument\u003A\u003A\u0024shortName",
 		"name": "shortName",
 		"summary": "The\u0020short\u0020name",
-		"url": "classes/Orpheus-InputController-CLIController-CLIArgument.html#property_shortName"
+		"url": "classes/Orpheus-InputController-CLIController-CliArgument.html#property_shortName"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIArgument\u003A\u003A\u0024type",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliArgument\u003A\u003A\u0024type",
 		"name": "type",
 		"summary": "The\u0020type",
-		"url": "classes/Orpheus-InputController-CLIController-CLIArgument.html#property_type"
+		"url": "classes/Orpheus-InputController-CLIController-CliArgument.html#property_type"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIArgument\u003A\u003A\u0024required",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliArgument\u003A\u003A\u0024required",
 		"name": "required",
 		"summary": "Is\u0020the\u0020argument\u0020required\u0020\u003F",
-		"url": "classes/Orpheus-InputController-CLIController-CLIArgument.html#property_required"
+		"url": "classes/Orpheus-InputController-CLIController-CliArgument.html#property_required"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIArgument\u003A\u003A\u0024typeValidators",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliArgument\u003A\u003A\u0024typeValidators",
 		"name": "typeValidators",
 		"summary": "Registered\u0020regex\u0020for\u0020a\u0020type",
-		"url": "classes/Orpheus-InputController-CLIController-CLIArgument.html#property_typeValidators"
+		"url": "classes/Orpheus-InputController-CLIController-CliArgument.html#property_typeValidators"
 	}, {
 		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIController",
 		"name": "CLIController",
@@ -3236,220 +3236,220 @@ Search.appendIndex(
 		"summary": "Get\u0020the\u0020CLI\u0020request",
 		"url": "classes/Orpheus-InputController-CLIController-CLIController.html#method_getRequest"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIRequest",
-		"name": "CLIRequest",
-		"summary": "The\u0020CLIRequest\u0020class",
-		"url": "classes/Orpheus-InputController-CLIController-CLIRequest.html"
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliRequest",
+		"name": "CliRequest",
+		"summary": "The\u0020CliRequest\u0020class",
+		"url": "classes/Orpheus-InputController-CLIController-CliRequest.html"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIRequest\u003A\u003A__toString\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliRequest\u003A\u003A__toString\u0028\u0029",
 		"name": "__toString",
 		"summary": "Get\u0020this\u0020request\u0020as\u0020string",
-		"url": "classes/Orpheus-InputController-CLIController-CLIRequest.html#method___toString"
+		"url": "classes/Orpheus-InputController-CLIController-CliRequest.html#method___toString"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIRequest\u003A\u003AgetURL\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliRequest\u003A\u003AgetURL\u0028\u0029",
 		"name": "getURL",
 		"summary": "Get\u0020the\u0020URL\u0020used\u0020for\u0020this\u0020request",
-		"url": "classes/Orpheus-InputController-CLIController-CLIRequest.html#method_getURL"
+		"url": "classes/Orpheus-InputController-CLIController-CliRequest.html#method_getURL"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIRequest\u003A\u003AgetRoutes\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliRequest\u003A\u003AgetRoutes\u0028\u0029",
 		"name": "getRoutes",
 		"summary": "Get\u0020all\u0020available\u0020routes",
-		"url": "classes/Orpheus-InputController-CLIController-CLIRequest.html#method_getRoutes"
+		"url": "classes/Orpheus-InputController-CLIController-CliRequest.html#method_getRoutes"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIRequest\u003A\u003AgetAllData\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliRequest\u003A\u003AgetAllData\u0028\u0029",
 		"name": "getAllData",
 		"summary": "Get\u0020all\u0020input\u0020data",
-		"url": "classes/Orpheus-InputController-CLIController-CLIRequest.html#method_getAllData"
+		"url": "classes/Orpheus-InputController-CLIController-CliRequest.html#method_getAllData"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIRequest\u003A\u003AgetArrayData\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliRequest\u003A\u003AgetArrayData\u0028\u0029",
 		"name": "getArrayData",
 		"summary": "Get\u0020the\u0020data\u0020by\u0020key\u0020with\u0020array\u0020as\u0020default",
-		"url": "classes/Orpheus-InputController-CLIController-CLIRequest.html#method_getArrayData"
+		"url": "classes/Orpheus-InputController-CLIController-CliRequest.html#method_getArrayData"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIRequest\u003A\u003AhasArrayData\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliRequest\u003A\u003AhasArrayData\u0028\u0029",
 		"name": "hasArrayData",
 		"summary": "Test\u0020if\u0020data\u0020\u0024key\u0020is\u0020an\u0020array",
-		"url": "classes/Orpheus-InputController-CLIController-CLIRequest.html#method_hasArrayData"
+		"url": "classes/Orpheus-InputController-CLIController-CliRequest.html#method_hasArrayData"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIRequest\u003A\u003AgetData\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliRequest\u003A\u003AgetData\u0028\u0029",
 		"name": "getData",
 		"summary": "Get\u0020a\u0020data\u0020by\u0020\u0024key,\u0020assuming\u0020\u0024default",
-		"url": "classes/Orpheus-InputController-CLIController-CLIRequest.html#method_getData"
+		"url": "classes/Orpheus-InputController-CLIController-CliRequest.html#method_getData"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIRequest\u003A\u003AhasData\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliRequest\u003A\u003AhasData\u0028\u0029",
 		"name": "hasData",
 		"summary": "Test\u0020if\u0020data\u0020contains\u0020the\u0020\u0024key",
-		"url": "classes/Orpheus-InputController-CLIController-CLIRequest.html#method_hasData"
+		"url": "classes/Orpheus-InputController-CLIController-CliRequest.html#method_hasData"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIRequest\u003A\u003AhasDataKey\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliRequest\u003A\u003AhasDataKey\u0028\u0029",
 		"name": "hasDataKey",
 		"summary": "Test\u0020if\u0020path\u0020contains\u0020a\u0020value\u0020and\u0020return\u0020it\u0020as\u0020parameter",
-		"url": "classes/Orpheus-InputController-CLIController-CLIRequest.html#method_hasDataKey"
+		"url": "classes/Orpheus-InputController-CLIController-CliRequest.html#method_hasDataKey"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIRequest\u003A\u003AsetContent\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliRequest\u003A\u003AsetContent\u0028\u0029",
 		"name": "setContent",
 		"summary": "Set\u0020the\u0020content\u0020\u0028input\u0020\u0026\u0020input\u0020type\u0029",
-		"url": "classes/Orpheus-InputController-CLIController-CLIRequest.html#method_setContent"
+		"url": "classes/Orpheus-InputController-CLIController-CliRequest.html#method_setContent"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIRequest\u003A\u003AgetDefaultController\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliRequest\u003A\u003AgetDefaultController\u0028\u0029",
 		"name": "getDefaultController",
 		"summary": "",
-		"url": "classes/Orpheus-InputController-CLIController-CLIRequest.html#method_getDefaultController"
+		"url": "classes/Orpheus-InputController-CLIController-CliRequest.html#method_getDefaultController"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIRequest\u003A\u003AhandleCurrentRequest\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliRequest\u003A\u003AhandleCurrentRequest\u0028\u0029",
 		"name": "handleCurrentRequest",
-		"summary": "Handle\u0020the\u0020current\u0020request\u0020as\u0020a\u0020CLIRequest\u0020one\nThis\u0020method\u0020ends\u0020the\u0020script",
-		"url": "classes/Orpheus-InputController-CLIController-CLIRequest.html#method_handleCurrentRequest"
+		"summary": "Handle\u0020the\u0020current\u0020request\u0020as\u0020a\u0020CliRequest\u0020one\nThis\u0020method\u0020ends\u0020the\u0020script",
+		"url": "classes/Orpheus-InputController-CLIController-CliRequest.html#method_handleCurrentRequest"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIRequest\u003A\u003AgenerateFromEnvironment\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliRequest\u003A\u003AgenerateFromEnvironment\u0028\u0029",
 		"name": "generateFromEnvironment",
-		"summary": "Generate\u0020CLIRequest\u0020from\u0020environment",
-		"url": "classes/Orpheus-InputController-CLIController-CLIRequest.html#method_generateFromEnvironment"
+		"summary": "Generate\u0020CliRequest\u0020from\u0020environment",
+		"url": "classes/Orpheus-InputController-CLIController-CliRequest.html#method_generateFromEnvironment"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIRequest\u003A\u003AparseArguments\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliRequest\u003A\u003AparseArguments\u0028\u0029",
 		"name": "parseArguments",
 		"summary": "Parse\u0020console\u0020arguments\u0020to\u0020parameters\u0020with\u0020option",
-		"url": "classes/Orpheus-InputController-CLIController-CLIRequest.html#method_parseArguments"
+		"url": "classes/Orpheus-InputController-CLIController-CliRequest.html#method_parseArguments"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIRequest\u003A\u003AgetRouteClass\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliRequest\u003A\u003AgetRouteClass\u0028\u0029",
 		"name": "getRouteClass",
-		"summary": "Get\u0020the\u0020name\u0020of\u0020the\u0020route\u0020class\u0020associated\u0020to\u0020a\u0020CLIRequest",
-		"url": "classes/Orpheus-InputController-CLIController-CLIRequest.html#method_getRouteClass"
+		"summary": "Get\u0020the\u0020name\u0020of\u0020the\u0020route\u0020class\u0020associated\u0020to\u0020a\u0020CliRequest",
+		"url": "classes/Orpheus-InputController-CLIController-CliRequest.html#method_getRouteClass"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIResponse",
-		"name": "CLIResponse",
-		"summary": "The\u0020CLIResponse\u0020class",
-		"url": "classes/Orpheus-InputController-CLIController-CLIResponse.html"
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliResponse",
+		"name": "CliResponse",
+		"summary": "The\u0020CliResponse\u0020class",
+		"url": "classes/Orpheus-InputController-CLIController-CliResponse.html"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIResponse\u003A\u003A__construct\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliResponse\u003A\u003A__construct\u0028\u0029",
 		"name": "__construct",
 		"summary": "Constructor",
-		"url": "classes/Orpheus-InputController-CLIController-CLIResponse.html#method___construct"
+		"url": "classes/Orpheus-InputController-CLIController-CliResponse.html#method___construct"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIResponse\u003A\u003Aprocess\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliResponse\u003A\u003Aprocess\u0028\u0029",
 		"name": "process",
 		"summary": "Process\u0020the\u0020response",
-		"url": "classes/Orpheus-InputController-CLIController-CLIResponse.html#method_process"
+		"url": "classes/Orpheus-InputController-CLIController-CliResponse.html#method_process"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIResponse\u003A\u003AisSuccess\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliResponse\u003A\u003AisSuccess\u0028\u0029",
 		"name": "isSuccess",
 		"summary": "",
-		"url": "classes/Orpheus-InputController-CLIController-CLIResponse.html#method_isSuccess"
+		"url": "classes/Orpheus-InputController-CLIController-CliResponse.html#method_isSuccess"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIResponse\u003A\u003AgetBody\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliResponse\u003A\u003AgetBody\u0028\u0029",
 		"name": "getBody",
 		"summary": "Get\u0020the\u0020body",
-		"url": "classes/Orpheus-InputController-CLIController-CLIResponse.html#method_getBody"
+		"url": "classes/Orpheus-InputController-CLIController-CliResponse.html#method_getBody"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIResponse\u003A\u003AsetBody\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliResponse\u003A\u003AsetBody\u0028\u0029",
 		"name": "setBody",
 		"summary": "Set\u0020the\u0020body",
-		"url": "classes/Orpheus-InputController-CLIController-CLIResponse.html#method_setBody"
+		"url": "classes/Orpheus-InputController-CLIController-CliResponse.html#method_setBody"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIResponse\u003A\u003AcollectFrom\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliResponse\u003A\u003AcollectFrom\u0028\u0029",
 		"name": "collectFrom",
 		"summary": "Collect\u0020response\u0020data\u0020from\u0020parameters",
-		"url": "classes/Orpheus-InputController-CLIController-CLIResponse.html#method_collectFrom"
+		"url": "classes/Orpheus-InputController-CLIController-CliResponse.html#method_collectFrom"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIResponse\u003A\u003AgetCode\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliResponse\u003A\u003AgetCode\u0028\u0029",
 		"name": "getCode",
 		"summary": "Get\u0020the\u0020code",
-		"url": "classes/Orpheus-InputController-CLIController-CLIResponse.html#method_getCode"
+		"url": "classes/Orpheus-InputController-CLIController-CliResponse.html#method_getCode"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIResponse\u003A\u003AsetCode\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliResponse\u003A\u003AsetCode\u0028\u0029",
 		"name": "setCode",
 		"summary": "Set\u0020the\u0020code",
-		"url": "classes/Orpheus-InputController-CLIController-CLIResponse.html#method_setCode"
+		"url": "classes/Orpheus-InputController-CLIController-CliResponse.html#method_setCode"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIResponse\u003A\u003AgenerateFromUserException\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliResponse\u003A\u003AgenerateFromUserException\u0028\u0029",
 		"name": "generateFromUserException",
-		"summary": "Generate\u0020CLIResponse\u0020from\u0020UserException",
-		"url": "classes/Orpheus-InputController-CLIController-CLIResponse.html#method_generateFromUserException"
+		"summary": "Generate\u0020CliResponse\u0020from\u0020UserException",
+		"url": "classes/Orpheus-InputController-CLIController-CliResponse.html#method_generateFromUserException"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIResponse\u003A\u003AgenerateFromException\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliResponse\u003A\u003AgenerateFromException\u0028\u0029",
 		"name": "generateFromException",
-		"summary": "Generate\u0020CLIResponse\u0020from\u0020Exception",
-		"url": "classes/Orpheus-InputController-CLIController-CLIResponse.html#method_generateFromException"
+		"summary": "Generate\u0020CliResponse\u0020from\u0020Exception",
+		"url": "classes/Orpheus-InputController-CLIController-CliResponse.html#method_generateFromException"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIResponse\u003A\u003A\u0024code",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliResponse\u003A\u003A\u0024code",
 		"name": "code",
 		"summary": "The\u0020returned\u0020response\u0020code",
-		"url": "classes/Orpheus-InputController-CLIController-CLIResponse.html#property_code"
+		"url": "classes/Orpheus-InputController-CLIController-CliResponse.html#property_code"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIResponse\u003A\u003A\u0024body",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliResponse\u003A\u003A\u0024body",
 		"name": "body",
 		"summary": "The\u0020HTML\u0020body\u0020of\u0020the\u0020response",
-		"url": "classes/Orpheus-InputController-CLIController-CLIResponse.html#property_body"
+		"url": "classes/Orpheus-InputController-CLIController-CliResponse.html#property_body"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIRoute",
-		"name": "CLIRoute",
-		"summary": "The\u0020CLIRoute\u0020class",
-		"url": "classes/Orpheus-InputController-CLIController-CLIRoute.html"
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliRoute",
+		"name": "CliRoute",
+		"summary": "The\u0020CliRoute\u0020class",
+		"url": "classes/Orpheus-InputController-CLIController-CliRoute.html"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIRoute\u003A\u003A__construct\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliRoute\u003A\u003A__construct\u0028\u0029",
 		"name": "__construct",
 		"summary": "Constructor",
-		"url": "classes/Orpheus-InputController-CLIController-CLIRoute.html#method___construct"
+		"url": "classes/Orpheus-InputController-CLIController-CliRoute.html#method___construct"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIRoute\u003A\u003AformatURL\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliRoute\u003A\u003AformatURL\u0028\u0029",
 		"name": "formatURL",
 		"summary": "Format\u0020the\u0020current\u0020route\u0020to\u0020get\u0020an\u0020URL\u0020from\u0020path",
-		"url": "classes/Orpheus-InputController-CLIController-CLIRoute.html#method_formatURL"
+		"url": "classes/Orpheus-InputController-CLIController-CliRoute.html#method_formatURL"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIRoute\u003A\u003AgetRootCommand\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliRoute\u003A\u003AgetRootCommand\u0028\u0029",
 		"name": "getRootCommand",
 		"summary": "",
-		"url": "classes/Orpheus-InputController-CLIController-CLIRoute.html#method_getRootCommand"
+		"url": "classes/Orpheus-InputController-CLIController-CliRoute.html#method_getRootCommand"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIRoute\u003A\u003AgetUsageCommand\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliRoute\u003A\u003AgetUsageCommand\u0028\u0029",
 		"name": "getUsageCommand",
 		"summary": "",
-		"url": "classes/Orpheus-InputController-CLIController-CLIRoute.html#method_getUsageCommand"
+		"url": "classes/Orpheus-InputController-CLIController-CliRoute.html#method_getUsageCommand"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIRoute\u003A\u003A__toString\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliRoute\u003A\u003A__toString\u0028\u0029",
 		"name": "__toString",
 		"summary": "Get\u0020route\u0020as\u0020string",
-		"url": "classes/Orpheus-InputController-CLIController-CLIRoute.html#method___toString"
+		"url": "classes/Orpheus-InputController-CLIController-CliRoute.html#method___toString"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIRoute\u003A\u003AisMatchingRequest\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliRoute\u003A\u003AisMatchingRequest\u0028\u0029",
 		"name": "isMatchingRequest",
 		"summary": "Test\u0020current\u0020route\u0020is\u0020matching\u0020request",
-		"url": "classes/Orpheus-InputController-CLIController-CLIRoute.html#method_isMatchingRequest"
+		"url": "classes/Orpheus-InputController-CLIController-CliRoute.html#method_isMatchingRequest"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIRoute\u003A\u003AgetParameters\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliRoute\u003A\u003AgetParameters\u0028\u0029",
 		"name": "getParameters",
 		"summary": "",
-		"url": "classes/Orpheus-InputController-CLIController-CLIRoute.html#method_getParameters"
+		"url": "classes/Orpheus-InputController-CLIController-CliRoute.html#method_getParameters"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIRoute\u003A\u003AregisterConfig\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliRoute\u003A\u003AregisterConfig\u0028\u0029",
 		"name": "registerConfig",
 		"summary": "Register\u0020route\u0020by\u0020\u0024name\u0020from\u0020config",
-		"url": "classes/Orpheus-InputController-CLIController-CLIRoute.html#method_registerConfig"
+		"url": "classes/Orpheus-InputController-CLIController-CliRoute.html#method_registerConfig"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIRoute\u003A\u003Aregister\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliRoute\u003A\u003Aregister\u0028\u0029",
 		"name": "register",
 		"summary": "Register\u0020route\u0020by\u0020\u0024name",
-		"url": "classes/Orpheus-InputController-CLIController-CLIRoute.html#method_register"
+		"url": "classes/Orpheus-InputController-CLIController-CliRoute.html#method_register"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIRoute\u003A\u003AgetRoutes\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliRoute\u003A\u003AgetRoutes\u0028\u0029",
 		"name": "getRoutes",
 		"summary": "Get\u0020registered\u0020routes",
-		"url": "classes/Orpheus-InputController-CLIController-CLIRoute.html#method_getRoutes"
+		"url": "classes/Orpheus-InputController-CLIController-CliRoute.html#method_getRoutes"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIRoute\u003A\u003AgetRoute\u0028\u0029",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliRoute\u003A\u003AgetRoute\u0028\u0029",
 		"name": "getRoute",
 		"summary": "Get\u0020the\u0020route\u0020object\u0020for\u0020the\u0020\u0024route\u0020name",
-		"url": "classes/Orpheus-InputController-CLIController-CLIRoute.html#method_getRoute"
+		"url": "classes/Orpheus-InputController-CLIController-CliRoute.html#method_getRoute"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIRoute\u003A\u003A\u0024routes",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliRoute\u003A\u003A\u0024routes",
 		"name": "routes",
 		"summary": "Registered\u0020routes",
-		"url": "classes/Orpheus-InputController-CLIController-CLIRoute.html#property_routes"
+		"url": "classes/Orpheus-InputController-CLIController-CliRoute.html#property_routes"
 	}, {
-		"fqsen": "\\Orpheus\\InputController\\CLIController\\CLIRoute\u003A\u003A\u0024parameters",
+		"fqsen": "\\Orpheus\\InputController\\CLIController\\CliRoute\u003A\u003A\u0024parameters",
 		"name": "parameters",
 		"summary": "Available\u0020parameters",
-		"url": "classes/Orpheus-InputController-CLIController-CLIRoute.html#property_parameters"
+		"url": "classes/Orpheus-InputController-CLIController-CliRoute.html#property_parameters"
 	}, {
 		"fqsen": "\\Orpheus\\InputController\\Controller",
 		"name": "Controller",
