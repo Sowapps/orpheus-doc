@@ -3758,12 +3758,12 @@ Search.appendIndex(
 	}, {
 		"fqsen": "\\Orpheus\\InputController\\HTTPController\\HTMLHTTPResponse\u003A\u003AgenerateFromException\u0028\u0029",
 		"name": "generateFromException",
-		"summary": "Generate\u0020HTMLResponse\u0020from\u0020Exception",
+		"summary": "Generate\u0020HtmlResponse\u0020from\u0020Exception",
 		"url": "classes/Orpheus-InputController-HTTPController-HTMLHTTPResponse.html#method_generateFromException"
 	}, {
 		"fqsen": "\\Orpheus\\InputController\\HTTPController\\HTMLHTTPResponse\u003A\u003AgenerateFromUserException\u0028\u0029",
 		"name": "generateFromUserException",
-		"summary": "Generate\u0020HTMLResponse\u0020from\u0020UserException",
+		"summary": "Generate\u0020HtmlResponse\u0020from\u0020UserException",
 		"url": "classes/Orpheus-InputController-HTTPController-HTMLHTTPResponse.html#method_generateFromUserException"
 	}, {
 		"fqsen": "\\Orpheus\\InputController\\HTTPController\\HTMLHTTPResponse\u003A\u003AgenerateExceptionHtmlResponse\u0028\u0029",
@@ -4213,12 +4213,12 @@ Search.appendIndex(
 	}, {
 		"fqsen": "\\Orpheus\\InputController\\HTTPController\\HTTPResponse\u003A\u003AgenerateFromException\u0028\u0029",
 		"name": "generateFromException",
-		"summary": "Generate\u0020HTMLResponse\u0020from\u0020Exception",
+		"summary": "Generate\u0020HtmlResponse\u0020from\u0020Exception",
 		"url": "classes/Orpheus-InputController-HTTPController-HTTPResponse.html#method_generateFromException"
 	}, {
 		"fqsen": "\\Orpheus\\InputController\\HTTPController\\HTTPResponse\u003A\u003AgenerateFromUserException\u0028\u0029",
 		"name": "generateFromUserException",
-		"summary": "Generate\u0020HTMLResponse\u0020from\u0020UserException",
+		"summary": "Generate\u0020HtmlResponse\u0020from\u0020UserException",
 		"url": "classes/Orpheus-InputController-HTTPController-HTTPResponse.html#method_generateFromUserException"
 	}, {
 		"fqsen": "\\Orpheus\\InputController\\HTTPController\\HTTPResponse\u003A\u003A\u0024contentType",
@@ -4418,7 +4418,7 @@ Search.appendIndex(
 	}, {
 		"fqsen": "\\Orpheus\\InputController\\HTTPController\\JSONHTTPResponse\u003A\u003AgenerateFromException\u0028\u0029",
 		"name": "generateFromException",
-		"summary": "Generate\u0020HTMLResponse\u0020from\u0020Exception",
+		"summary": "Generate\u0020HtmlResponse\u0020from\u0020Exception",
 		"url": "classes/Orpheus-InputController-HTTPController-JSONHTTPResponse.html#method_generateFromException"
 	}, {
 		"fqsen": "\\Orpheus\\InputController\\HTTPController\\JSONHTTPResponse\u003A\u003Arender\u0028\u0029",
@@ -4433,7 +4433,7 @@ Search.appendIndex(
 	}, {
 		"fqsen": "\\Orpheus\\InputController\\HTTPController\\JSONHTTPResponse\u003A\u003AgenerateFromUserException\u0028\u0029",
 		"name": "generateFromUserException",
-		"summary": "Generate\u0020HTMLResponse\u0020from\u0020UserException",
+		"summary": "Generate\u0020HtmlResponse\u0020from\u0020UserException",
 		"url": "classes/Orpheus-InputController-HTTPController-JSONHTTPResponse.html#method_generateFromUserException"
 	}, {
 		"fqsen": "\\Orpheus\\InputController\\HTTPController\\JSONHTTPResponse\u003A\u003A\u0024data",
