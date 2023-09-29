@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpdocumentor
+		configVersion="3"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns="https://www.phpdoc.org"
+		xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/phpDocumentor/phpDocumentor/master/data/xsd/phpdoc.xsd"
+>
+	<title>Orpheus</title>
+	<paths>
+		<output>html/</output>
+		<cache>cache/</cache>
+	</paths>
+	<version number="latest">
+		<api>
+			<default-package-name>orpheus</default-package-name>
+			<ignore hidden="false" symlinks="true">
+				<path>**/vendor/</path>
+				<path>**/src/App/</path>
+				<path>orpheus-website/</path>
+				<path>orpheus-doc/</path>
+				<path>orpheus-hook/</path>
+			</ignore>
+		</api>
+	</version>
+</phpdocumentor>

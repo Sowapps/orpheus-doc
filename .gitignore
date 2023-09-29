@@ -1,3 +1,14 @@
-/cache/*
 /vendor/
 /composer.phar
+/composer.*.json
+/composer.lock
+/.idea
+
+# App
+phpDocumentor.phar
+
+# Non-project files
+.DS_Store
+# But keep empty folder containing gitkeep & htaccess
+!.gitkeep
+!.htaccess

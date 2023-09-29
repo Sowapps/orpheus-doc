@@ -1,0 +1,60 @@
+{
+	"name": "orpheus/orpheus-doc",
+	"description": "Orpheus PHP Framework Documentation",
+	"type": "project",
+	"license": "MIT",
+	"keywords": [
+		"framework",
+		"php",
+		"manual",
+		"doc"
+	],
+	"autoload": {
+		"psr-4": {
+			"": "src/"
+		}
+	},
+	"repositories": [
+		{
+			"type": "path",
+			"url": "../orpheus/*",
+			"options": {
+				"symlink": true
+			}
+		}
+	],
+	"require": {
+		"php": ">=8.2",
+		"orpheus/orpheus-cache": "dev-main as 4.0",
+		"orpheus/orpheus-core": "dev-main as 4.0",
+		"orpheus/orpheus-composer-plugin": "dev-main as 4.0",
+		"orpheus/orpheus-entitydescriptor": "dev-main as 4.0",
+		"orpheus/orpheus-form": "dev-main as 4.0",
+		"orpheus/orpheus-hook": "dev-main as 4.0",
+		"orpheus/orpheus-initernationalization": "dev-main as 4.0",
+		"orpheus/orpheus-inputcontroller": "dev-main as 4.0",
+		"orpheus/orpheus-publisher": "dev-main as 4.0",
+		"orpheus/orpheus-rendering": "dev-main as 4.0",
+		"orpheus/orpheus-rest": "dev-main as 4.0",
+		"orpheus/orpheus-sqladapter": "dev-main as 4.0",
+		"orpheus/orpheus-ssh2": "dev-main as 4.0",
+		"orpheus/orpheus-webtools": "dev-main as 4.0",
+		"orpheus/orpheus-yaml": "dev-main as 4.0",
+		"ext-pdo": "*",
+		"ext-json": "*",
+		"ext-simplexml": "*"
+	},
+	"authors": [
+		{
+			"name": "Florent HAZARD",
+			"email": "contact@sowapps.com",
+			"homepage": "https://sowapps.com",
+			"role": "Developer"
+		}
+	],
+	"config": {
+		"allow-plugins": {
+			"orpheus/orpheus-composer-plugin": false
+		}
+	}
+}
